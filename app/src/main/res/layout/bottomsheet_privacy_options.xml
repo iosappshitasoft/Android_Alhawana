@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_background"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="16dp">
+
+
+    <View
+        android:id="@+id/bottomSheetHandle"
+        android:layout_width="36dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/handle_drawable" />
+
+
+    <TextView
+        android:id="@+id/bottomSheetTitle"
+        style="@style/TextSecondaryRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text="@string/who_can_post_comments" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tiny1"
+        android:background="#2B2B2B"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/optionEveryoneLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/optionEveryone"
+            style="@style/TextSecondaryRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="@string/settings_everyone" />
+
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/optionEveryoneradio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:checked="true"
+            android:minWidth="10dp"
+            android:minHeight="10dp"
+            android:theme="@style/radioButton"
+            android:visibility="visible"
+            app:useMaterialThemeColors="true" />
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/optionFansLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/optionFans"
+            style="@style/TextSecondaryRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/white"
+            android:text="@string/settings_Fans" />
+
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/optionFansradio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:checked="true"
+            android:minWidth="10dp"
+            android:minHeight="10dp"
+            android:theme="@style/radioButton"
+            android:visibility="visible"
+            app:useMaterialThemeColors="true" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/optionOffLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/optionOff"
+            style="@style/TextSecondaryRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/white"
+            android:text="@string/settings_Off" />
+
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/optionOffradio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:checked="true"
+            android:minWidth="10dp"
+            android:minHeight="10dp"
+            android:theme="@style/radioButton"
+            android:visibility="visible"
+            app:useMaterialThemeColors="true" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

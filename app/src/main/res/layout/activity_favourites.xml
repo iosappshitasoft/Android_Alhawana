@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    android:focusable="true">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#cc000000"
+        android:focusable="false"
+        android:visibility="visible" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/contentLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlack">
+
+            <!--            <include layout="@layout/activity_toolbar_black" />-->
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/search_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorBlack"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layoutDirection="locale"
+                    android:src="@drawable/back" />
+
+                <!-- Title Centered -->
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/outfit_semibold"
+                    android:text="@string/favourites"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                     />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tab_layout_height"
+                android:background="@color/colorBlack"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMyVideos"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorBlack"
+                    android:fontFamily="@font/outfit_medium"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:letterSpacing="0"
+                    android:text="@string/videos"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="18sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="@color/colorDarkGrey" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLikedVideos"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorBlack"
+                    android:fontFamily="@font/outfit_semibold"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:letterSpacing="0"
+                    android:text="@string/sounds"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="18sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="@color/colorDarkGrey" />
+
+            </LinearLayout>
+
+            <!--            <com.google.android.material.tabs.TabLayout-->
+            <!--                android:id="@+id/tabLayout"-->
+            <!--                style="@style/ProfileTabLayout1"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="48dp"-->
+            <!--                android:background="@android:color/black"-->
+            <!--                android:paddingTop="0dp"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:paddingBottom="5dp"-->
+            <!--                android:visibility="visible"-->
+            <!--                app:tabIndicatorColor="@color/colorPrimary"-->
+            <!--                app:tabSelectedTextColor="@color/colorPrimary"-->
+            <!--                app:tabTextColor="@color/tabbar_colour"-->
+            <!--                app:tabMode="fixed"-->
+            <!--                app:tabRippleColor="@null" />-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Background stroke line under both tabs -->
+                <View
+                    android:id="@+id/strokeLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#cc000000" />
+
+                <!-- TabLayout placed ABOVE the line but indicator will lie ON the line -->
+                <!--                <com.google.android.material.tabs.TabLayout-->
+                <!--                    android:id="@+id/tabLayout"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_alignParentTop="true"-->
+                <!--                    android:layout_marginBottom="1dp"-->
+                <!--                    android:background="@android:color/transparent"-->
+                <!--                    app:tabIndicatorColor="@color/colorPrimary"-->
+                <!--                    app:tabIndicatorGravity="bottom"-->
+                <!--                    app:tabIndicatorHeight="2dp"-->
+                <!--                    app:tabSelectedTextColor="@color/colorPrimary"-->
+                <!--                    app:tabTextColor="@color/colorPrimary" />-->
+                <!--              -->
+                <!--              -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- TabLayout -->
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        app:tabIndicatorColor="@color/colorPrimary1"
+                        app:tabIndicatorGravity="bottom"
+                        app:tabIndicatorHeight="2dp"
+                        app:tabSelectedTextColor="@color/colorPrimary1"
+                        app:tabTextColor="@color/colorPrimary1"
+
+                        />
+
+                    <View
+                        android:id="@+id/tabStrokeLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="-1dp"
+                        android:background="@color/bottomsheet_viewline" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>

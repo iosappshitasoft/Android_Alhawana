@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_toolbar_black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDivider" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="10dp"
+                    android:text="Go premium"
+                    android:layout_gravity="center" />
+            <ImageView
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:padding="18dp"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/invite_friend">
+
+            </ImageView>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/colorBlack"
+                android:text="@string/text_sub"
+                android:layout_gravity="center">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/buttonLiveSubscription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="70dp"
+                android:paddingEnd="70dp"
+                android:text="Live Video Streaming"
+                android:layout_marginTop="40dp"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_primary_curved"
+                android:visibility="visible" />
+            <Button
+                android:id="@+id/buttonVideoSubscription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="70dp"
+                android:paddingEnd="70dp"
+                android:layout_marginTop="20dp"
+                android:text="Add Video Upload Time"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:background="@drawable/bg_primary_curved"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+
+        <!--<androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+             android:layout_height="20dp"/>-->
+
+    </LinearLayout>
+
+
+</RelativeLayout>

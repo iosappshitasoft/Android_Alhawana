@@ -1,0 +1,195 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomParentLay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBlack"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/layout_pk_zone_slection"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/mls_shadow_bg" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+           android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/font_regular"
+            android:text="1 on 1 Battle Zone"
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp"
+            android:layout_margin="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtLine"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"
+            android:text="Line"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtBattle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"
+            android:text="Random"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+          />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtZoneSelect"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"
+            android:text="Select"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/mls_curved_orange_lite"
+           />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/layout_pk_zone_time_slection">
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/mls_shadow_bg"
+            android:backgroundTint="@color/colorBlack"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+           android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/font_regular"
+            android:text="Select time for 1 on 1 battle zone"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            android:layout_margin="5dp"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/zoneTimeRV"
+            tools:listitem="@layout/simple_text_rv"
+            android:padding="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt3mins"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="3 mins"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt5mins"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"
+            android:text="5 mins"
+            android:visibility="gone"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt15mins"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"
+            android:text="15 mins"
+            android:visibility="gone"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txttimeselection"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/font_regular"
+            android:gravity="center"
+            android:text="Select"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/mls_curved_orange_lite"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

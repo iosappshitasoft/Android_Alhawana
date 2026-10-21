@@ -1,0 +1,29 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+
+  <!-- Purple rounded rectangle -->
+  <path
+      android:fillColor="#6A1B9A"
+      android:pathData="M12,8
+                          h40
+                          a4,4 0 0 1 4,4
+                          v40
+                          a4,4 0 0 1 -4,4
+                          h-40
+                          a4,4 0 0 1 -4,-4
+                          v-40
+                          a4,4 0 0 1 4,-4z" />
+
+  <!-- White plus icon -->
+  <!-- Horizontal bar -->
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="M20,31h24v2h-24z" />
+  <!-- Vertical bar -->
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="M31,20h2v24h-2z" />
+</vector>

@@ -1,0 +1,40 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+
+        maven {
+            name = "IMG.LY Artifactory"
+            url = uri("https://artifactory.img.ly/artifactory/maven")
+            mavenContent {
+                includeGroup("ly.img")
+            }
+        }
+
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.aliyun.com/repository/jcenter'}
+        maven { url 'https://storage.zego.im/maven' }
+        
+        // Kotlin repository for Compose Compiler Plugin
+        maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
+        maven { url = uri("https://oss.sonatype.org/content/repositories/snapshots/") }
+    }
+}
+
+
+include ':app'
+include ':gpuimagefilter'
+include ':library'
+include ':webrtc-android-framework'
+include ':qrcodereaderview'
+include ':rtmpclient'
+include ':videocache'
+include ':blurry'
+include ':crystalrangeseekbar'
+include ':recordview'
+include ':socialviewautocomplete'
+include ':socialview'
+include ':filepicker'
+include ':solutions:photo-editor'
+include ':solutions:solution-template'

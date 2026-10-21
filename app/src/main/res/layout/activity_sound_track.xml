@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/backImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="false"
+        android:scaleType="centerCrop"
+       />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8C000000" />
+
+
+    <include layout="@layout/activity_toolbar_transparent" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/soundTrackName"
+                style="@style/TextWhiteRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="@string/okay"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/hashTagCount"
+                style="@style/TextWhiteRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:lineSpacingExtra="2dp"
+                android:text="@string/Original_sound" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/hashTagImage"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="false"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/app_icon_new"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                    app:strokeColor="#ABB6B6B6"
+                    app:strokeWidth="3dp" />
+
+
+                <ImageView
+                    android:id="@+id/playControl"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/video_play"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:layout_centerInParent="true"
+                    android:id="@+id/circuleProgress"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="invisible" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
+
+                <ProgressBar
+
+                    android:id="@+id/progress_bar"
+                    style="@style/HorizontalProgressAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:progress="0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/timeStart"
+                    style="@style/TextWhiteRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/progress_bar"
+                    android:layout_alignParentStart="true"
+                    android:textSize="@dimen/text_tiny"
+                    tools:text="00:00" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/timeEnd"
+                    style="@style/TextWhiteRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/progress_bar"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="@dimen/text_tiny"
+                    tools:text="00:10" />
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+
+                android:id="@+id/btnAddToFav"
+                style="@style/TextWhiteRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#ABB6B6B6"
+                android:insetTop="3dp"
+                android:insetBottom="3dp"
+                android:letterSpacing="0"
+                android:stateListAnimator="@null"
+                android:text="@string/addafav2"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_normal"
+                app:cornerRadius="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUseHashTag"
+                style="@style/TextWhiteRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#ABB6B6B6"
+                android:insetTop="4dp"
+                android:insetBottom="4dp"
+                android:letterSpacing="0"
+                android:stateListAnimator="@null"
+                android:text="@string/use_this_sound"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_normal"
+                app:cornerRadius="8dp"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRelatedVideos"
+                style="@style/TextWhiteRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="#ABB6B6B6"
+                android:insetTop="4dp"
+                android:insetBottom="4dp"
+                android:letterSpacing="0"
+                android:stateListAnimator="@null"
+                android:text="@string/related_videos"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_normal"
+                app:cornerRadius="8dp"
+                tools:ignore="MissingConstraints" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

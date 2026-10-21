@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemReportLay"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="horizontal">
+
+    <com.google.android.material.radiobutton.MaterialRadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:checked="true"
+        android:minWidth="10dp"
+        android:minHeight="10dp"
+        android:theme="@style/radioButton"
+        app:useMaterialThemeColors="false"
+        tools:text=""/>
+
+    <TextView
+        android:id="@+id/txtReport"
+        style="@style/TextBlackRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toStartOf="@+id/radioButton"
+        android:padding="10dp"
+        android:text="@string/report_user"
+        android:textSize="@dimen/text_normal"
+        tools:text="@tools:sample/first_names" />
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/full_chatlay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@android:color/transparent"
+    tools:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/messageLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="6dp"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:background="@drawable/pkimgborder_edittextbottom"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/edtMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.6"
+            android:background="@null"
+            android:hint="@string/txt_add_comment"
+            android:padding="8dp"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="#FFFFFF"
+            android:textSize="12sp"
+            android:inputType="textCapSentences"
+            android:gravity="center_vertical"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/btnSend"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="0.5"
+            android:layout_marginStart="8dp"
+            android:padding="10dp"
+            android:src="@drawable/sent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:visibility="visible"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

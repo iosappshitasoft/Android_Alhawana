@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="locale"
+    android:splitMotionEvents="false"
+    tools:context=".SettingsActivity">
+
+    <include
+        layout="@layout/activity_toolbar_black"
+         />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar"
+        android:visibility="invisible"
+        android:background="@color/colorDivider" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/settingMainLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/settingsLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/newsettings" />
+
+                <TextView
+                    style="@style/OutfitRegularForHeadingWhiteSize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:padding="5dp"
+                    android:text="@string/general_settings"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textFontWeight="500" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/transparent_black"/>
+
+            <LinearLayout
+                android:id="@+id/coinsLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/coinnew" />
+
+                <TextView
+                    style="@style/OutfitRegularForHeadingWhiteSize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:padding="5dp"
+                    android:text="@string/coins"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textFontWeight="500" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/transparent_black"/>
+
+            <LinearLayout
+                android:id="@+id/giftsLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/giftnew" />
+
+                <TextView
+                    style="@style/OutfitRegularForHeadingWhiteSize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:padding="5dp"
+                    android:text="@string/my_gifts"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textFontWeight="500" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/transparent_black"/>
+
+            <LinearLayout
+                android:id="@+id/interestLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/newinterest" />
+
+                <TextView
+                    android:textFontWeight="0"
+                    style="@style/OutfitRegularForHeadingWhiteSize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/interests"
+                    android:textAlignment="viewStart" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/transparent_black"/>
+
+            <LinearLayout
+                android:id="@+id/privacyLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/newlock" />
+
+                <TextView
+                    android:textFontWeight="0"
+                    style="@style/OutfitRegularForHeadingWhiteSize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/privacy"
+                    android:textAlignment="viewStart" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/transparent_black"/>
+
+            <LinearLayout
+                android:id="@+id/languageLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="15dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/frame_427322086"
+                    android:translationY="0dp"
+
+
+                    />
+
+                <TextView
+                    android:textFontWeight="0"
+                    style="@style/OutfitRegularForHeadingWhiteSize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/language"
+                    android:textAlignment="viewStart" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/transparent_black"/>
+
+
+            <LinearLayout
+                android:id="@+id/bookmarkLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/newbookmark" />
+
+                <TextView
+                    style="@style/OutfitRegularForHeadingWhiteSize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/bookmark"
+                    android:textAlignment="viewStart" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/transparent_black"/>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/helpLay"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:background="?attr/selectableItemBackground"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingStart="5dp"-->
+<!--                android:paddingTop="15dp"-->
+<!--                android:paddingEnd="5dp"-->
+<!--                android:paddingBottom="15dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="24dp"-->
+<!--                    android:layout_height="24dp"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginStart="15dp"-->
+<!--                    android:src="@drawable/newhelp"-->
+<!--                    android:translationY="2dp" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/OutfitRegularForHeadingWhiteSize16"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="start|center_vertical"-->
+<!--                    android:layout_marginStart="12dp"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:fontFamily="@font/outfit_medium"-->
+<!--                    android:text="@string/help"-->
+<!--                    android:textAlignment="viewStart" />-->
+
+<!--            </LinearLayout>-->
+            <LinearLayout
+                android:id="@+id/helpLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/newhelp" />
+
+                <TextView
+                    style="@style/OutfitRegularForHeadingWhiteSize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/help"
+                    android:textAlignment="viewStart" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/transparent_black"/>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/inviteLay"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="?attr/selectableItemBackground"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingStart="5dp"-->
+<!--                android:paddingTop="15dp"-->
+<!--                android:paddingEnd="5dp"-->
+<!--                android:paddingBottom="15dp">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="24dp"-->
+<!--                    android:layout_height="24dp"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginStart="15dp"-->
+<!--                    android:src="@drawable/newinvite"-->
+<!--                    android:translationY="2dp" />-->
+
+
+<!--                <TextView-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:fontFamily="@font/outfit_medium"-->
+<!--                    style="@style/OutfitRegularForHeadingWhiteSize16"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="start|center_vertical"-->
+<!--                    android:layout_marginStart="12dp"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:text="@string/invite_your_friends"-->
+<!--                    android:textAlignment="viewStart" />-->
+
+<!--            </LinearLayout>-->
+            <LinearLayout
+                android:id="@+id/inviteLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/newinvite" />
+
+                <TextView
+                    style="@style/OutfitRegularForHeadingWhiteSize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/invite_your_friends"
+                    android:textAlignment="viewStart" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@android:color/transparent"/>
+
+            <LinearLayout
+                android:id="@+id/logoutLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/newlogout"
+                    android:tint="@color/highlighted_red"/>
+
+                <TextView
+                    style="@style/OutfitRegularForHeadingRedSize14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:padding="5dp"
+                    android:text="@string/logout"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:textAlignment="viewStart" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/transparent_black"/>
+
+
+            <LinearLayout
+                android:id="@+id/del_accLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/newdelete"
+                    android:tint="@color/highlighted_red"/>
+
+                <TextView
+                    style="@style/OutfitRegularForHeadingRedSize14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:text="@string/delete_account"
+                    android:textAlignment="viewStart" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <include layout="@layout/layout_adview" />
+
+    <include layout="@layout/layout_ad" />
+
+</RelativeLayout>

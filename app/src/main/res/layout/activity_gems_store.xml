@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorBlack">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="62dp"-->
+<!--            android:layout_marginTop="32dp">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/btnBack"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                 android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                android:clickable="true"-->
+<!--                android:padding="10dp"-->
+<!--                android:src="@drawable/back"-->
+<!--                android:visibility="visible"-->
+<!--                android:layout_marginStart="2dp"/>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txtGems"-->
+<!--                android:textFontWeight="600"-->
+<!--                style="@style/OutfitRegularForHeadingWhiteSize16"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:text="@string/coins"-->
+<!--                android:gravity="center"-->
+<!--                android:visibility="visible" />-->
+
+<!--        </RelativeLayout>-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@drawable/back"
+                android:layout_marginStart="20dp"
+                android:layout_alignParentStart="true" />
+
+
+            <TextView
+                android:id="@+id/txtGems"
+                android:textFontWeight="600"
+                style="@style/OutfitRegularForHeadingWhiteSize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/coins"
+                android:gravity="center"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/headerLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iconDiamond"
+                android:layout_width="142dp"
+                android:layout_height="142dp"
+                android:src="@drawable/coinsimage"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                android:id="@+id/txtAvailableGems"
+                android:textFontWeight="600"
+                style="@style/OutfitRegularForHeadingLiteWhiteSize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="0 Coins" />
+
+            <TextView
+                android:id="@+id/txt_description"
+                android:fontFamily="@font/outfit_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="@string/bypurchase_content"
+                android:textSize="@dimen/text_small"
+                android:maxLines="2"
+                android:textFontWeight="400"
+                android:textColor="#A8A8A8"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFreeGems"
+                android:textFontWeight="500"
+                style="@style/OutfitRegularForHeadingLiteWhiteSize14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/free_coins"
+                android:textAllCaps="false"
+                android:visibility="visible"
+                android:background="@drawable/btn_bottomsheet_addcomment_12"
+                app:backgroundTint="@color/new_black_addcomment"
+                app:rippleColor="@color/new_black_addcomment" />
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include
+                    android:id="@+id/nullLay1"
+                    layout="@layout/null_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="50dp"
+                    android:visibility="gone"/>
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nestedScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:overScrollMode="never"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never"
+                        android:visibility="visible" />
+
+                </androidx.core.widget.NestedScrollView>
+
+            </RelativeLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/userImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher"
+        app:riv_corner_radius="65dp"
+        app:riv_mutate_background="true" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/colorImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="65dp"
+        app:riv_mutate_background="true" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="start"
+        android:layout_marginBottom="15dp"
+        android:layout_toEndOf="@+id/userImage"
+        android:fontFamily="@font/font_regular"
+        android:layoutDirection="ltr"
+        android:maxLines="1"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="kkkk"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium" />
+
+
+</RelativeLayout>

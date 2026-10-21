@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorBlack">
+
+    <include
+        android:id="@+id/includeHeader"
+        layout="@layout/activity_toolbar_black" />
+
+    <LinearLayout
+        android:id="@+id/mainLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/colorBlack"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/postCommandLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextBlackRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:gravity="start"
+                android:fontFamily="@font/outfit_medium"
+                android:padding="10dp"
+                android:textColor="@color/colorWhite"
+                android:text="@string/who_can_post_comments"
+                android:textSize="16sp"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/resultPostCommand"
+                style="@style/TextSecondaryRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:gravity="end"
+                android:padding="10dp"
+                android:text="@string/Everyone"
+                android:textSize="@dimen/text_normal" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#454545" />
+        <LinearLayout
+            android:id="@+id/messageLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextBlackRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:gravity="start"
+                android:fontFamily="@font/outfit_medium"
+                android:padding="10dp"
+                android:textColor="@color/colorWhite"
+                android:text="@string/who_can_send_message"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/resultPostMessage"
+                style="@style/TextSecondaryRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:gravity="end"
+                android:padding="10dp"
+                android:text="@string/Everyone"
+                android:textSize="@dimen/text_normal" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#454545" />
+        <LinearLayout
+            android:id="@+id/blockLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextBlackRegular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:gravity="start"
+                android:fontFamily="@font/outfit_medium"
+                android:padding="10dp"
+                android:textColor="@color/colorWhite"
+                android:text="@string/block_lists"
+                android:textSize="16sp" />
+            <ImageView
+                style="@style/TextSecondaryRegular"
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:layout_weight=".1"
+                android:padding="10dp"
+                android:gravity="end"
+                android:src="@drawable/arrow_right"
+                android:text="@string/Everyone"
+                android:textSize="@dimen/text_normal" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/mProgressbar"
+        style="@style/CircularProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

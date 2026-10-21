@@ -1,0 +1,180 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack">
+
+  <!-- Background image -->
+  <ImageView
+      android:id="@+id/bgImage"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scaleType="centerCrop"
+      android:src="@drawable/login_bg_img" />
+
+  <!-- Skip Text Top Right -->
+
+
+  <FrameLayout
+      android:layout_width="38dp"
+      android:layout_height="38dp"
+      android:layout_marginTop="35dp"
+      android:layout_marginStart="24dp"
+      android:background="@drawable/bg_circle_primary_color"
+      android:clickable="true"
+      android:focusable="true">
+
+    <ImageView
+        android:id="@+id/lang_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/frame_427322086" />
+  </FrameLayout>
+
+
+
+
+  <LinearLayout
+      android:id="@+id/logoLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="24dp"
+      android:gravity="center_horizontal"
+      android:layout_above="@id/bottomLayout">
+
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/welcome_icon" />
+
+    <!-- Tagline -->
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_semibold"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:text="@string/snap_and_share"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+  </LinearLayout>
+
+  <!-- Bottom Buttons and Terms -->
+  <LinearLayout
+      android:id="@+id/bottomLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:gravity="center"
+      android:orientation="vertical"
+      android:padding="24dp">
+
+    <!-- Buttons Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+      <!-- Login with Mobile -->
+      <LinearLayout
+          android:id="@+id/btnMobile"
+          android:layout_width="match_parent"
+          android:layout_height="50sp"
+          android:layout_weight="1"
+          android:background="@drawable/bg_purple_fill"
+          android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_medium"
+            android:text="@string/login_with_mobile"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+      </LinearLayout>
+
+      <!-- Login with Google -->
+      <LinearLayout
+          android:id="@+id/gpTxt"
+          android:layout_width="match_parent"
+          android:layout_height="50sp"
+          android:layout_marginTop="15dp"
+          android:layout_weight="1"
+          android:background="@drawable/bg_purple_stroke"
+          android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_medium"
+            android:text="@string/googleplus"
+            android:textColor="@color/colorPrimary1"
+            android:textSize="12sp" />
+      </LinearLayout>
+
+      <!-- Login with whatsapp -->
+      <LinearLayout
+          android:id="@+id/whatsappTxt"
+          android:layout_width="match_parent"
+          android:layout_height="50sp"
+          android:layout_marginTop="15dp"
+          android:layout_weight="1"
+          android:background="@drawable/bg_purple_stroke"
+          android:gravity="center"
+          android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_medium"
+            android:text="@string/continue_with_whatsapp"
+            android:textColor="@color/colorPrimary1"
+            android:textSize="12sp" />
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/skipBT"
+          android:layout_weight="1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="24dp"
+          android:layout_gravity="center_horizontal"
+          android:clickable="true"
+          android:focusable="true"
+          android:fontFamily="@font/outfit_medium"
+          android:padding="8dp"
+          android:text="@string/guest_login"
+          android:textColor="@color/white"
+          android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Terms and Conditions -->
+    <TextView
+        android:id="@+id/txtTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit_regular"
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        android:text="@string/terms_and_conditions_des"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/CircularProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+  </LinearLayout>
+</RelativeLayout>

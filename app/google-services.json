@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "390805121020",
+    "project_id": "alhawanajd",
+    "storage_bucket": "alhawanajd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390805121020:android:9046fa336ceaef1da53479",
+        "android_client_info": {
+          "package_name": "com.app.JustToilet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390805121020-tfqcb002fc37j5m93nraeesbeiq694tn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.JustToilet",
+            "certificate_hash": "216754537afeb5c42309373429fd2a20996c9fae"
+          }
+        },
+        {
+          "client_id": "390805121020-b7l5uqd4rlpktt4rou14v5gnage942qc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9PuO3UYQFJQUVuX43A5FFLRamCVNuwl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "390805121020-b7l5uqd4rlpktt4rou14v5gnage942qc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "390805121020-2fgdhj86q25o9rdhmv7615r03ai0k623.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.ALShoplyve"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390805121020:android:8ed618485c2924fba53479",
+        "android_client_info": {
+          "package_name": "com.app.alhawanajd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390805121020-n1vi5utj4li9l582m71edvrhhm75f6fg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.alhawanajd",
+            "certificate_hash": "f63186494e37ed977b5231ad7877e9ce0a892824"
+          }
+        },
+        {
+          "client_id": "390805121020-b7l5uqd4rlpktt4rou14v5gnage942qc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9PuO3UYQFJQUVuX43A5FFLRamCVNuwl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "390805121020-b7l5uqd4rlpktt4rou14v5gnage942qc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "390805121020-2fgdhj86q25o9rdhmv7615r03ai0k623.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.ALShoplyve"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:keepScreenOn="true">
+
+    <!-- Top Close Button -->
+    <ImageView
+        android:id="@+id/btnClose"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/camera_close_svg"
+        android:tint="@color/colorWhite" />
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/camera_close_svg"
+        android:tint="@color/colorWhite"
+        android:visibility="gone" />
+
+
+
+    <!-- Bottom Controls -->
+    <LinearLayout
+        android:id="@+id/bottomControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="20dp"
+        android:weightSum="3">
+
+        <!-- Gallery Button -->
+        <ImageView
+            android:id="@+id/btnGallery"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/gallery"
+            android:tint="@color/colorWhite" />
+
+        <!-- Record Button -->
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/recordButtonOuter"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/circle_background"
+                android:backgroundTint="@color/colorWhite"
+                android:alpha="0.3" />
+
+            <ImageView
+                android:id="@+id/btnRecord"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/circle_background"
+                android:backgroundTint="@color/colorRed"
+                android:src="@drawable/ic_play_white"
+                android:scaleType="centerInside"
+                android:padding="15dp" />
+
+        </RelativeLayout>
+
+        <!-- Flip Camera Button -->
+        <ImageView
+            android:id="@+id/btnFlipCamera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/camera_change"
+            android:tint="@color/colorWhite" />
+
+    </LinearLayout>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomControls"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/btnClose">
+
+        <FrameLayout
+            android:id="@+id/videoPlayerContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cameraPreviewContainer"
+            app:layout_constraintHorizontal_weight="1">
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/playerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:use_controller="false"
+                app:resize_mode="zoom" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/cameraPreviewContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toEndOf="@id/videoPlayerContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <FrameLayout
+            android:id="@+id/TwovideoPlayerContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/videoPlayerContainer"
+            android:background="@color/colorBlack">
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/TwoplayerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:use_controller="false" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <!-- Recording Progress -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/HorizontalProgressAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomControls"
+        android:visibility="gone"
+        android:progress="0" />
+
+    <!-- Recording Timer -->
+    <TextView
+        android:id="@+id/txtRecordTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomControls"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="00:00"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <!-- Done Button -->
+    <TextView
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Done"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/bg_primary_curved"
+        android:visibility="gone" />
+
+
+
+</RelativeLayout>
+
+

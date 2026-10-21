@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemLay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:padding="12dp"
+    android:background="@drawable/bg_card_curve">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardMainLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card_curve"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="0dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#121212"
+            android:padding="0dp">
+
+<!--            <com.google.android.material.imageview.ShapeableImageView-->
+<!--                android:id="@+id/ivHashTag"-->
+<!--                android:layout_width="55dp"-->
+<!--                android:layout_height="55dp"-->
+<!--                android:adjustViewBounds="true"-->
+<!--                -->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@mipmap/app_icon_new"-->
+<!--                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />-->
+
+            <ImageView
+                android:id="@+id/ivHashTag"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:scaleType="center"
+                android:src="@drawable/hashtag_svg_icon"
+                android:background="@drawable/bg_send_circle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="8dp"
+                android:layout_toStartOf="@+id/nextLay"
+                android:layout_toEndOf="@+id/ivHashTag"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title"
+                    style="@style/TextBlackRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/outfit_medium"
+                    android:singleLine="true"
+                    android:text="@string/search_for_users"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_medium" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/trendingHashTag"
+                    style="@style/TextSecondaryRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_toStartOf="@+id/count"
+                    android:fontFamily="@font/outfit_medium"
+                    android:singleLine="true"
+                    android:text="@string/trending_hashtag"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_tiny" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nextLay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/count"
+                    style="@style/TextBlackRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/outfit_medium"
+                    android:singleLine="true"
+                    android:text="@string/search_for_users"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/btnNext"
+                    style="@style/TextBlackRegular"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:singleLine="true"
+                    android:tint="@color/colorWhite"
+                    android:src="@drawable/arrow"
+                    android:text="@string/search_for_users"
+                    android:textSize="@dimen/text_small" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!--<FrameLayout
+        android:id="@+id/hashTagLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/hashtagImage"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/circle_hashtag" />
+
+        <TextView
+            style="@style/TextPrimaryLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/hash_symbol"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_large_medium" />
+
+    </FrameLayout>-->
+
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_toEndOf="@+id/hashTagLay">
+
+        <TextView
+            android:id="@+id/txtHashTagName"
+            style="@style/TextPrimaryLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toStartOf="@+id/optionLay"
+            android:hint="@string/hashtag"
+            android:maxLines="2"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/text_medium" />
+
+        <FrameLayout
+            android:id="@+id/optionLay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/txtHasTagCount"
+                style="@style/TextSecondaryLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:hint="@string/views"
+                android:maxLines="1"
+                android:textAlignment="viewEnd"
+                android:textSize="@dimen/text_medium" />
+
+            <CheckBox
+                android:id="@+id/btnSelect"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end"
+                android:background="@drawable/hashtag_selector"
+                android:button="@null"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </RelativeLayout>-->
+
+</RelativeLayout>

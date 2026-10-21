@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    android:fitsSystemWindows="false">
+
+    <!-- Content area: ViewPager takes remaining space -->
+    <com.app.alhawanajd.home.CustomViewPager
+        android:id="@+id/fragment_home_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never" />
+
+    <FrameLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_decorview_color">
+
+        <!-- Standard BottomNavigationView (visible by default) -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/app_decorview_color"
+            android:visibility="visible"
+            app:itemHorizontalTranslationEnabled="true"
+            app:itemIconSize="50dp"
+            android:layoutDirection="@string/layout_direction"
+            app:itemIconTint="@color/nav_color"
+            app:itemPaddingBottom="0dp"
+            app:itemPaddingTop="0dp"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/fundoo_home_menu" />
+
+        <!-- Custom bottom navigation (hidden by default) -->
+        <LinearLayout
+            android:id="@+id/bottom_navigation_custom"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginEnd="13dp"
+            android:layout_gravity="center_vertical|start"
+            android:background="@drawable/bottom_navigation_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <!-- Home -->
+            <ImageView
+                android:id="@+id/btnHome"
+                android:layout_width="0dp"
+                android:layout_height="62dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_top_selection_2"
+                android:paddingStart="22dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="22dp"
+                android:paddingBottom="20dp"
+                android:src="@drawable/img_1_home_selected" />
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <!-- Search -->
+            <ImageView
+                android:id="@+id/btnSearch"
+                android:layout_width="0dp"
+                android:layout_height="62dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingStart="22dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="22dp"
+                android:paddingBottom="20dp"
+                android:src="@drawable/img_1_search_unselected" />
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <!-- Chat -->
+            <ImageView
+                android:id="@+id/btnChat"
+                android:layout_width="0dp"
+                android:layout_height="62dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingStart="22dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="22dp"
+                android:paddingBottom="20dp"
+                android:src="@drawable/img_1_chat_unselected" />
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <!-- Profile -->
+            <ImageView
+                android:id="@+id/btnProfile"
+                android:layout_width="0dp"
+                android:layout_height="62dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingStart="22dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="22dp"
+                android:paddingBottom="20dp"
+                android:src="@drawable/img_1_profile_unselected" />
+
+        </LinearLayout>
+
+        <!-- Floating Add button -->
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/menuAddStory"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="15dp"
+            android:onClick="onClickAddStory"
+            android:scaleType="centerInside"
+            android:src="@drawable/plus_2"
+            android:layout_gravity="end|center_vertical" />
+
+    </FrameLayout>
+
+    <!-- splash include (kept outside so it overlays on top when visible) -->
+    <include
+        layout="@layout/activity_splash"
+        android:visibility="gone" />
+
+</LinearLayout>
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/parentLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        >
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+
+          <com.app.alhawanajd.home.CustomViewPager
+              android:id="@+id/fragment_home_viewpager"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:overScrollMode="never"
+              app:layout_constraintBottom_toTopOf="@id/parentLay"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:id="@+id/constraintLayout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/app_decorview_color"
+              android:visibility="visible"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent">
+
+              &lt;!&ndash;android:background="@color/app_decorview_color" BottomNavigationView with fixed background &ndash;&gt;
+
+              &lt;!&ndash; Custom bottom navigation (hidden by default) &ndash;&gt;
+              &lt;!&ndash;<com.google.android.material.bottomnavigation.BottomNavigationView
+                  android:id="@+id/bottom_navigation"
+                  android:layout_width="0dp"
+                  android:layout_height="44dp"
+                  android:background="@android:color/transparent"
+                  android:visibility="visible"
+                  android:layout_margin="10dp"
+                  app:itemBackground="@android:color/transparent"
+                  app:itemHorizontalTranslationEnabled="true"
+                  app:itemIconSize="60dp"
+                  app:itemIconTint="@color/nav_color"
+                  app:itemPaddingBottom="0dp"
+                  app:itemPaddingTop="0dp"
+                  app:labelVisibilityMode="unlabeled"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:menu="@menu/fundoo_home_menu" />
+    &ndash;&gt;
+
+              <com.google.android.material.bottomnavigation.BottomNavigationView
+                  android:id="@+id/bottom_navigation"
+                  android:layout_width="0dp"
+                  android:layout_height="55dp"
+                  android:background="@color/app_decorview_color"
+                  android:visibility="visible"
+                  android:layout_margin="5dp"
+                  app:itemHorizontalTranslationEnabled="true"
+                  app:itemIconSize="50dp"
+                  app:itemIconTint="@color/nav_color"
+                  app:itemPaddingBottom="0dp"
+                  app:itemPaddingTop="0dp"
+                  app:labelVisibilityMode="labeled"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:menu="@menu/fundoo_home_menu" />
+
+              <LinearLayout
+                  android:id="@+id/bottom_navigation_custom"
+                  android:layout_width="0dp"
+                  android:layout_height="64dp"
+                  android:layout_marginEnd="13dp"
+                  android:background="@drawable/bottom_navigation_background"
+                  android:gravity="center"
+                  android:orientation="horizontal"
+                  android:visibility="gone"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toStartOf="@+id/menuAddStory"
+                  app:layout_constraintStart_toStartOf="parent">
+
+                  &lt;!&ndash; Home &ndash;&gt;
+                  <ImageView
+                      android:id="@+id/btnHome"
+                      android:layout_width="0dp"
+                      android:layout_height="62dp"
+                      android:layout_margin="1dp"
+                      android:layout_weight="1"
+                      android:background="@drawable/bg_top_selection_2"
+                      android:paddingStart="22dp"
+                      android:paddingTop="20dp"
+                      android:paddingEnd="22dp"
+                      android:paddingBottom="20dp"
+                      android:src="@drawable/img_1_home_selected" />
+
+                  <View
+                      android:layout_width="15dp"
+                      android:layout_height="match_parent"
+                      android:background="@android:color/transparent" />
+
+                  &lt;!&ndash; Search &ndash;&gt;
+                  <ImageView
+                      android:id="@+id/btnSearch"
+                      android:layout_width="0dp"
+                      android:layout_height="62dp"
+                      android:layout_margin="1dp"
+                      android:layout_weight="1"
+                      android:background="@android:color/transparent"
+                      android:paddingStart="22dp"
+                      android:paddingTop="20dp"
+                      android:paddingEnd="22dp"
+                      android:paddingBottom="20dp"
+                      android:src="@drawable/img_1_search_unselected" />
+
+                  <View
+                      android:layout_width="15dp"
+                      android:layout_height="match_parent"
+                      android:background="@android:color/transparent" />
+
+                  &lt;!&ndash; Chat &ndash;&gt;
+                  <ImageView
+                      android:id="@+id/btnChat"
+                      android:layout_width="0dp"
+                      android:layout_height="62dp"
+                      android:layout_weight="1"
+                      android:background="@android:color/transparent"
+                      android:paddingStart="22dp"
+                      android:paddingTop="20dp"
+                      android:paddingEnd="22dp"
+                      android:paddingBottom="20dp"
+                      android:src="@drawable/img_1_chat_unselected" />
+
+                  <View
+                      android:layout_width="15dp"
+                      android:layout_height="match_parent"
+                      android:background="@android:color/transparent" />
+
+                  &lt;!&ndash; Profile &ndash;&gt;
+                  <ImageView
+                      android:id="@+id/btnProfile"
+                      android:layout_width="0dp"
+                      android:layout_height="62dp"
+                      android:layout_margin="1dp"
+                      android:layout_weight="1"
+                      android:background="@android:color/transparent"
+                      android:paddingStart="22dp"
+                      android:paddingTop="20dp"
+                      android:paddingEnd="22dp"
+                      android:paddingBottom="20dp"
+                      android:src="@drawable/img_1_profile_unselected" />
+
+              </LinearLayout>
+
+              &lt;!&ndash; Floating Action Button &ndash;&gt;
+              <ImageView
+                  android:visibility="gone"
+                  android:id="@+id/menuAddStory"
+                  android:layout_width="42dp"
+                  android:layout_height="42dp"
+                  android:layout_marginStart="15dp"
+                  android:onClick="onClickAddStory"
+                  android:scaleType="centerInside"
+                  android:src="@drawable/plus_2"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="@id/bottom_navigation"
+                  app:layout_constraintHorizontal_bias="0.63"
+                  app:layout_constraintStart_toStartOf="@id/bottom_navigation"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+          &lt;!&ndash;      <androidx.constraintlayout.widget.ConstraintLayout&ndash;&gt;
+    &lt;!&ndash;          android:id="@+id/constraintLayout"&ndash;&gt;
+    &lt;!&ndash;          android:layout_width="match_parent"&ndash;&gt;
+    &lt;!&ndash;          android:layout_height="wrap_content"&ndash;&gt;
+    &lt;!&ndash;          android:layout_alignParentBottom="true"&ndash;&gt;
+    &lt;!&ndash;          android:visibility="visible"&ndash;&gt;
+    &lt;!&ndash;          android:background="@color/app_decorview_color"&ndash;&gt;
+    &lt;!&ndash;          app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;
+    &lt;!&ndash;          app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;
+    &lt;!&ndash;          app:layout_constraintStart_toStartOf="parent">&ndash;&gt;
+
+    &lt;!&ndash;          <com.google.android.material.bottomnavigation.BottomNavigationView&ndash;&gt;
+    &lt;!&ndash;              android:id="@+id/bottom_navigation"&ndash;&gt;
+    &lt;!&ndash;              android:layout_width="0dp"&ndash;&gt;
+    &lt;!&ndash;              android:layout_height="64dp"&ndash;&gt;
+    &lt;!&ndash;              android:layout_marginStart="5dp"&ndash;&gt;
+    &lt;!&ndash;              android:layout_marginEnd="5dp"&ndash;&gt;
+    &lt;!&ndash;              android:background="@drawable/bottom_navigation_background"&ndash;&gt;
+    &lt;!&ndash;              android:elevation="0dp"&ndash;&gt;
+    &lt;!&ndash;              android:paddingLeft="-20dp"&ndash;&gt;
+    &lt;!&ndash;              android:visibility="visible"&ndash;&gt;
+    &lt;!&ndash;              app:itemBackground="@android:color/transparent"&ndash;&gt;
+    &lt;!&ndash;              app:itemHorizontalTranslationEnabled="true"&ndash;&gt;
+    &lt;!&ndash;              app:itemIconSize="60dp"&ndash;&gt;
+    &lt;!&ndash;              app:itemPaddingBottom="-3dp"&ndash;&gt;
+    &lt;!&ndash;              app:itemPaddingTop="-3dp"&ndash;&gt;
+    &lt;!&ndash;              app:labelVisibilityMode="unlabeled"&ndash;&gt;
+    &lt;!&ndash;              app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;
+    &lt;!&ndash;              app:layout_constraintEnd_toStartOf="@+id/menuAddStory"&ndash;&gt;
+    &lt;!&ndash;              app:layout_constraintStart_toStartOf="parent"&ndash;&gt;
+    &lt;!&ndash;              app:menu="@menu/fundoo_home_menu" />&ndash;&gt;
+
+    &lt;!&ndash;          &lt;!&ndash; custom_bottom_navigation.xml &ndash;&gt;&ndash;&gt;
+    &lt;!&ndash;          <LinearLayout&ndash;&gt;
+    &lt;!&ndash;              android:id="@+id/bottom_navigation_custom"&ndash;&gt;
+    &lt;!&ndash;              android:layout_width="0dp"&ndash;&gt;
+    &lt;!&ndash;              android:layout_height="64dp"&ndash;&gt;
+    &lt;!&ndash;              android:layout_marginEnd="13dp"&ndash;&gt;
+    &lt;!&ndash;              android:background="@drawable/bottom_navigation_background"&ndash;&gt;
+    &lt;!&ndash;              android:gravity="center"&ndash;&gt;
+    &lt;!&ndash;              android:orientation="horizontal"&ndash;&gt;
+    &lt;!&ndash;              android:visibility="gone"&ndash;&gt;
+    &lt;!&ndash;              app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;
+    &lt;!&ndash;              app:layout_constraintEnd_toStartOf="@+id/menuAddStory"&ndash;&gt;
+    &lt;!&ndash;              app:layout_constraintStart_toStartOf="parent">&ndash;&gt;
+
+    &lt;!&ndash;              &lt;!&ndash; Live / Home &ndash;&gt;&ndash;&gt;
+    &lt;!&ndash;              <ImageView&ndash;&gt;
+    &lt;!&ndash;                  android:id="@+id/btnHome"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_width="0dp"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_height="62dp"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_margin="1dp"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_weight="1"&ndash;&gt;
+    &lt;!&ndash;                  android:background="@drawable/bg_top_selection_2"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingStart="22dp"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingTop="20dp"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingEnd="22dp"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingBottom="20dp"&ndash;&gt;
+    &lt;!&ndash;                  android:src="@drawable/img_1_home_selected" />&ndash;&gt;
+
+    &lt;!&ndash;              <View&ndash;&gt;
+    &lt;!&ndash;                  android:layout_width="15dp"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_height="match_parent"&ndash;&gt;
+    &lt;!&ndash;                  android:background="@color/transparent" />&ndash;&gt;
+    &lt;!&ndash;              &lt;!&ndash; Search &ndash;&gt;&ndash;&gt;
+    &lt;!&ndash;              <ImageView&ndash;&gt;
+    &lt;!&ndash;                  android:id="@+id/btnSearch"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_width="0dp"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_height="62dp"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_margin="1dp"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_weight="1"&ndash;&gt;
+    &lt;!&ndash;                  android:background="@android:color/transparent"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingStart="22dp"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingTop="20dp"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingEnd="22dp"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingBottom="20dp"&ndash;&gt;
+    &lt;!&ndash;                  android:src="@drawable/img_1_search_unselected" />&ndash;&gt;
+
+    &lt;!&ndash;              <View&ndash;&gt;
+    &lt;!&ndash;                  android:layout_width="15dp"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_height="match_parent"&ndash;&gt;
+    &lt;!&ndash;                  android:background="@color/transparent" />&ndash;&gt;
+    &lt;!&ndash;              &lt;!&ndash; Chat &ndash;&gt;&ndash;&gt;
+    &lt;!&ndash;              <ImageView&ndash;&gt;
+    &lt;!&ndash;                  android:id="@+id/btnChat"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_width="0dp"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_height="62dp"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_weight="1"&ndash;&gt;
+    &lt;!&ndash;                  android:background="@android:color/transparent"&ndash;&gt;
+    &lt;!&ndash;                  android:padding="22dp"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingStart="22dp"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingTop="20dp"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingEnd="22dp"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingBottom="20dp"&ndash;&gt;
+    &lt;!&ndash;                  android:src="@drawable/img_1_chat_unselected" />&ndash;&gt;
+
+    &lt;!&ndash;              <View&ndash;&gt;
+    &lt;!&ndash;                  android:layout_width="15dp"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_height="match_parent"&ndash;&gt;
+    &lt;!&ndash;                  android:background="@color/transparent" />&ndash;&gt;
+
+    &lt;!&ndash;              &lt;!&ndash; Profile &ndash;&gt;&ndash;&gt;
+    &lt;!&ndash;              <ImageView&ndash;&gt;
+    &lt;!&ndash;                  android:id="@+id/btnProfile"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_width="0dp"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_height="62dp"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_margin="1dp"&ndash;&gt;
+    &lt;!&ndash;                  android:layout_weight="1"&ndash;&gt;
+    &lt;!&ndash;                  android:background="@android:color/transparent"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingStart="22dp"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingTop="20dp"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingEnd="22dp"&ndash;&gt;
+    &lt;!&ndash;                  android:paddingBottom="20dp"&ndash;&gt;
+    &lt;!&ndash;                  android:src="@drawable/img_1_profile_unselected" />&ndash;&gt;
+
+    &lt;!&ndash;          </LinearLayout>&ndash;&gt;
+
+    &lt;!&ndash;          &lt;!&ndash; Floating Add Button &ndash;&gt;&ndash;&gt;
+    &lt;!&ndash;          <ImageView&ndash;&gt;
+    &lt;!&ndash;              android:id="@+id/menuAddStory"&ndash;&gt;
+    &lt;!&ndash;              android:layout_width="56dp"&ndash;&gt;
+    &lt;!&ndash;              android:layout_height="56dp"&ndash;&gt;
+    &lt;!&ndash;              android:layout_marginStart="15dp"&ndash;&gt;
+    &lt;!&ndash;              android:background="@drawable/circle_background"&ndash;&gt;
+    &lt;!&ndash;              android:onClick="onClickAddStory"&ndash;&gt;
+    &lt;!&ndash;              android:scaleType="centerInside"&ndash;&gt;
+    &lt;!&ndash;              android:src="@drawable/plus_1"&ndash;&gt;
+    &lt;!&ndash;              app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;
+    &lt;!&ndash;              app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;
+    &lt;!&ndash;              app:layout_constraintStart_toEndOf="@+id/bottom_navigation"&ndash;&gt;
+    &lt;!&ndash;              app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;
+    &lt;!&ndash;      </androidx.constraintlayout.widget.ConstraintLayout>&ndash;&gt;
+
+        <include
+            layout="@layout/activity_splash"
+            android:visibility="gone" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->

@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/apple/AndroidStudioProjects/android_alhawanajd/gpuimagefilter/.cxx/Debug/7152123g/armeabi-v7a",
+  "command": "/Users/apple/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi16 --sysroot=/Users/apple/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dyuv_decoder_EXPORTS -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -fexceptions -g  -fno-limit-debug-info -fPIC -o CMakeFiles/yuv-decoder.dir/yuv-decoder.c.o -c /Users/apple/AndroidStudioProjects/android_alhawanajd/gpuimagefilter/src/main/cpp/yuv-decoder.c",
+  "file": "/Users/apple/AndroidStudioProjects/android_alhawanajd/gpuimagefilter/src/main/cpp/yuv-decoder.c"
+}
+]

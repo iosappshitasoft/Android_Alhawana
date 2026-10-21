@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Selected -->
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="#A021F0"/> <!-- Filled inner circle (purple) -->
+                </shape>
+            </item>
+            <item android:width="24dp" android:height="24dp">
+                <shape android:shape="oval">
+                    <stroke
+                        android:width="2dp"
+                        android:color="#A021F0" /> <!-- Purple stroke -->
+                    <solid android:color="@android:color/transparent" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- Unselected -->
+    <item>
+        <shape android:shape="oval">
+            <stroke
+                android:width="2dp"
+                android:color="#AAAAAA" /> <!-- Gray outline -->
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+
+</selector>

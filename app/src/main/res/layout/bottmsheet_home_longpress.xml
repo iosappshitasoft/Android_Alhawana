@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:background="@drawable/bottom_sheet_black_bg_nostroke"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/img_bottomsheet_rectangle"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <TextView
+            android:id="@+id/commentCount"
+            android:textFontWeight="600"
+            style="@style/OutfitRegularForHeadingWhiteSize18"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:textAlignment="viewStart"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/options" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorIconTint"
+            android:layout_marginBottom="16dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shareLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingVertical="10dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/share"
+            android:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/txtShare"
+            android:textFontWeight="500"
+            style="@style/OutfitRegularForHeadingLiteWhiteSize16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:maxLines="1"
+            android:text="@string/share" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/favLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingVertical="10dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:tint="@color/white"
+            android:src="@drawable/add_to_favourites" />
+
+        <TextView
+            android:id="@+id/txtFav"
+            android:textFontWeight="500"
+            style="@style/OutfitRegularForHeadingLiteWhiteSize16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:maxLines="1"
+            android:text="@string/addafav"
+            android:textSize="@dimen/text_normal" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/reportLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingVertical="10dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:tint="@color/white"
+            android:src="@drawable/report" />
+
+        <TextView
+            android:id="@+id/txtReport"
+            android:textFontWeight="500"
+            style="@style/OutfitRegularForHeadingLiteWhiteSize16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:maxLines="1"
+            android:text="@string/report_user" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/blockLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingVertical="10dp"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/report_black" />
+
+        <TextView
+            android:id="@+id/txtBlock"
+            style="@style/TextBlackLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:maxLines="1"
+            android:text="@string/block"
+            android:textSize="@dimen/text_normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/downloadLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingVertical="10dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/save"
+            android:tint="@color/white"/>
+
+        <TextView
+            android:id="@+id/txtDownload"
+            android:textFontWeight="500"
+            style="@style/OutfitRegularForHeadingLiteWhiteSize16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:maxLines="1"
+            android:text="@string/save" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/editLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingVertical="10dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/edit_grey"
+            android:tint="@color/white"/>
+
+        <TextView
+            android:id="@+id/txtEdit"
+            android:textFontWeight="500"
+            style="@style/OutfitRegularForHeadingLiteWhiteSize16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:maxLines="1"
+            android:text="@string/edit"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/deleteLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingVertical="10dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/delete_grey"
+            android:tint="@color/white"/>
+
+        <TextView
+            android:id="@+id/txtDelete"
+            android:textFontWeight="500"
+            style="@style/OutfitRegularForHeadingLiteWhiteSize16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:maxLines="1"
+            android:text="@string/delete" />
+
+    </LinearLayout>
+
+</LinearLayout>

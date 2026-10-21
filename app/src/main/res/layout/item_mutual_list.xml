@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemLay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/userImage"
+        android:layout_width="45dp"
+        app:riv_mutate_background="true"
+        app:riv_corner_radius="60dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@+id/checkLay"
+        android:layout_toEndOf="@+id/userImage"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txtFullName"
+            style="@style/TextPrimaryLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:maxLines="1"
+            android:text="text"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/text_medium" />
+
+        <TextView
+            android:id="@+id/txtUserName"
+            style="@style/TextSecondaryLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtFullName"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="5dp"
+            android:maxLines="1"
+            android:text="text"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/text_medium"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/checkLay"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/circle_primary_bg">
+
+        <CheckBox
+            android:id="@+id/btnSelect"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/location_selector"
+            android:button="@null"
+            android:checked="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack">
+
+    <include
+        layout="@layout/activity_chat_toolbar_black" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomLay"
+        android:layout_below="@+id/toolbar">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingTop="10dp"
+            android:paddingBottom="40dp"
+            app:reverseLayout="true"
+            app:stackFromEnd="true" />
+
+
+    </FrameLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:theme="@style/CircularProgress" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/smartRepliesRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomLay"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:background="@color/colorBlack"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/smart_reply_chip" />
+
+
+    <RelativeLayout
+        android:id="@+id/bottomLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorBlack"
+        android:layoutDirection="ltr"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnContactUs"
+            style="@style/TextPrimaryRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:elevation="5dp"
+            android:shadowRadius="5"
+            android:text="@string/contact_us"
+            android:textAllCaps="false"
+            android:visibility="gone" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:layout_marginBottom="5dp"
+            android:background="#454545" />
+
+
+        <RelativeLayout
+            android:id="@+id/edtLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="0dp"
+            android:paddingBottom="10dp"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:id="@+id/attachLay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <ImageView
+                    android:id="@+id/btnGallery"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:src="@drawable/gallery"
+                    app:tint="@color/white"
+                    android:translationY="4dp" />
+
+
+                <ImageView
+                    android:id="@+id/btnCamera"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:src="@drawable/camera"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/chatInputRoot"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:layout_height="55dp"-->
+<!--                >-->
+
+<!--                &lt;!&ndash; Background layout with EditText and icons &ndash;&gt;-->
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:id="@+id/constraint_check"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:background="@drawable/bg_chat_input"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/btnSend"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/btnGif"-->
+<!--                        android:layout_width="30dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:padding="5dp"-->
+<!--                        android:visibility="gone"-->
+<!--                        android:src="@drawable/gif"-->
+<!--                        android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                        app:tint="@color/colorWhite"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent" />-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/edtMessage"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@null"-->
+<!--                        android:hint="@string/type_your_message"-->
+<!--                        android:inputType="textCapSentences|textMultiLine"-->
+<!--                        android:lines="3"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textColorHint="@color/secondarytext"-->
+<!--                        android:textColor="@color/grayclr"-->
+<!--                        android:gravity="start|center_vertical"-->
+<!--                        android:scrollbars="vertical"-->
+<!--                        android:padding="15dp"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        app:layout_constraintStart_toEndOf="@id/btnGif"-->
+<!--                        app:layout_constraintEnd_toStartOf="@id/btnAdd"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent" />-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/btnAdd"-->
+<!--                        android:layout_width="30dp"-->
+<!--                        android:layout_height="32dp"-->
+<!--                        android:layout_marginStart="5dp"-->
+<!--                        android:layout_marginEnd="15dp"-->
+<!--                        android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                        android:padding="5dp"-->
+<!--                        android:src="@drawable/chat_attachment"-->
+<!--                        app:tint="@color/colorWhite"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent" />-->
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                &lt;!&ndash; Send Button OUTSIDE bg_chat_input &ndash;&gt;-->
+<!--                <ImageView-->
+<!--                    android:id="@+id/btnSend"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:scaleType="center"-->
+<!--                    android:src="@drawable/send1_svg"-->
+<!--                    android:background="@drawable/bg_send_circle"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/chatInputRoot"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layoutDirection="locale">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_check"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_chat_input"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnSend"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <ImageView
+                        android:id="@+id/btnGif"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:visibility="gone"
+                        android:src="@drawable/gif"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        app:tint="@color/colorWhite"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+                    <EditText
+                        android:id="@+id/edtMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/type_your_message"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:lines="3"
+                        android:textSize="14sp"
+                        android:textColorHint="@color/secondarytext"
+                        android:textColor="@color/grayclr"
+                        android:gravity="start|top"
+                        android:scrollbars="vertical"
+                        android:padding="15dp"
+                        android:layout_marginStart="0dp"
+
+                        android:textDirection="firstStrong"
+                        android:layoutDirection="locale"
+
+                        app:layout_constraintStart_toEndOf="@id/btnGif"
+                        app:layout_constraintEnd_toStartOf="@id/btnAdd"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+                    <ImageView
+                        android:id="@+id/btnAdd"
+                        android:layout_width="30dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="5dp"
+                        android:src="@drawable/chat_attachment"
+                        app:tint="@color/colorWhite"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/btnSend"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:scaleType="center"
+                    android:src="@drawable/send_svg_chat"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

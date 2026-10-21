@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:layoutDirection="locale"
+    android:textDirection="locale"
+    tools:ignore="RtlHardcoded">
+
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@drawable/back"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/OutfitRegularForHeadingWhiteSize16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/outfit_semibold"
+            android:gravity="center"
+            android:text="@string/coins"
+            android:textFontWeight="600"
+            android:textSize="18sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        android:layout_below="@+id/relativeHeader"
+        android:fitsSystemWindows="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            android:layoutDirection="locale"
+            android:textDirection="locale">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImage"
+                android:layout_width="108dp"
+                android:layout_height="108dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/music_placeholder"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.StreamRound" />
+
+            <include
+                android:id="@+id/primeBannerLayout"
+                layout="@layout/layout_prime_banner" />
+            <include
+                android:id="@+id/renewalBannerLayout"
+                layout="@layout/layout_renewal_banner" />
+
+            <!-- Name -->
+            <TextView android:text="@string/name" style="@style/EditLabelStyle"/>
+            <EditText
+                android:id="@+id/edtName"
+                style="@style/OutfitRegularForHeadingEdittextSize14"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_editfield_12"
+                android:hint="@string/name"
+                android:paddingStart="22dp"
+                android:paddingEnd="22dp"
+                android:textColorHint="@color/edittext_background"
+                android:textFontWeight="500" />
+
+            <!-- Email -->
+            <TextView android:text="@string/emailaddress" style="@style/EditLabelStyle"/>
+            <EditText
+                android:id="@+id/edtemail"
+                style="@style/OutfitRegularForHeadingEdittextSize14"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_editfield_12"
+                android:hint="@string/emailaddress"
+                android:paddingStart="22dp"
+                android:inputType="textEmailAddress"
+                android:visibility="visible"
+                android:paddingEnd="22dp"
+                android:textColorHint="@color/edittext_background"
+                android:textFontWeight="500" />
+
+            <TextView android:text="@string/mobile_number" style="@style/EditLabelStyle"/>
+            <EditText
+                android:id="@+id/edtmobile"
+                style="@style/OutfitRegularForHeadingEdittextSize14"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:inputType="number"
+                android:background="@drawable/btn_editfield_12"
+                android:hint="@string/mobile_number"
+                android:paddingStart="22dp"
+                android:visibility="visible"
+                android:paddingEnd="22dp"
+                android:textColorHint="@color/edittext_background"
+                android:textFontWeight="500" />
+
+            <!-- Username -->
+            <TextView android:text="@string/user_name" style="@style/EditLabelStyle"/>
+            <TextView
+                android:id="@+id/edtusername"
+                style="@style/OutfitRegularForHeadingEdittextSize14"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/btn_editfield_12"
+                android:text="@string/user_name"
+                android:paddingStart="22dp"
+                android:paddingEnd="22dp"
+                android:textColorHint="@color/edittext_background"
+                android:textFontWeight="500" />
+
+            <!-- Gender -->
+            <TextView android:text="@string/gender" style="@style/EditLabelStyle"/>
+            <EditText
+                android:id="@+id/txtGender"
+                style="@style/OutfitRegularForHeadingEdittextSize14"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_editfield_12"
+                android:focusable="false"
+                android:hint="@string/gender"
+                android:paddingStart="22dp"
+                android:paddingEnd="22dp"
+                android:textColorHint="@color/edittext_background"
+                android:textFontWeight="500" />
+
+            <!-- Date of Birth -->
+            <TextView android:text="@string/date_of_birth" style="@style/EditLabelStyle"/>
+            <EditText
+                android:id="@+id/txtDob"
+                style="@style/OutfitRegularForHeadingEdittextSize14"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_editfield_12"
+                android:hint="@string/date_of_birth"
+                android:paddingStart="22dp"
+                android:paddingEnd="22dp"
+                android:textColorHint="@color/edittext_background"
+                android:textFontWeight="500" />
+
+            <!-- Hidden Email -->
+            <TextView android:text="Email" style="@style/EditLabelStyle" android:visibility="gone"/>
+            <EditText
+                android:id="@+id/txtEmail"
+                style="@style/OutfitRegularForHeadingEdittextSize14"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_editfield_12"
+                android:hint="Email"
+                android:visibility="gone"
+                android:paddingStart="22dp"
+                android:paddingEnd="22dp"
+                android:text="Email"
+                android:textColorHint="@color/edittext_background"
+                android:textFontWeight="500" />
+
+            <!-- Bio -->
+            <TextView android:text="@string/bio" style="@style/EditLabelStyle"/>
+            <EditText
+                android:id="@+id/edtBio"
+                style="@style/OutfitRegularForHeadingEdittextSize14"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_editfield_12"
+                android:hint="@string/bio"
+                android:paddingStart="22dp"
+                android:paddingEnd="22dp"
+                android:textColorHint="@color/edittext_background"
+                android:textFontWeight="500" />
+
+            <!-- PayPal -->
+            <TextView
+                android:text="PayPal ID"
+                style="@style/EditLabelStyle"
+                android:visibility="visible"/>
+            <EditText
+                android:id="@+id/edtPayPal"
+                style="@style/OutfitRegularForHeadingEdittextSize14"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_editfield_12"
+                android:hint="Paypal ID"
+                android:paddingStart="22dp"
+                android:paddingEnd="22dp"
+                android:text="Paypal ID"
+                android:textColorHint="@color/edittext_background"
+                android:visibility="visible"
+                android:textFontWeight="500" />
+
+            <!-- Save Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                style="@style/TextWhiteRegular"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_12"
+                android:fontFamily="@font/outfit_medium"
+                android:letterSpacing="0"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:cornerRadius="8dp"
+                app:rippleColor="@color/colorWhite" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:theme="@style/CircularProgress"
+        android:visibility="gone" />
+
+    <include layout="@layout/layout_adview" />
+</RelativeLayout>

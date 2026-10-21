@@ -1,0 +1,409 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBlack">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:background="@color/colorBlack"
+            android:layout_height="wrap_content">
+            <!-- Toolbar with back icon -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorBlack"
+                app:contentInsetStart="0dp"
+                android:layout_marginTop="18dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnBack"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="12dp"
+                        android:padding="10dp"
+                        android:src="@drawable/back"
+                        android:background="?attr/selectableItemBackgroundBorderless" />
+
+                    <!-- ✨ Centered Title -->
+                    <TextView
+                        android:id="@+id/toolbarTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/find_friend"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/outfit_semibold"
+                        android:ellipsize="end"
+                        android:maxLines="1" />
+
+                    <ImageView
+                        android:id="@+id/scanBt"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:padding="10dp"
+                        android:src="@drawable/scan_svgrepo"
+                        android:background="?attr/selectableItemBackgroundBorderless" />
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginEnd="19dp"
+                android:padding="8dp"
+                android:background="@drawable/bg_card_curve"                >
+
+                <EditText
+                    android:id="@+id/edtSearch"
+                    style="@style/TextWhiteLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/searchimg"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/outfit_medium"
+                    android:hint="@string/search_by_name_username"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColorHint="#8F8F8F"
+                    android:textSize="@dimen/text_normal" />
+
+
+                <ImageView
+                    android:id="@+id/searchimg"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/search" />
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/appBarLayout"
+            android:id="@+id/findfriendlay"
+            android:layout_margin="10dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/btnQrcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/transparentGrey"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mirror_right_svg"
+                    app:riv_corner_radius="60dp"
+                    app:riv_mutate_background="true" />
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextPrimaryRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textDirection="locale"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorWhite"
+                        android:text="@string/use_qr_code"
+                        android:textSize="@dimen/text_medium"
+                        android:fontFamily="@font/outfit_regular" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_marginTop="5dp"
+                        style="@style/TextPrimaryRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textDirection="locale"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_400"
+                        android:text="@string/would_you_like_more_text_or_help"
+                        android:textSize="@dimen/text_normal"
+                        android:fontFamily="@font/outfit_regular" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/arrow_right"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearInviteFriends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/btnShareNow"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/transparentGrey"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mirror_shere_svgreposvg"
+                    app:riv_corner_radius="60dp"
+                    app:riv_mutate_background="true" />
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextPrimaryRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textDirection="locale"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorWhite"
+                        android:text="@string/invite_friends"
+                        android:textSize="@dimen/text_medium"
+                        android:fontFamily="@font/outfit_regular" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_marginTop="5dp"
+                        style="@style/TextPrimaryRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textDirection="locale"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_400"
+                        android:text="@string/shareyourprofile_connect"
+                        android:textSize="@dimen/text_normal"
+                        android:fontFamily="@font/outfit_regular" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/arrow_right"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/linearFindContacts"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/btnFindFriends"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/transparentGrey"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/status"
+                    app:riv_corner_radius="60dp"
+                    app:riv_mutate_background="true" />
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TextPrimaryRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textDirection="locale"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorWhite"
+                        android:text="@string/find_contact"
+                        android:textSize="@dimen/text_medium"
+                        android:fontFamily="@font/outfit_regular" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_marginTop="5dp"
+                        style="@style/TextPrimaryRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textDirection="locale"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/gray_400"
+                        android:text="@string/syncfind_contact"
+                        android:textSize="@dimen/text_normal"
+                        android:fontFamily="@font/outfit_regular" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/arrow_right"/>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_marginTop="5dp"
+                    style="@style/TextPrimaryRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textDirection="locale"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/gray_400"
+                    android:text="@string/suggested_accounts"
+                    android:drawableRight="@drawable/outline_add_circle_24"
+                    android:drawableTint="@color/white"
+                    android:drawablePadding="20dp"
+                    android:textSize="@dimen/text_normal"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/outfit_regular" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/linear_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_below="@+id/findfriendlay">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/mobile"
+                android:layout_margin="20dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/fullName"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                style="@style/TextPrimaryRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textDirection="locale"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:text="@string/search_name_or_username"
+                android:textSize="@dimen/text_normal"
+                android:fontFamily="@font/outfit_semibold" />
+
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linear_search">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_search_user" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/nullLay"
+            layout="@layout/null_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+</FrameLayout>

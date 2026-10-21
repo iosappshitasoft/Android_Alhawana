@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemLay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_gravity="start"
+    android:gravity="start"
+    android:padding="5dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/userImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top"
+        android:layout_marginStart="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher"
+        app:riv_corner_radius="65dp"
+        app:riv_mutate_background="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_toEndOf="@+id/userImage"
+        android:background="@drawable/chat_receive_bg"
+        android:gravity="center_vertical"
+        android:minWidth="100dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/contentLay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical|start">
+
+            <SeekBar
+                android:id="@+id/song_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/fileLay"
+                android:paddingStart="10dp"
+                android:paddingEnd="15dp"
+                android:progressBackgroundTint="@color/colorBgBlack" />
+
+            <TextView
+                android:id="@+id/txtFileName"
+                style="@style/TextPrimaryLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/fileLay"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="@dimen/text_small" />
+
+            <FrameLayout
+                android:id="@+id/fileLay"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="15dp"
+                android:backgroundTint="#80000000"
+                android:visibility="visible">
+
+                <FrameLayout
+                    android:id="@+id/downloadLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnDownload"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/colorBlack"
+                        android:src="@drawable/download"
+                        android:visibility="visible" />
+
+                    <com.app.external.ProgressWheel xmlns:ProgressWheel="http://schemas.android.com/tools"
+                        android:id="@+id/downloadProgress"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        ProgressWheel:matProg_barColor="@color/white"
+                        ProgressWheel:matProg_barWidth="2dp"
+                        ProgressWheel:matProg_rimColor="#40FFFFFF"
+                        ProgressWheel:matProg_rimWidth="2dp" />
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnPlay"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_play_white"
+                    android:visibility="gone"
+                    app:tint="@color/colorIconTint" />
+
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/txtChatTime"
+                style="@style/TextPrimaryLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:paddingBottom="5dp"
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/txtDuration"
+                style="@style/TextSecondaryLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:gravity="end"
+                android:paddingStart="10dp"
+                android:paddingEnd="15dp"
+
+                android:text=""
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_small" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

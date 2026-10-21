@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:padding="3dp">
+
+        <LinearLayout
+            android:id="@+id/messageLay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center"
+            android:layout_toStartOf="@+id/attachLay"
+            android:layout_weight="1"
+            android:background="@drawable/mls_curved_white"
+             android:backgroundTint="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/edtMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_toStartOf="@+id/btnSend"
+                android:layout_weight="1"
+                android:alpha="0.7"
+                android:background="@null"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:hint="@string/txt_add_comment"
+                android:inputType="textCapSentences"
+                android:isScrollContainer="true"
+                android:padding="8dp"
+                android:textColorHint="#FFFFFF"
+                android:textSize="12dp"
+                style="@style/TextWhiteLight"/>
+
+
+            <ImageView
+                android:id="@+id/btnSendNew"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:src="@drawable/sent"
+                android:tint="@color/white"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

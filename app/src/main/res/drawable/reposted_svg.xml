@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="800dp"
+    android:height="800dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+
+    <!-- Yellow Circle -->
+    <path
+        android:fillColor="#FFD600"
+        android:pathData="M10,0
+                          a10,10 0 1,1 0,20
+                          a10,10 0 1,1 0,-20" />
+
+    <!-- Smaller icon (scaled down to 80% and centered) -->
+    <group
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:translateX="2"
+        android:translateY="2">
+
+        <path
+            android:fillColor="#007EFF"
+            android:pathData="M5,4a2,2 0,0 0,-2 2v6L0,12l4,4 4,-4L5,12L5,6h7l2,-2L5,4zM15,8h-3l4,-4 4,4h-3v6a2,2 0,0 1,-2 2L6,16l2,-2h7L15,8z"/>
+    </group>
+
+</vector>

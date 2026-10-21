@@ -1,0 +1,3 @@
+/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/.cxx/Debug/6v6r5e5k/arm64-v8a/CMakeFiles/rtmp-jni.dir
+/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/.cxx/Debug/6v6r5e5k/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/.cxx/Debug/6v6r5e5k/arm64-v8a/CMakeFiles/rebuild_cache.dir

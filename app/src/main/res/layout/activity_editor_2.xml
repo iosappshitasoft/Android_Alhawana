@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    android:tag="layout"
+    android:weightSum="1">
+
+
+    <LinearLayout
+        android:id="@+id/editor_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack"
+        android:orientation="vertical"
+        android:tag="layout"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/zoom_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="10dp"
+                android:text=" -"
+                android:textColor="@color/colorWhite"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/zoom_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="end"
+                android:padding="10dp"
+                android:text=" +"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp" />
+
+
+        </RelativeLayout>
+
+        <FrameLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="0.4">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlack" />
+
+            <com.app.audiotrimmer.soundeditor.WaveformView
+                android:id="@+id/waveform"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/Editor_Waveform_Marginleft"
+                android:layout_marginEnd="@dimen/Editor_Waveform_MarginRight"
+                android:layout_marginBottom="@dimen/Editor_Waveform_MarginBottom"
+                android:background="@color/colorBlack" />
+
+            <com.app.audiotrimmer.soundeditor.MarkerView
+                android:id="@+id/startmarker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:nextFocusDown="@+id/endmarker" />
+
+            <com.app.audiotrimmer.soundeditor.MarkerView
+                android:id="@+id/endmarker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:nextFocusDown="@+id/endmarker"
+                app:setRotation="180" />
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/Editor_song_title"
+                style="@style/TextWhiteRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:layout_weight="0.23"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingBottom="10dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_large_medium" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.40"
+                android:baselineAligned="true"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:minWidth="@dimen/editor_start_container_minWidth">
+
+
+                    <TextView
+                        android:id="@+id/starttext"
+                        style="@style/TextWhiteRegular"
+                        android:layout_width="@dimen/Editor_StartText_width"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:inputType="number|numberDecimal"
+                        android:textSize="@dimen/text_medium" />
+
+                    <!--<com.app.audiotrimmer.views.CustomTextView
+                        style="@style/TextWhiteRegular"
+                        android:id="@+id/mark_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/starttext"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="center"
+                        android:textSize="14sp" />-->
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <com.app.audiotrimmer.views.PlayPauseView
+                        android:id="@+id/Play_Pause_View"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:clickable="true"
+                        android:contentDescription="@null"
+                        android:focusable="true"
+                        android:scaleType="center"
+                        app:PlayPauseArrow_color="@color/colorPrimary"
+                        app:PlayPauseView_distance="-1dp"
+                        app:PlayPauseView_height="16sp"
+                        app:PlayPauseView_width="8sp"
+                        app:backgroundcolor="@color/editor_playpause_background" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:minWidth="@dimen/Editor_container_End_MinWidth">
+
+
+                    <TextView
+                        android:id="@+id/endtext"
+                        style="@style/TextWhiteRegular"
+                        android:layout_width="@dimen/editor_textview_shape_width"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:inputType="number|numberDecimal"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_medium" />
+
+                    <!--<TextView
+                        android:id="@+id/mark_end"
+                        style="@style/TextWhiteRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/endtext"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_medium" />-->
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/selectedSoundDuration"
+                style="@style/TextWhiteBold"
+                android:layout_width="@dimen/editor_textview_shape_width"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_medium_large" />
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:visibility="visible">
+
+
+            <!--<Button
+                android:id="@+id/Button_Done"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Save"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_13sp" />-->
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Button_Done"
+                style="@style/TextWhiteRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:letterSpacing="0"
+                android:minHeight="60dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/upload_sounds"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_normal"
+                android:visibility="visible"
+                app:cornerRadius="10dp"
+                app:rippleColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <!--<com.app.audiotrimmer.RevealFrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/options_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/editor_options_background"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:id="@+id/image_Cancel"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/cancel"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/Editor_Ringtone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="ltr"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_editor_ringtone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/menu_set_as_ringtone"
+                        android:textColor="@color/edior_options_text_color"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/Editor_Alarm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layoutDirection="ltr"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_editor_alarm" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/menu_set_as_alarm"
+                        android:textColor="@color/edior_options_text_color"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/Editor_Notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layoutDirection="ltr"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_editor_notificaiton" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/menu_set_as_notification"
+                        android:textColor="@color/edior_options_text_color"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/Editor_Save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layoutDirection="ltr"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_editor_save" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/menu_save_in_internal_storage"
+                        android:textColor="@color/edior_options_text_color"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/Editor_Contacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layoutDirection="ltr"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_editor_contact" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/context_menu_contact"
+                        android:textColor="@color/edior_options_text_color"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </com.app.audiotrimmer.RevealFrameLayout>-->
+
+
+</RelativeLayout>
+

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardMainLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:focusable="true"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp"
+        app:rippleColor="@color/searchRippleGrey">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/thumbnailLay"
+                android:layout_width="70dp"
+                android:layout_height="80dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/loginscreen_bg"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerRadius" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/playPause"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/video_play" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/selectLay"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/trackTitle"
+                    style="@style/TextBlackRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/favourites"
+                    android:textSize="@dimen/text_small" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/trackDuration"
+                    style="@style/TextSecondaryRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/trackTitle"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/search_for_users"
+                    android:textSize="@dimen/text_tiny" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

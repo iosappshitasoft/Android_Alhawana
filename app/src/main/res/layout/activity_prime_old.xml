@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/activity_toolbar_black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDivider" />
+
+        <com.app.external.LoopViewPager
+            android:id="@+id/looper_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:foregroundGravity="center"
+            android:layoutDirection="locale"
+            android:overScrollMode="never" />
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/pagerIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:ci_drawable="@drawable/primary_circle_bg"
+            app:ci_drawable_unselected="@drawable/circle_secondary_bg" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_prime_pack" />
+
+        <Button
+            android:id="@+id/btnSubscribe"
+            style="@style/ButtonPrimaryLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="70dp"
+            android:paddingEnd="70dp"
+            android:text="@string/subscribe"
+            android:textSize="@dimen/text_medium"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <!--<androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+             android:layout_height="20dp"/>-->
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_ad" />
+
+</RelativeLayout>

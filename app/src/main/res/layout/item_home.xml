@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="5dp"
+    android:layout_margin="7dp"
+    app:cardCornerRadius="5dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/parentLay"
+        android:background="@color/colorTransparent"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/no_video" />
+
+        <ImageView
+            android:id="@+id/imageThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_square_semi_transparent"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/iconView"
+                android:layout_width="15dp"
+                android:layout_marginStart="5dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/views" />
+
+            <TextView
+                android:id="@+id/txtViewCount"
+                style="@style/TextWhiteLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:maxLines="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="5dp"
+                android:text="count"
+                android:textSize="@dimen/text_small" />
+        </LinearLayout>
+
+            <TextView
+                style="@style/TextWhiteLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/live_bg"
+                android:maxWidth="70dp"
+                android:id="@+id/txtLive"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:maxLines="1"
+                android:text="@string/live"
+                android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/txtDuration"
+            style="@style/TextWhiteLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:maxLines="1"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/TextWhiteRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtUserName"
+            android:layout_marginStart="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="title"
+            android:textSize="@dimen/text_medium" />
+
+        <TextView
+            android:id="@+id/txtUserName"
+            style="@style/TextWhiteLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:maxLines="1"
+            android:text="username"
+            android:textSize="@dimen/text_small" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

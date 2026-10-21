@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:id="@+id/ll_setting_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="14dp">
+
+        <FrameLayout
+            android:id="@+id/fl_icon_container"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_category_icon_grey">
+            
+            <ImageView
+                android:id="@+id/iv_setting_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                app:tint="#FFFFFF"
+                tools:src="@drawable/ic_settings" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_setting_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="Allow Receiving Reservation" />
+
+        <TextView
+            android:id="@+id/tv_setting_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textColor="#99FFFFFF"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:text="Everyone"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_chevron"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/arrow_right"
+            android:visibility="gone"
+            app:tint="#99FFFFFF"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:trackTint="@color/sel_switch_track_purple"
+            app:thumbTint="@color/sel_switch_thumb"
+            tools:visibility="visible"
+            tools:checked="true" />
+            
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="46dp"
+        android:background="#0DFFFFFF" />
+
+</LinearLayout>

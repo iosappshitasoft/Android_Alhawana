@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:fitsSystemWindows="true">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/welcome_bg" />
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorVideoOpacity"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/skipBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:drawableRight="@drawable/arrow"
+        android:padding="25dp"
+        android:text="@string/Skip"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="22dp"
+            android:paddingEnd="22dp">
+
+            <!-- Logo Image -->
+            <ImageView
+                android:id="@+id/iconAppLogo"
+                android:layout_width="120.98dp"
+                android:layout_height="126.79dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="150dp"
+                android:src="@drawable/welcome_icon" />
+
+            <!-- Content Block -->
+            <LinearLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iconAppLogo"
+                android:layout_marginTop="40dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <!-- Title -->
+                <TextView
+                    style="@style/TextWhiteBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:lineSpacingExtra="10dp"
+                    android:lines="2"
+                    android:text="@string/snap_and_share"
+                    android:textSize="@dimen/text_header" />
+
+                <!-- Login with Mobile Button -->
+
+                <!-- Google Login Button -->
+                <LinearLayout
+                    android:id="@+id/btnMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/loginbtn_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_semibold"
+                        android:gravity="center"
+                        android:text="@string/login_with_mobile"
+                        android:textColor="@color/colorBgBlack"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <!--                <com.google.android.material.button.MaterialButton-->
+                <!--                    android:id="@+id/gpTxt"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="20dp"-->
+                <!--                    android:layout_marginBottom="5dp"-->
+                <!--                    android:fontFamily="@font/outfit_medium"                   -->
+                <!--                    android:text="@string/googleplus"-->
+                <!--                    android:textAllCaps="false"-->
+                <!--                    android:textColor="@color/colorWhite"-->
+                <!--                    android:textSize="@dimen/text_normal"-->
+                <!--                    android:visibility="visible"-->
+                <!--                    app:cornerRadius="5dp"-->
+                <!--                    android:padding="20dp"-->
+                <!--                    app:rippleColor="@color/colorWhite"-->
+                <!--                    app:strokeColor="@color/colorWhite" />-->
+                <LinearLayout
+                    android:id="@+id/gpTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/bg_border_white"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/outfit_semibold"
+                        android:gravity="center"
+                        android:text="@string/googleplus"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/mcheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorWhite"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:shadowColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/txtTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:padding="2dp"
+            android:fontFamily="@font/font_regular"
+            android:text="@string/terms_and_conditions_des"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/CircularProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>
+

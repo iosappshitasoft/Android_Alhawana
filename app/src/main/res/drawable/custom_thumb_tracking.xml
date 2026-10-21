@@ -1,0 +1,31 @@
+<!-- res/drawable/custom_thumb.xml -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetTop="2dp"
+    android:insetBottom="2dp">
+
+    <shape android:shape="rectangle">
+        <size
+            android:width="8dp"
+            android:height="8dp"/> <!-- real size -->
+        <corners android:radius="2dp"/>
+        <solid android:color="@color/colorWhite"/>
+    </shape>
+
+</inset>
+<!--
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="rectangle">
+            <size
+                android:width="8dp"
+                android:height="12dp"
+                />
+            <corners
+                android:radius="2dp"
+                />
+            <solid
+                android:color="@color/colorWhite"/>
+        </shape>
+    </item>
+</layer-list>-->

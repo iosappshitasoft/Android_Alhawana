@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/Users/apple/AndroidStudioProjects/android_alhawanajd/gpuimagefilter/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/apple/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/apple/AndroidStudioProjects/android_alhawanajd/gpuimagefilter/.cxx/Debug/7152123g/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/apple/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/apple/AndroidStudioProjects/android_alhawanajd/gpuimagefilter/.cxx/Debug/7152123g/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "yuv-decoder::@6890427a1f51a3e7e1df": {
+      "artifactName": "yuv-decoder",
+      "abi": "x86_64",
+      "output": "/Users/apple/AndroidStudioProjects/android_alhawanajd/gpuimagefilter/build/intermediates/cxx/Debug/7152123g/obj/x86_64/libyuv-decoder.so",
+      "runtimeFiles": []
+    }
+  }
+}

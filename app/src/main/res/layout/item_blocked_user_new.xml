@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_launcher"
+        app:riv_border_width="0dp"
+        android:scaleType="centerCrop"
+        app:riv_oval="true"
+        android:id="@+id/profileImage" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="User Name"
+        android:textSize="13sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAlignment="viewStart"
+        style="@style/TextWhiteRegular"
+        android:textColor="@color/white"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnUnblock"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="@string/unblock"
+        android:textAllCaps="false"
+        style="@style/TextWhiteRegular"
+        android:textSize="10dp"
+        android:background="@drawable/bg_primary_curved_"/>
+
+</LinearLayout>

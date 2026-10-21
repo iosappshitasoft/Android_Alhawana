@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/lay_bottom_details"
+        android:visibility="gone"
+        android:layout_margin="5dp"
+        android:padding="3dp">
+        <TextView
+            android:id="@+id/roomRequestTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:drawableTop="@drawable/host"
+            android:drawablePadding="2dp"
+            android:scaleType="fitXY"
+            android:text="@string/txt_plushost"
+            android:textSize="11sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/host"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:drawableTop="@drawable/host"
+            android:drawablePadding="2dp"
+            android:scaleType="fitXY"
+            android:text="@string/txt_plushost"
+            android:textSize="11sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Match"
+            android:id="@+id/startPkButton"
+            android:drawableTop="@drawable/pk1"
+            android:textSize="11sp"
+            android:drawablePadding="2dp"
+            android:visibility="gone"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:scaleType="fitXY"/>
+
+        <!-- chobi flow for viewers list from host side    <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:drawableTop="@drawable/guest"
+                 android:textSize="11sp"
+                 android:drawablePadding="2dp"
+                 android:scaleType="fitXY"
+                 android:text="@string/txt_plusguest"
+                 android:textColor="@color/white"
+                 android:background="?selectableItemBackgroundBorderless"
+                 android:layout_gravity="center"
+                 android:layout_marginEnd="5dp"
+                 android:id="@+id/guest"/>-->
+        <LinearLayout
+            android:id="@+id/messageLay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center"
+            android:layout_toStartOf="@+id/attachLay"
+            android:layout_weight="1"
+            android:background="@drawable/mls_curved_white"
+            android:backgroundTint="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/edtMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_toStartOf="@+id/btnSend"
+                android:layout_weight="1"
+                android:alpha="0.7"
+                android:background="@null"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:hint="@string/txt_add_comment"
+                android:inputType="textCapSentences"
+                android:isScrollContainer="true"
+                android:padding="8dp"
+                android:textColorHint="#FFFFFF"
+                android:textSize="12dp"
+                style="@style/TextWhiteLight"/>
+
+
+            <RelativeLayout
+                android:id="@+id/sendCommentLay"
+                android:layout_width="0dp"
+                android:elevation="1dp"
+                android:layout_marginBottom="1dp"
+                android:padding="1dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_gravity="center">
+
+
+                <TextView
+                    android:id="@+id/addComment"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="12dp"
+                    style="@style/TextWhiteLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/txt_add_comment"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="10dp"
+                    android:gravity="center"
+                    android:textAlignment="textStart" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/handsJoinLay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <!--<ImageView
+                    android:id="@+id/handView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:padding="4dp"
+                    android:src="@drawable/mls_hand"
+                    android:tint="@color/primarytext" />-->
+
+                <TextView
+                    android:id="@+id/handsJoinLayhandsJoinLay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp"
+                    android:text="Join"
+                    android:visibility="gone"
+                    android:textColor="@color/primarytext"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/btnSend"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:src="@drawable/sent"
+                android:tint="@color/white"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/btnGift"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="3dp"
+                android:src="@drawable/gift" />
+
+
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/guest"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="3dp"
+                android:src="@drawable/mls_hand"
+                android:tint="@color/white"/>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/relative_hand">
+
+          <!--  <com.app.Zego.components.cohost.CoHostButton
+                    android:id="@+id/handView"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_centerHorizontal="true"
+                    android:padding="4dp"
+                    android:tint="@color/white"
+                    android:background="@android:color/transparent" />
+-->
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_multilive"
+                    android:textSize="11sp"
+                    android:drawablePadding="2dp"
+                    android:id="@+id/mlsTxt"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/btnHeart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="3dp"
+                android:visibility="gone"
+                android:tint="@color/white"
+                android:src="@drawable/heart" />
+
+            <ImageView
+                android:id="@+id/more"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="3dp"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                android:src="@drawable/new_more"
+                />
+
+        </LinearLayout>
+
+        <!-- chobi flow  -->
+
+<!--        <RelativeLayout-->
+<!--               android:layout_width="wrap_content"-->
+<!--               android:layout_marginLeft="5dp"-->
+<!--               android:layout_height="wrap_content">-->
+
+<!--               <com.app.numediatech.Pk.components.cohost.CoHostButton-->
+<!--                   android:id="@+id/handView"-->
+<!--                   android:layout_width="30dp"-->
+<!--                   android:layout_height="30dp"-->
+<!--                   android:layout_centerHorizontal="true"-->
+<!--                   android:layout_marginStart="5dp"-->
+<!--                   android:padding="4dp"-->
+<!--                   android:background="@android:color/transparent" />-->
+
+<!--               <TextView-->
+<!--                   android:layout_width="wrap_content"-->
+<!--                   android:layout_height="wrap_content"-->
+<!--                   android:text="@string/txt_multilive"-->
+<!--                   android:textSize="11sp"-->
+<!--                   android:drawablePadding="2dp"-->
+<!--                   android:id="@+id/mlsTxt"-->
+<!--                   android:textColor="@color/white"-->
+<!--                   android:layout_below="@id/handView"/>-->
+
+<!--           </RelativeLayout>-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp">
+
+            <ImageButton
+                android:id="@+id/handViewIB"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/multi_live"
+                />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/requestPkButton"
+                android:src="@drawable/add_friend"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                android:backgroundTint="@color/colorPrimary"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text=""
+                android:textColor="@color/white"
+                android:id="@+id/pkButton"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/newtab_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="2dp"
+        android:visibility="visible">
+        <ImageView
+            android:id="@+id/newcomment_Lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:src="@drawable/new_more"
+            android:padding="12dp"
+            android:layout_weight="1"
+            android:tint="@color/colorWhite"/>
+        <ImageView
+            android:id="@+id/newViewers_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:padding="12dp"
+            android:src="@drawable/new_friend"
+            android:layout_weight="1"
+            android:tint="@color/colorWhite"/>
+        <ImageView
+            android:id="@+id/newShare_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:src="@drawable/new_share"
+            android:padding="12dp"
+            android:layout_weight="1"
+            android:tint="@color/colorWhite"/>
+        <ImageView
+            android:id="@+id/img_close__"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:src="@drawable/new_power"
+            android:padding="12dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:tint="@color/colorWhite"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/more_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorBlack"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/internalShare"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorBlack"
+            android:padding="12dp"
+            android:src="@drawable/new_friendshare"
+            android:tint="@color/colorWhite"></ImageView>
+        <ImageView
+            android:id="@+id/externalShare"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorBlack"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/new_share"
+            android:padding="12dp"
+
+            android:tint="@color/colorWhite"></ImageView>
+        <ImageView
+            android:id="@+id/userClose"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/colorBlack"
+            android:src="@drawable/new_power"
+            android:padding="12dp"
+            android:tint="@color/colorWhite">
+
+        </ImageView>
+    </LinearLayout>
+</LinearLayout>

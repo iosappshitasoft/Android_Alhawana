@@ -1,0 +1,61 @@
+[versions]
+jdk = "17" # min for android
+checkstyle = "8.45.1"
+kotlin = "2.0.21"
+ktlint = "1.0.1"
+sdk-min = "14"
+sdk-target = "36"
+android-plugin = "8.1.4"
+androidx = "1.6.0"
+androidx-test = "1.5.0"
+lifecycle-runtime-ktx = "2.10.0"
+activity-compose = "1.12.0"
+kotlin-version = "2.0.21"
+compose-bom = "2024.09.00"
+activity = "1.12.1"
+constraintlayout = "2.2.1"
+
+[plugins]
+android-application = { id = "com.android.library", version.ref = "android-plugin" }
+android-library = { id = "com.android.library", version.ref = "android-plugin" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "kotlin" }
+maven-publish = "com.vanniktech.maven.publish.base:0.25.3"
+git-publish = "org.ajoberstar.git-publish:4.2.0"
+pages = "com.hendraanggrian.pages:0.1"
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin-version" }
+
+[libraries]
+# lint
+rulebook-checkstyle = "com.hendraanggrian.rulebook:rulebook-checkstyle:0.4"
+# main
+kotlinx-coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3"
+material = { module = "com.google.android.material:material", version.ref = "androidx" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx" }
+androidx-multidex = "androidx.multidex:multidex:2.0.1"
+process-phoenix = "com.jakewharton:process-phoenix:2.1.2"
+picasso = "com.squareup.picasso:picasso:2.8"
+# test
+androidx-test-core = { module = "androidx.test:core", version.ref = "androidx-test" }
+androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidx-test" }
+androidx-test-junit = "androidx.test.ext:junit:1.1.5"
+robolectric = "org.robolectric:robolectric:4.10.3"
+truth = "com.google.truth:truth:1.1.5"
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+[bundles]
+androidx-test = [
+  "androidx-test-core", "androidx-test-runner", "androidx-test-junit",
+  "robolectric", "truth"
+]

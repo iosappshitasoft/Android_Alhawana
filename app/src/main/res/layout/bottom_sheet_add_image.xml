@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@color/primary_background_color">
+
+    <TextView
+        android:id="@+id/actionGallery"
+        android:layout_width="0dp"
+        android:layout_height="78dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_bottom_chip"
+        android:gravity="center"
+        android:padding="12dp"
+        android:drawableTop="@android:drawable/ic_menu_gallery"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/colorWhite"
+        android:text="@string/gallery"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp" />
+
+    <Space
+        android:layout_width="12dp"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/actionCamera"
+        android:layout_width="0dp"
+        android:layout_height="78dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_bottom_chip"
+        android:gravity="center"
+        android:padding="12dp"
+        android:drawableTop="@android:drawable/ic_menu_camera"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/colorWhite"
+        android:text="@string/camera_photo"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp" />
+
+    <Space
+        android:layout_width="12dp"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/actionCameraVideo"
+        android:layout_width="0dp"
+        android:layout_height="78dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_bottom_chip"
+        android:gravity="center"
+        android:padding="12dp"
+        android:drawableTop="@android:drawable/ic_media_play"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/colorWhite"
+        android:text="@string/camera_video"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp" />
+
+    <Space
+        android:layout_width="12dp"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/actionVideo"
+        android:layout_width="0dp"
+        android:layout_height="78dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_bottom_chip"
+        android:gravity="center"
+        android:padding="12dp"
+        android:drawableTop="@android:drawable/ic_media_play"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/colorWhite"
+        android:text="@string/gallery_video"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp" />
+
+</LinearLayout>
+

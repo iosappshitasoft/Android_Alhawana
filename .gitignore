@@ -1,0 +1,12 @@
+.gradle/
+*/build
+build/
+*/build/
+*.apk
+app/release/
+app/debug/
+*.apk
+app/debug/
+app/release/
+build/
+.gradle/

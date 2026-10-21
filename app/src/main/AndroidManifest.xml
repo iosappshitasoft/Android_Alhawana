@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.alhawanajd" >
+
+    <uses-sdk tools:overrideLibrary="com.arthenica.mobileffmpeg" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PICK" />
+
+            <data android:mimeType="image/jpeg" />
+        </intent>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.fingerprint"
+        android:required="false" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!--
+ Required only if your app needs to access audio files
+         that other apps created.
+    -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="TIRAMISU" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:extractNativeLibs="true"
+        android:fullBackupContent="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/app_icon_new"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:supportsRtl, android:allowBackup"
+        tools:targetApi="tiramisu" >
+        <activity
+            android:name="com.app.qrpage.QrCode"
+            android:exported="false" />
+        <activity
+            android:name="com.app.qrpage.QrScanActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+        <activity
+            android:name="com.app.newlib.ComposeChangeScreen"
+            android:exported="false"
+            android:label="@string/title_activity_photoedit"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ChatFragment"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+
+        <activity
+            android:name="com.app.camera.CameraLiveChooserActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+
+        <activity
+            android:name="com.app.camera.audioimage.ImageAndAudioMixerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+
+        <activity
+            android:name="com.app.camera.textpost.TextPostActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+
+        <activity
+            android:name=".ActGifVideoEditor"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+
+
+
+        <activity
+            android:name=".profile.FavouritesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+        <activity
+            android:name=".SingleVideoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="stateHidden" />
+        <!--
+android:exported="false"
+        android:screenOrientation="portrait"
+        android:theme="@style/SliderThemeBlack"
+        android:windowSoftInputMode="stateHidden"
+        -->
+        <activity
+            android:name=".MultipleVideoActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeThemeGal1"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+        <activity
+            android:name=".Video.DynamicPrivacyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PlayerTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Video.VideoPreviewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity
+            android:name="com.app.audiotrimmer.ActivityEditor"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/TrimmerTheme" />
+        <activity
+            android:name=".Video.PostVideoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlackNew"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".Video.UploadSoundActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".search.AllCountriesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UsersListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true" >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="alhawanajd.com"
+                    android:pathPrefix="/open"
+                    android:scheme="https" />
+
+                <!-- Production livestream -->
+                <data
+                    android:host="alhawanajd.com"
+                    android:pathPrefix="/sharelivestream"
+                    android:scheme="https" />
+
+                <!-- Dev livestream -->
+                <data
+                    android:host="dev.alhawanajd.com"
+                    android:pathPrefix="/sharelivestream"
+                    android:scheme="https" />
+                <data
+                    android:host="console.alhawanajd.com"
+                    android:pathPrefix="/sharelivestream"
+                    android:scheme="https" />
+                <!-- Add shareprofile for dev -->
+                <data
+                    android:host="dev.alhawanajd.com"
+                    android:pathPrefix="/shareprofile"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="alhawanajd" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.app.helper.ShareBroadcastReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.INPUT_METHOD_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".BaseFragmentActivity"
+            android:exported="true" />
+        <!--
+  <activity
+            android:name=".MainActivity"
+            android:theme="@style/HomeThemeNew"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="adjustNothing|stateHidden" />
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeThemeGal1"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+        <!--
+  <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeThemeGal1"
+            android:windowSoftInputMode="stateHidden|adjustNothing" >
+            &lt;!&ndash; Handle shared text &ndash;&gt;
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+
+            &lt;!&ndash; Handle shared images &ndash;&gt;
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+
+            &lt;!&ndash; Handle shared videos &ndash;&gt;
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+
+            &lt;!&ndash; (Optional) Handle multiple shared files &ndash;&gt;
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+        </activity>
+        -->
+        <!--
+ <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.TransparentStatusBar" />
+        -->
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeWhite"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".EarnGemsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".CameraActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity
+            android:name=".Video.DuetRecordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+        <!--
+    <activity
+            android:name="com.app.alhawanajd.CameraActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+        </activity>
+        -->
+        <activity
+            android:name=".HelpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:theme="@style/SliderThemeBlack" />
+        <activity
+            android:name=".ConvertGiftActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+        <activity
+            android:name=".LocationFilterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+        <activity android:name=".GemsStoreActivity" />
+        <activity
+            android:name=".PrimeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+        <activity
+            android:name=".PrimeActivityOld"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+        <activity
+            android:name=".VideoCallActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+        <activity
+            android:name="com.app.Zego.MutualListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+        <activity
+            android:name=".PrivacyActivity"
+            android:exported="false"
+            android:theme="@style/SliderThemeBlack" />
+        <activity
+            android:name=".AccountPrivacy"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+        <activity
+            android:name=".GeneralSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" /> <!-- LoginTheme  HomeThemeGal1 -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginTheme" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" /> <!-- android:windowSoftInputMode="adjustPan|stateHidden" -->
+        <activity
+            android:name=".NewEditProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" /> <!-- android:windowSoftInputMode="adjustPan|stateHidden" -->
+        <activity
+            android:name=".EditFieldActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" /> <!-- android:windowSoftInputMode="adjustPan|stateHidden" -->
+        <activity
+            android:name=".profile.OthersProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".profile.MyProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".FollowersActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack" />
+        <activity
+            android:name=".ImageViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SingleImageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".BlockedUsersActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".LanguageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".LockScreenActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".search.SearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".VideoListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".MusicListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="stateHidden" />
+        <!--
+<activity
+            android:name="com.app.external.video_trimmer.ui.ActVideoTrimmer"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/VideoTrimmerTheme" >
+        </activity>
+        -->
+        <!--
+ <activity
+            android:name="com.app.external.video_trimmer.ui.ActVideoTrimmer"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/VideoTrimmerTheme" >
+
+            &lt;!&ndash; Intent filter to receive videos shared from other apps &ndash;&gt;
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+
+        </activity>
+        -->
+        <activity
+            android:name="com.app.external.video_trimmer.ui.ActVideoTrimmer"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/VideoTrimmerTheme" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+            -->
+
+
+            <!--
+                <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+            -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- Normal video -->
+                <data android:mimeType="video/*" />
+
+                <!-- Generic types used by Android 12/13+ -->
+                <data android:mimeType="application/octet-stream" />
+                <data android:mimeType="application/mp4" />
+
+                <!-- Other common video formats -->
+                <data android:mimeType="video/mp4" />
+                <data android:mimeType="video/quicktime" />
+                <data android:mimeType="video/x-matroska" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="video/*" />
+                <data android:mimeType="application/octet-stream" />
+                <data android:mimeType="application/mp4" />
+                <data android:mimeType="video/mp4" />
+                <data android:mimeType="video/quicktime" />
+                <data android:mimeType="video/x-matroska" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.app.addon.LanguageTranslationAct"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SliderThemeBlack"
+            android:windowSoftInputMode="stateHidden" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/google_ad_id" />
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+        <!--
+<meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/ad_mob_id" />
+        -->
+        <provider
+            android:name=".provider.GenericFileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <provider
+            android:name=".provider.GenericFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name="com.app.helper.MyFirebaseMessagingService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+<service
+            android:name="com.hitasoft.appcom.app.hiliteapp.helper.OnesignalNotificationService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.onesignal.NotificationServiceExtension" />
+            </intent-filter>
+        </service>
+        -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.app.addon.livestream.StreamListActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" >
+
+            <!--
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.app.addon.livestream.broadcaster.liveVideoBroadcaster.PublishActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeThemePublish" />
+        <activity
+            android:name="com.app.Zego.PublishActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeThemePublish" />
+        <activity
+            android:name="com.app.Zego.PublishActivityNew"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeThemePublish" />
+        <activity
+            android:name="com.app.addon.livestream.liveVideoPlayer.SubscribeActivity"
+            android:exported="false"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/PlayerTheme" />
+        <activity
+            android:name="com.app.addon.livestream.PlayerActivity"
+            android:exported="false"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/PlayerTheme" />
+        <activity
+            android:name="com.app.addon.livestream.liveVideoPlayer.UserVideoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDark" />
+        <activity
+            android:name="com.app.Zego.activity.StartLiveActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeThemePublish1" />
+        <activity
+            android:name="com.app.Zego.activity.PkLiveStreamingActivity"
+            android:exported="false"
+            android:keepScreenOn="true"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.app.Zego.pkbattle.activity.SwipeLiveActivity"
+            android:exported="false"
+            android:keepScreenOn="true"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ActivityLoginMobile"
+            android:exported="false" />
+        <activity
+            android:name=".SearchFragmentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeThemeGal1" />
+        <activity
+            android:name=".search.SearchUserActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeThemeGal1" />
+        <activity
+            android:name=".search.ActivityFindFriends"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeThemeGal1" />
+        <activity
+            android:name=".FirebaseEnglishActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

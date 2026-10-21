@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="top"
+    android:elevation="5dp"
+    android:orientation="vertical"
+    android:background="@drawable/bottom_sheet_black_bg_nostroke"
+    android:clipToOutline="true"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btnSelect"
+        app:layout_constraintTop_toTopOf="parent"
+
+        tools:listitem="@layout/item_audio_category">
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/bottom_sheet_close" />
+
+        <com.app.helper.LinkEllipseTextView
+            android:id="@+id/txtTitle"
+            style="@style/TextWhiteRegular"
+            android:fontFamily="@font/outfit_medium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="18sp"
+
+
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorPlaceHolder"
+            android:gravity="start"
+            android:text="@string/audio_category"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginHorizontal="16sp"
+            android:background="@color/colorDivider1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAudioCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dp"
+            android:overScrollMode="never"
+            android:layout_marginBottom="30dp"
+            android:layout_marginHorizontal="18sp"
+            tools:listitem="@layout/item_audio_category" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSelect"
+        style="@style/TextWhiteRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0"
+        android:text="@string/report_user"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

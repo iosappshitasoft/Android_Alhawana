@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemLay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    android:padding="5dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/userImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher"
+        android:visibility="gone"
+        app:riv_corner_radius="65dp"
+        app:riv_mutate_background="true" />
+
+    <LinearLayout
+        android:id="@+id/textLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_toEndOf="@+id/userImage"
+        android:background="@drawable/chat_receive_bg"
+        android:gravity="center_vertical"
+        android:minWidth="100dp"
+        android:orientation="vertical"
+        android:textDirection="locale"
+        android:layoutDirection="locale">
+
+        <TextView
+            android:id="@+id/txtMessage"
+            style="@style/TextBlackLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:clickable="true"
+            android:lineSpacingExtra="5dp"
+            android:paddingStart="16dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="14dp"
+            android:text="Ah okay, thanks for your information"
+            android:textColor="@color/colorPlaceHolder"
+            android:textColorLink="@color/colorPrimary"
+            android:textSize="@dimen/text_medium"
+            android:textDirection="locale"
+            android:layoutDirection="locale" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtChatTime"
+        style="@style/TextSecondaryRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5:09 Pm"
+        android:textColor="#A8A8A8"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_below="@+id/textLay"
+        android:textSize="@dimen/text_small"
+        android:textDirection="locale"
+        android:layoutDirection="locale" />
+</RelativeLayout>

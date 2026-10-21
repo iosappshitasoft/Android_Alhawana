@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:background="@drawable/bottom_sheet_black_bg_nostroke"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/img_bottomsheet_rectangle"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+<ImageView
+    android:layout_width="25dp"
+    android:layout_height="25dp"
+
+    android:visibility="gone"
+    android:src="@drawable/search"
+    android:layout_gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/commentCount"
+            android:textFontWeight="600"
+            style="@style/OutfitRegularForHeadingWhiteSize18"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_weight="2"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/send_to" />
+
+        <ImageView
+            android:id="@+id/cancelBtn"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:src="@drawable/cancel"
+            android:layout_gravity="center_vertical"/>
+    <!--    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorIconTint"
+            android:layout_marginBottom="16dp" />-->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/share_item"
+                tools:itemCount="6"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorDivider"
+            android:layout_marginBottom="16dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/appsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/share_item"
+                tools:itemCount="6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/infoList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/share_item"
+                tools:itemCount="6"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

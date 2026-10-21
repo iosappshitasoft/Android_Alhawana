@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/.cxx/Debug/6v6r5e5k/arm64-v8a",
+  "command": "/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DNO_CRYPTO -Drtmp_jni_EXPORTS -I\"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp\" -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -g  -fno-limit-debug-info -fPIC -o CMakeFiles/rtmp-jni.dir/src/main/cpp/rtmpmuxer.c.o -c \"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/rtmpmuxer.c\"",
+  "file": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/rtmpmuxer.c"
+},
+{
+  "directory": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/.cxx/Debug/6v6r5e5k/arm64-v8a",
+  "command": "/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DNO_CRYPTO -Drtmp_jni_EXPORTS -I\"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp\" -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -g  -fno-limit-debug-info -fPIC -o CMakeFiles/rtmp-jni.dir/src/main/cpp/librtmp-jni.c.o -c \"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp-jni.c\"",
+  "file": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp-jni.c"
+},
+{
+  "directory": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/.cxx/Debug/6v6r5e5k/arm64-v8a",
+  "command": "/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DNO_CRYPTO -Drtmp_jni_EXPORTS -I\"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp\" -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -g  -fno-limit-debug-info -fPIC -o CMakeFiles/rtmp-jni.dir/src/main/cpp/librtmp/amf.c.o -c \"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/amf.c\"",
+  "file": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/amf.c"
+},
+{
+  "directory": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/.cxx/Debug/6v6r5e5k/arm64-v8a",
+  "command": "/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DNO_CRYPTO -Drtmp_jni_EXPORTS -I\"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp\" -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -g  -fno-limit-debug-info -fPIC -o CMakeFiles/rtmp-jni.dir/src/main/cpp/librtmp/hashswf.c.o -c \"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/hashswf.c\"",
+  "file": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/hashswf.c"
+},
+{
+  "directory": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/.cxx/Debug/6v6r5e5k/arm64-v8a",
+  "command": "/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DNO_CRYPTO -Drtmp_jni_EXPORTS -I\"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp\" -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -g  -fno-limit-debug-info -fPIC -o CMakeFiles/rtmp-jni.dir/src/main/cpp/librtmp/log.c.o -c \"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/log.c\"",
+  "file": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/log.c"
+},
+{
+  "directory": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/.cxx/Debug/6v6r5e5k/arm64-v8a",
+  "command": "/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DNO_CRYPTO -Drtmp_jni_EXPORTS -I\"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp\" -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -g  -fno-limit-debug-info -fPIC -o CMakeFiles/rtmp-jni.dir/src/main/cpp/librtmp/parseurl.c.o -c \"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/parseurl.c\"",
+  "file": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/parseurl.c"
+},
+{
+  "directory": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/.cxx/Debug/6v6r5e5k/arm64-v8a",
+  "command": "/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DNO_CRYPTO -Drtmp_jni_EXPORTS -I\"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp\" -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -g  -fno-limit-debug-info -fPIC -o CMakeFiles/rtmp-jni.dir/src/main/cpp/librtmp/rtmp.c.o -c \"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/rtmp.c\"",
+  "file": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/rtmp.c"
+},
+{
+  "directory": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/.cxx/Debug/6v6r5e5k/arm64-v8a",
+  "command": "/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/Users/hts-mac/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DNO_CRYPTO -Drtmp_jni_EXPORTS -I\"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp\" -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -g  -fno-limit-debug-info -fPIC -o CMakeFiles/rtmp-jni.dir/src/main/cpp/flvmuxer/xiecc_rtmp.c.o -c \"/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/flvmuxer/xiecc_rtmp.c\"",
+  "file": "/Users/hts-mac/Documents/Arun projects/android_alhawanajd/rtmpclient/src/main/cpp/flvmuxer/xiecc_rtmp.c"
+}
+]

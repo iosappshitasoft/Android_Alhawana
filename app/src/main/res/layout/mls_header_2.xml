@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:id="@+id/headerLay"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+   <!-- android:background="@drawable/bg_mls_curved"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_mls_curved"
+            android:layout_gravity="center"
+            android:layout_weight="0.6">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/userProfileImageNew"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:padding="3dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher"
+                android:visibility="visible"
+                app:riv_mutate_background="true"
+                app:riv_oval="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtView_Heading_new"
+                    style="@style/TextWhiteLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="النص باللغة العربية"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="start|center_vertical"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/text_small"
+                    android:textStyle="bold" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+
+                    <ProgressBar
+                        android:id="@+id/likepBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:visibility="gone"
+                        android:progressTint="@color/colorPrimary"
+                        android:indeterminateTint="@color/colorPrimary"
+                        android:max="10"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/pBarLottie"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="25dp"
+                        android:visibility="visible"
+                        android:layout_height="25dp"
+                        app:lottie_fileName="likeanimation.json"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:id="@+id/pBarLottie"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_gravity="center"
+                          android:gravity="center"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:visibility="gone"
+                          android:id="@+id/linear_seat_host_bottom_diamond">
+
+                          <ImageView
+                              android:layout_width="20dp"
+                              android:layout_height="20dp"
+                              android:padding="3dp"
+                              android:src="@drawable/diamond"/>
+
+                          <TextView
+                              android:id="@+id/tv_diamond"
+                              android:fontFamily="@font/font_regular"
+                              android:layout_width="wrap_content"
+                              android:layout_height="20dp"
+                              android:text="0"
+                              android:layout_weight="1"
+                              android:layout_gravity="center"
+                              android:gravity="center"
+                              android:textAlignment="textStart"
+                              android:textColor="@color/white"
+                              android:textSize="@dimen/text_small" />
+                      </LinearLayout>-->
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_viewers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:scrollbars="none"
+            android:layout_weight="1"
+           android:layout_gravity="center"/>
+        <!--<LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_mls_curved_white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="3dp"
+                    android:src="@drawable/heart"
+                    android:tint="@color/colorPrimary"
+                    android:layout_marginRight="2dp"/>
+
+                <TextView
+                    android:id="@+id/textView_likecount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="10dp"
+                    android:text="0"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>-->
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="45dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:id="@+id/lay_view"
+        android:background="@drawable/mls_bg_gray">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="14dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/view"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtViewCountTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/iconView"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/rank"
+        android:background="?selectableItemBackgroundBorderless"
+        android:id="@+id/ranking"
+        android:layout_gravity="center"
+        android:layout_marginEnd="3dp"
+        android:visibility="gone"/>
+
+
+    <ImageView
+        android:id="@+id/img_close_"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="4dp"
+        android:layout_gravity="center"
+        android:src="@drawable/close_white"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"/>
+</LinearLayout>
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="45dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" >
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/userProfileImageNew"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:padding="3dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/filter_sample_image"
+        android:visibility="visible"
+        app:riv_mutate_background="true"
+        app:riv_oval="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtView_Heading_new"
+            style="@style/TextWhiteLight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingStart="0dp"
+            android:paddingEnd="10dp"
+            android:text="Lets Talk Something..."
+            android:textAlignment="textStart"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>-->

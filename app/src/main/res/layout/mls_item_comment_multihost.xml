@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemLay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    android:clipToPadding="true">
+<!--
+    android:background="@drawable/rounded_square_black_alpha"-->
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_commenter"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="65dp"
+        android:padding="7dp"
+        app:riv_mutate_background="true" />
+
+    <View
+        android:id="@+id/view_formargin"
+        android:layout_width="8dp"
+        android:layout_height="40dp"
+        android:layout_toEndOf="@+id/img_commenter"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toEndOf="@+id/view_formargin"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@drawable/blurred_card_background_1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textviewhost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Host"
+                    android:textFontWeight="500"
+                    style="@style/OutfitRegularForHeadingLiteWhiteSize12"
+                    android:visibility="gone"
+                    android:layout_marginEnd="2dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="username"
+                    android:textFontWeight="500"
+                    style="@style/OutfitRegularForHeadingLiteWhiteSize12" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtMessage"
+                style="@style/OutfitRegularForHeadingLiteWhiteSize12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="start|center_vertical"
+                android:text="message"
+                android:textAlignment="viewStart"
+                android:padding="2dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

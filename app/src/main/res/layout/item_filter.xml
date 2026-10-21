@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="60dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/filter_sample_image"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerRadius"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/filterTitle"
+        style="@style/TextWhiteRegular"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="10dp"
+        android:gravity="top|center"
+        android:singleLine="true"
+        android:text="@string/next"
+        android:textSize="@dimen/text_small" />
+
+</RelativeLayout>

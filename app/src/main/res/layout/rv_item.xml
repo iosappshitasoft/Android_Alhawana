@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@android:color/transparent"
+    android:id="@+id/view1"
+    app:cardUseCompatPadding="true">
+
+    <com.app.Zego.internal.sdk.components.express.ZEGOVideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/hostView" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/colorBlack"
+        android:id="@+id/blurLay">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:scaleType="centerCrop"
+            android:id="@+id/blur_newchange"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="70dp"
+            android:src="@drawable/ic_launcher"
+            android:visibility="gone"
+            app:riv_border_width="3dp"
+            app:riv_border_color="@color/colorBlack"
+            android:layout_height="70dp"
+            android:id="@+id/blurDP"
+            app:riv_corner_radius="40dp"
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_host"
+            android:textSize="12dp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/curved_accent"
+            android:layout_gravity="start"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:visibility="gone"
+            android:backgroundTint="@color/colorPrimary"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <com.app.Zego.internal.sdk.components.express.ToggleMicrophoneButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_marginStart="5dp"
+                android:id="@+id/toggleMic"/>
+
+            <com.app.Zego.internal.sdk.components.express.ToggleCameraButton
+                android:layout_width="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_gravity="end"
+                android:layout_height="30dp"
+                android:id="@+id/enableCamera"/>
+
+
+            <com.app.Zego.internal.sdk.components.express.SwitchCameraButton
+                android:layout_width="30dp"
+                android:layout_marginEnd="5dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:id="@+id/switchCamera"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

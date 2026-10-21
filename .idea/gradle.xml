@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/blurry" />
+            <option value="$PROJECT_DIR$/crystalrangeseekbar" />
+            <option value="$PROJECT_DIR$/filepicker" />
+            <option value="$PROJECT_DIR$/gpuimagefilter" />
+            <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/qrcodereaderview" />
+            <option value="$PROJECT_DIR$/recordview" />
+            <option value="$PROJECT_DIR$/rtmpclient" />
+            <option value="$PROJECT_DIR$/socialview" />
+            <option value="$PROJECT_DIR$/socialviewautocomplete" />
+            <option value="$PROJECT_DIR$/solutions" />
+            <option value="$PROJECT_DIR$/solutions/photo-editor" />
+            <option value="$PROJECT_DIR$/solutions/solution-template" />
+            <option value="$PROJECT_DIR$/videocache" />
+            <option value="$PROJECT_DIR$/webrtc-android-framework" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

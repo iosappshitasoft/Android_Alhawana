@@ -1,0 +1,11 @@
+/Users/apple/AndroidStudioProjects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp-jni.h
+/Users/apple/AndroidStudioProjects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/amf.h
+/Users/apple/AndroidStudioProjects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/bytes.h
+/Users/apple/AndroidStudioProjects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/dh.h
+/Users/apple/AndroidStudioProjects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/dhgroups.h
+/Users/apple/AndroidStudioProjects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/handshake.h
+/Users/apple/AndroidStudioProjects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/http.h
+/Users/apple/AndroidStudioProjects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/log.h
+/Users/apple/AndroidStudioProjects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/rtmp.h
+/Users/apple/AndroidStudioProjects/android_alhawanajd/rtmpclient/src/main/cpp/librtmp/rtmp_sys.h
+/Users/apple/AndroidStudioProjects/android_alhawanajd/rtmpclient/src/main/cpp/flvmuxer/xiecc_rtmp.h

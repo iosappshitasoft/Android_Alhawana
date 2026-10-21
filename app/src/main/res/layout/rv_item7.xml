@@ -1,0 +1,1607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="130dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!-- Left: Host -->
+        <com.google.android.material.card.MaterialCardView
+                    app:cardBackgroundColor="@android:color/transparent"
+                    android:id="@+id/cv" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" app:cardCornerRadius="0dp" app:cardUseCompatPadding="false" app:cardElevation="0dp" app:cardMaxElevation="0dp">
+
+
+                    <com.app.Zego.internal.sdk.components.express.ZEGOVideoView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/hostView"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:background="@color/colorBlack"
+                        android:id="@+id/blurLay">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:alpha="0.5"
+                            android:scaleType="centerCrop"
+                            android:id="@+id/blur_newchange"/>
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="70dp"
+                            android:src="@drawable/ic_launcher"
+                            android:layout_height="70dp"
+                            android:id="@+id/blurDP"
+                            app:riv_border_width="3dp"
+                            app:riv_border_color="@color/colorBlack"
+                            app:riv_corner_radius="40dp"
+                            android:scaleType="centerCrop"
+                            android:layout_centerInParent="true"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/text_host"
+                            android:textSize="12dp"
+                            android:textColor="@color/colorWhite"
+                            android:background="@drawable/curved_accent"
+                            android:layout_gravity="start"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/colorPrimary"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:gravity="end"
+                            android:id="@+id/layout1"
+                            android:visibility="gone"
+                            android:orientation="horizontal">
+
+                            <com.app.Zego.internal.sdk.components.express.ToggleMicrophoneButton
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="end"
+                                android:layout_marginStart="5dp"
+                                android:id="@+id/toggleMic1"/>
+
+                            <com.app.Zego.internal.sdk.components.express.ToggleCameraButton
+                                android:layout_width="30dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_gravity="end"
+                                android:layout_height="30dp"
+                                android:id="@+id/enableCamera1"/>
+
+
+                            <com.app.Zego.internal.sdk.components.express.SwitchCameraButton
+                                android:layout_width="30dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="end"
+                                android:id="@+id/switchCamera1"/>
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:visibility="invisible"/>
+
+                        <LinearLayout
+                            android:id="@+id/gemLay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="end|bottom"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:visibility="visible"
+                            android:background="@drawable/bg_mls_curved">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/userProfileImageNew"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="false"
+                                android:padding="1dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/image_logo"
+                                android:visibility="gone"
+                                app:riv_mutate_background="true"
+                                app:riv_oval="true" />
+
+                            <ImageView
+                                android:id="@+id/mic1"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginEnd="2dp"
+                                app:tint="@color/white"
+                                android:src="@drawable/ic_mic_off" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txtView_Heading_new"
+                                    style="@style/TextWhiteLight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="10dp"
+                                    android:maxLines="1"
+                                    android:text=""
+                                    android:textAlignment="textStart"
+                                    android:textSize="@dimen/text_tiny_new"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:id="@+id/linear_seat_host_bottom_diamond">
+
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:padding="3dp"
+                                        android:src="@drawable/diamond"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_diamond"
+                                        android:fontFamily="@font/font_regular"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="20dp"
+                                        android:text="0"
+                                        android:layout_weight="1"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:textAlignment="textStart"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_tiny_new" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="60dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/bg_mls_curved_white">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:padding="3dp"
+                                    android:src="@drawable/heart"
+                                    android:tint="@color/colorPrimary"
+                                    android:layout_marginRight="2dp"/>
+
+                                <TextView
+                                    android:id="@+id/textView_likecount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="10dp"
+                                    android:text="0"
+                                    android:textColor="@color/colorBlack" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_gravity="center"
+                        android:layout_width="70dp"
+                        android:src="@drawable/ic_launcher"
+                        app:riv_border_width="3dp"
+                        app:riv_border_color="@color/colorBlack"
+                        android:layout_height="70dp"
+                        android:id="@+id/userdp6"
+                        app:riv_corner_radius="40dp"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+                </com.google.android.material.card.MaterialCardView>
+
+        <!-- Right: 2 columns, 3 rows of Cohosts (total 6 cohosts) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Row 1: cv1 and cv2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+                    app:cardBackgroundColor="@android:color/transparent"
+                    android:id="@+id/cv1" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" app:cardCornerRadius="0dp" app:cardUseCompatPadding="false" app:cardElevation="0dp" app:cardMaxElevation="0dp">
+
+
+                    <com.app.Zego.internal.sdk.components.express.ZEGOVideoView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/cohostView2"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:background="@color/colorBlack"
+                        android:id="@+id/blurLay2">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:alpha="0.5"
+                            android:scaleType="centerCrop"
+                            android:id="@+id/blur2"/>
+
+                        <!--                        <com.cashgate.chobi.Zego.soundlevelandspectrum.SpeechWaveView-->
+                        <!--                            android:layout_width="150dp"-->
+                        <!--                            android:layout_height="150dp"-->
+                        <!--                            android:layout_centerInParent="true"-->
+                        <!--                            android:id="@+id/cohostSpeechView2"/>-->
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="70dp"
+                            android:src="@drawable/ic_launcher"
+                            android:visibility="gone"
+                            app:riv_border_width="3dp"
+                            app:riv_border_color="@color/colorBlack"                        android:layout_height="70dp"
+                            android:id="@+id/blurDP2"
+                            app:riv_corner_radius="40dp"
+                            android:scaleType="centerCrop"
+                            android:layout_centerInParent="true"/>
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:gravity="end"
+                        android:id="@+id/layout3"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <com.app.Zego.internal.sdk.components.express.ToggleMicrophoneButton
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="5dp"
+                            android:id="@+id/toggleMic3"/>
+
+                        <com.app.Zego.internal.sdk.components.express.ToggleCameraButton
+                            android:layout_width="30dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="end"
+                            android:layout_height="30dp"
+                            android:id="@+id/enableCamera3"/>
+
+
+                        <com.app.Zego.internal.sdk.components.express.SwitchCameraButton
+                            android:layout_width="30dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="end"
+                            android:id="@+id/switchCamera3"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="5dp">
+
+                        <ImageButton
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_clear_white_24dp"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:padding="10dp"
+                            android:layout_gravity="start|center"
+                            android:visibility="gone"/>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="end"
+                            android:id="@+id/gemLay2"
+                            android:visibility="visible"
+                            android:background="@drawable/bg_mls_curved">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/userProfileImageNew2"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="false"
+                                android:padding="1dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/image_logo"
+                                android:visibility="gone"
+                                app:riv_mutate_background="true"
+                                app:riv_oval="true" />
+
+                            <ImageView
+                                android:id="@+id/mic3"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginEnd="2dp"
+                                app:tint="@color/white"
+                                android:src="@drawable/ic_mic_off" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txtView_Heading_new2"
+                                    style="@style/TextWhiteLight"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:paddingStart="0dp"
+                                    android:maxLines="1"
+                                    android:paddingEnd="10dp"
+                                    android:text=""
+                                    android:textAlignment="textStart"
+                                    android:textSize="@dimen/text_tiny_new"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:id="@+id/linear_seat_host_bottom_diamond2">
+
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:padding="3dp"
+                                        android:src="@drawable/diamond"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_diamond2"
+                                        android:fontFamily="@font/font_regular"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="20dp"
+                                        android:text="0"
+                                        android:layout_weight="1"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:textAlignment="textStart"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_tiny_new" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="60dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/bg_mls_curved_white">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:padding="3dp"
+                                    android:src="@drawable/heart"
+                                    android:tint="@color/colorPrimary"
+                                    android:layout_marginRight="2dp"/>
+
+                                <TextView
+                                    android:id="@+id/textView_likecount2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="10dp"
+                                    android:text="0"
+                                    android:textColor="@color/colorBlack" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    app:cardBackgroundColor="@android:color/transparent"
+                    android:id="@+id/cv2" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" app:cardCornerRadius="0dp" app:cardUseCompatPadding="false" app:cardElevation="0dp" app:cardMaxElevation="0dp">
+
+
+                    <com.app.Zego.internal.sdk.components.express.ZEGOVideoView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/cohostView3"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:background="@color/colorBlack"
+                        android:id="@+id/blurLay3">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:alpha="0.5"
+                            android:scaleType="centerCrop"
+                            android:id="@+id/blur3"/>
+
+
+                        <!--                        <com.cashgate.chobi.Zego.soundlevelandspectrum.SpeechWaveView-->
+                        <!--                            android:layout_width="150dp"-->
+                        <!--                            android:layout_height="150dp"-->
+                        <!--                            android:layout_centerInParent="true"-->
+                        <!--                            android:id="@+id/cohostSpeechView3"/>-->
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="70dp"
+                            android:src="@drawable/ic_launcher"
+                            android:layout_height="70dp"
+                            android:id="@+id/blurDP3"
+                            android:visibility="gone"
+                            app:riv_border_width="3dp"
+                            app:riv_border_color="@color/colorBlack"                        app:riv_corner_radius="40dp"
+                            android:scaleType="centerCrop"
+                            android:layout_centerInParent="true"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:gravity="end"
+                        android:id="@+id/layout4"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <com.app.Zego.internal.sdk.components.express.ToggleMicrophoneButton
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="5dp"
+                            android:id="@+id/toggleMic4"/>
+
+                        <com.app.Zego.internal.sdk.components.express.ToggleCameraButton
+                            android:layout_width="30dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="end"
+                            android:layout_height="30dp"
+                            android:id="@+id/enableCamera4"/>
+
+
+                        <com.app.Zego.internal.sdk.components.express.SwitchCameraButton
+                            android:layout_width="30dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="end"
+                            android:id="@+id/switchCamera4"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="5dp">
+
+                        <ImageButton
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_clear_white_24dp"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:padding="10dp"
+                            android:layout_gravity="start|center"
+                            android:visibility="gone"/>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="end"
+                            android:id="@+id/gemLay3"
+                            android:visibility="visible"
+                            android:background="@drawable/bg_mls_curved">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/userProfileImageNew3"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="false"
+                                android:padding="1dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/image_logo"
+                                android:visibility="gone"
+                                app:riv_mutate_background="true"
+                                app:riv_oval="true" />
+
+                            <ImageView
+                                android:id="@+id/mic4"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginEnd="2dp"
+                                app:tint="@color/white"
+                                android:src="@drawable/ic_mic_off" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txtView_Heading_new3"
+                                    style="@style/TextWhiteLight"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:paddingStart="0dp"
+                                    android:maxLines="1"
+                                    android:paddingEnd="10dp"
+                                    android:text=""
+                                    android:textAlignment="textStart"
+                                    android:textSize="@dimen/text_tiny_new"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:id="@+id/linear_seat_host_bottom_diamond3">
+
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:padding="3dp"
+                                        android:src="@drawable/diamond"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_diamond3"
+                                        android:fontFamily="@font/font_regular"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="20dp"
+                                        android:text="0"
+                                        android:layout_weight="1"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:textAlignment="textStart"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_tiny_new" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="60dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/bg_mls_curved_white">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:padding="3dp"
+                                    android:src="@drawable/heart"
+                                    android:tint="@color/colorPrimary"
+                                    android:layout_marginRight="2dp"/>
+
+                                <TextView
+                                    android:id="@+id/textView_likecount3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="10dp"
+                                    android:text="0"
+                                    android:textColor="@color/colorBlack" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Row 2: cv3 and cv4 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+            app:cardBackgroundColor="@android:color/transparent"
+            android:id="@+id/cv3" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" app:cardCornerRadius="0dp" app:cardUseCompatPadding="false" app:cardElevation="0dp" app:cardMaxElevation="0dp">
+
+
+            <com.app.Zego.internal.sdk.components.express.ZEGOVideoView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cohostView4"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:visibility="gone"
+                android:background="@color/colorBlack"
+                android:id="@+id/blurLay4">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.5"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/blur4"/>
+
+                <!--                <com.cashgate.chobi.Zego.soundlevelandspectrum.SpeechWaveView-->
+                <!--                    android:layout_width="150dp"-->
+                <!--                    android:layout_height="150dp"-->
+                <!--                    android:layout_centerInParent="true"-->
+                <!--                    android:id="@+id/cohostSpeechView4"/>-->
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="70dp"
+                    android:src="@drawable/ic_launcher"
+                    android:visibility="gone"
+                    app:riv_border_width="3dp"
+                    app:riv_border_color="@color/colorBlack"                        android:layout_height="70dp"
+                    android:id="@+id/blurDP4"
+                    app:riv_corner_radius="40dp"
+                    android:scaleType="centerCrop"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="end"
+                android:id="@+id/layout5"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <com.app.Zego.internal.sdk.components.express.ToggleMicrophoneButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/toggleMic5"/>
+
+                <com.app.Zego.internal.sdk.components.express.ToggleCameraButton
+                    android:layout_width="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_gravity="end"
+                    android:layout_height="30dp"
+                    android:id="@+id/enableCamera5"/>
+
+
+                <com.app.Zego.internal.sdk.components.express.SwitchCameraButton
+                    android:layout_width="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:id="@+id/switchCamera5"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_clear_white_24dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="10dp"
+                    android:layout_gravity="start|center"
+                    android:visibility="gone"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="end"
+                    android:id="@+id/gemLay4"
+                    android:visibility="visible"
+                    android:background="@drawable/bg_mls_curved">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/userProfileImageNew4"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:padding="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image_logo"
+                        android:visibility="gone"
+                        app:riv_mutate_background="true"
+                        app:riv_oval="true" />
+
+                    <ImageView
+                        android:id="@+id/mic5"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        app:tint="@color/white"
+                        android:src="@drawable/ic_mic_off" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtView_Heading_new4"
+                            style="@style/TextWhiteLight"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingStart="0dp"
+                            android:maxLines="1"
+                            android:paddingEnd="10dp"
+                            android:text=""
+                            android:textAlignment="textStart"
+                            android:textSize="@dimen/text_tiny_new"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/linear_seat_host_bottom_diamond4">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:padding="3dp"
+                                android:src="@drawable/diamond"/>
+
+                            <TextView
+                                android:id="@+id/tv_diamond4"
+                                android:fontFamily="@font/font_regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:text="0"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_tiny_new" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_mls_curved_white">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:padding="3dp"
+                            android:src="@drawable/heart"
+                            android:tint="@color/colorPrimary"
+                            android:layout_marginRight="2dp"/>
+
+                        <TextView
+                            android:id="@+id/textView_likecount4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:text="0"
+                            android:textColor="@color/colorBlack" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+            app:cardBackgroundColor="@android:color/transparent"
+            android:id="@+id/cv4" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" app:cardCornerRadius="0dp" app:cardUseCompatPadding="false" app:cardElevation="0dp" app:cardMaxElevation="0dp">
+
+
+            <com.app.Zego.internal.sdk.components.express.ZEGOVideoView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cohostView5"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:visibility="gone"
+                android:background="@color/colorBlack"
+                android:id="@+id/blurLay5">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.5"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/blur5"/>
+
+                <!--                <com.cashgate.chobi.Zego.soundlevelandspectrum.SpeechWaveView-->
+                <!--                    android:layout_width="150dp"-->
+                <!--                    android:layout_height="150dp"-->
+                <!--                    android:layout_centerInParent="true"-->
+                <!--                    android:id="@+id/cohostSpeechView5"/>-->
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="70dp"
+                    android:src="@drawable/ic_launcher"
+                    android:layout_height="70dp"
+                    android:id="@+id/blurDP5"
+                    app:riv_corner_radius="40dp"
+                    android:visibility="gone"
+                    app:riv_border_width="3dp"
+                    app:riv_border_color="@color/colorBlack"                        android:scaleType="centerCrop"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="end"
+                android:id="@+id/layout6"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <com.app.Zego.internal.sdk.components.express.ToggleMicrophoneButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/toggleMic6"/>
+
+                <com.app.Zego.internal.sdk.components.express.ToggleCameraButton
+                    android:layout_width="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_gravity="end"
+                    android:layout_height="30dp"
+                    android:id="@+id/enableCamera6"/>
+
+
+                <com.app.Zego.internal.sdk.components.express.SwitchCameraButton
+                    android:layout_width="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:id="@+id/switchCamera6"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_clear_white_24dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="10dp"
+                    android:layout_gravity="start|center"
+                    android:visibility="gone"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="end"
+                    android:id="@+id/gemLay5"
+                    android:visibility="visible"
+                    android:background="@drawable/bg_mls_curved">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/userProfileImageNew5"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:padding="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image_logo"
+                        android:visibility="gone"
+                        app:riv_mutate_background="true"
+                        app:riv_oval="true" />
+
+                    <ImageView
+                        android:id="@+id/mic6"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        app:tint="@color/white"
+                        android:src="@drawable/ic_mic_off" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtView_Heading_new5"
+                            style="@style/TextWhiteLight"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingStart="0dp"
+                            android:maxLines="1"
+                            android:paddingEnd="10dp"
+                            android:text=""
+                            android:textAlignment="textStart"
+                            android:textSize="@dimen/text_tiny_new"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/linear_seat_host_bottom_diamond5">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:padding="3dp"
+                                android:src="@drawable/diamond"/>
+
+                            <TextView
+                                android:id="@+id/tv_diamond5"
+                                android:fontFamily="@font/font_regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:text="0"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_tiny_new" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_mls_curved_white">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:padding="3dp"
+                            android:src="@drawable/heart"
+                            android:tint="@color/colorPrimary"
+                            android:layout_marginRight="2dp"/>
+
+                        <TextView
+                            android:id="@+id/textView_likecount5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:text="0"
+                            android:textColor="@color/colorBlack" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Row 3: cv5 and cv6 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <com.google.android.material.card.MaterialCardView
+            app:cardBackgroundColor="@android:color/transparent"
+            android:id="@+id/cv5" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" app:cardCornerRadius="0dp" app:cardUseCompatPadding="false" app:cardElevation="0dp" app:cardMaxElevation="0dp">
+
+
+            <com.app.Zego.internal.sdk.components.express.ZEGOVideoView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cohostView6"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:visibility="gone"
+                android:background="@color/colorBlack"                android:id="@+id/blurLay6">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.5"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/blur6"/>
+
+                <!--                <com.cashgate.chobi.Zego.soundlevelandspectrum.SpeechWaveView-->
+                <!--                    android:layout_width="150dp"-->
+                <!--                    android:layout_height="150dp"-->
+                <!--                    android:layout_centerInParent="true"-->
+                <!--                    android:id="@+id/cohostSpeechView6"/>-->
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="70dp"
+                    android:src="@drawable/ic_launcher"
+                    android:layout_height="70dp"
+                    android:id="@+id/blurDP6"
+                    android:visibility="gone"
+                    app:riv_border_width="3dp"
+                    app:riv_border_color="@color/colorBlack"                        app:riv_corner_radius="40dp"
+                    android:scaleType="centerCrop"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="end"
+                android:id="@+id/layout7"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <com.app.Zego.internal.sdk.components.express.ToggleMicrophoneButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/toggleMic7"/>
+
+                <com.app.Zego.internal.sdk.components.express.ToggleCameraButton
+                    android:layout_width="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_gravity="end"
+                    android:layout_height="30dp"
+                    android:id="@+id/enableCamera7"/>
+
+
+                <com.app.Zego.internal.sdk.components.express.SwitchCameraButton
+                    android:layout_width="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:id="@+id/switchCamera7"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_clear_white_24dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="10dp"
+                    android:layout_gravity="start|center"
+                    android:visibility="gone"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="end"
+                    android:id="@+id/gemLay6"
+                    android:visibility="visible"
+                    android:background="@drawable/bg_mls_curved">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/userProfileImageNew6"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:padding="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image_logo"
+                        android:visibility="gone"
+                        app:riv_mutate_background="true"
+                        app:riv_oval="true" />
+
+                    <ImageView
+                        android:id="@+id/mic7"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        app:tint="@color/white"
+                        android:src="@drawable/ic_mic_off" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtView_Heading_new6"
+                            style="@style/TextWhiteLight"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingStart="0dp"
+                            android:maxLines="1"
+                            android:paddingEnd="10dp"
+                            android:text=""
+                            android:textAlignment="textStart"
+                            android:textSize="@dimen/text_tiny_new"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/linear_seat_host_bottom_diamond6">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:padding="3dp"
+                                android:src="@drawable/diamond"/>
+
+                            <TextView
+                                android:id="@+id/tv_diamond6"
+                                android:fontFamily="@font/font_regular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:text="0"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_tiny_new" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_mls_curved_white">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:padding="3dp"
+                            android:src="@drawable/heart"
+                            android:tint="@color/colorPrimary"
+                            android:layout_marginRight="2dp"/>
+
+                        <TextView
+                            android:id="@+id/textView_likecount6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="10dp"
+                            android:text="0"
+                            android:textColor="@color/colorBlack" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    app:cardBackgroundColor="@android:color/transparent"
+                    android:id="@+id/cv6" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" app:cardCornerRadius="0dp" app:cardUseCompatPadding="false" app:cardElevation="0dp" app:cardMaxElevation="0dp">
+
+
+                    <com.app.Zego.internal.sdk.components.express.ZEGOVideoView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/cohostView1"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:background="@color/colorBlack"
+                        android:id="@+id/blurLay1">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:alpha="0.5"
+                            android:scaleType="centerCrop"
+                            android:id="@+id/blur1"/>
+
+                        <!--                        <com.cashgate.chobi.Zego.soundlevelandspectrum.SpeechWaveView-->
+                        <!--                            android:layout_width="150dp"-->
+                        <!--                            android:layout_height="150dp"-->
+                        <!--                            android:layout_centerInParent="true"-->
+                        <!--                            android:id="@+id/cohostSpeechView1"/>-->
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="70dp"
+                            android:src="@drawable/ic_launcher"
+                            android:layout_height="70dp"
+                            android:id="@+id/blurDP1"
+                            android:visibility="gone"
+                            app:riv_border_width="3dp"
+                            app:riv_border_color="@color/colorBlack"
+                            app:riv_corner_radius="40dp"
+                            android:scaleType="centerCrop"
+                            android:layout_centerInParent="true"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:gravity="end"
+                        android:id="@+id/layout2"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <com.app.Zego.internal.sdk.components.express.ToggleMicrophoneButton
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="5dp"
+                            android:id="@+id/toggleMic2"/>
+
+                        <com.app.Zego.internal.sdk.components.express.ToggleCameraButton
+                            android:layout_width="30dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="end"
+                            android:layout_height="30dp"
+                            android:id="@+id/enableCamera2"/>
+
+
+                        <com.app.Zego.internal.sdk.components.express.SwitchCameraButton
+                            android:layout_width="30dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="end"
+                            android:id="@+id/switchCamera2"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="5dp">
+
+                        <ImageButton
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_clear_white_24dp"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:padding="10dp"
+                            android:layout_gravity="start|center"
+                            android:visibility="gone"/>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="end"
+                            android:id="@+id/gemLay1"
+                            android:visibility="visible"
+                            android:background="@drawable/bg_mls_curved">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/userProfileImageNew1"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="false"
+                                android:padding="1dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/image_logo"
+                                android:visibility="gone"
+                                app:riv_mutate_background="true"
+                                app:riv_oval="true" />
+
+                            <ImageView
+                                android:id="@+id/mic2"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginEnd="2dp"
+                                app:tint="@color/white"
+                                android:src="@drawable/ic_mic_off" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txtView_Heading_new1"
+                                    style="@style/TextWhiteLight"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:paddingStart="0dp"
+                                    android:maxLines="1"
+                                    android:paddingEnd="10dp"
+                                    android:text=""
+                                    android:textAlignment="textStart"
+                                    android:textSize="@dimen/text_tiny_new"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:id="@+id/linear_seat_host_bottom_diamond1">
+
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:padding="3dp"
+                                        android:src="@drawable/diamond"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_diamond1"
+                                        android:fontFamily="@font/font_regular"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="20dp"
+                                        android:text="0"
+                                        android:layout_weight="1"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:textAlignment="textStart"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_tiny_new" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="60dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/bg_mls_curved_white">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:padding="3dp"
+                                    android:src="@drawable/heart"
+                                    android:tint="@color/colorPrimary"
+                                    android:layout_marginRight="2dp"/>
+
+                                <TextView
+                                    android:id="@+id/textView_likecount1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="10dp"
+                                    android:text="0"
+                                    android:textColor="@color/colorBlack" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

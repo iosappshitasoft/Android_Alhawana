@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:background="@color/colorBlack"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="30dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_card_curve" />
+
+    <ListView
+        android:id="@+id/userListView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="10dp"
+        android:nestedScrollingEnabled="false"
+        android:visibility="gone"
+        tools:listitem="@layout/item_username" />
+
+    <!--<com.app.external.CustomEditText
+        android:id="@+id/commentEditText"
+        style="@style/TextBlackRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:layout_toStartOf="@+id/sendComment"
+        android:background="@null"
+        android:cursorVisible="true"
+        android:fitsSystemWindows="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/add_comment"
+        android:maxLength="250"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:textColorHint="@color/colorSecondaryText"
+        android:textCursorDrawable="@color/colorPrimary"
+        android:textSize="@dimen/text_small"
+        android:visibility="gone" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <com.hendraanggrian.appcompat.socialview.widget.SocialAutoCompleteTextView
+            android:id="@+id/socialAutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_toStartOf="@+id/sendComment"
+            android:background="@null"
+            android:focusable="true"
+            android:gravity="start"
+            android:textDirection="locale"
+            android:hint="@string/add_comment"
+            android:maxLength="250"
+            android:padding="10dp"
+            android:scrollbars="none"
+            android:textColorHint="@color/colorWhite"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_normal"
+            app:socialFlags="mention"
+            tools:text="" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/sendComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/socialAutoCompleteTextView"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/font_regular"
+            android:padding="10dp"
+            android:text="@string/send"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_normal" />
+
+    </RelativeLayout>
+
+</LinearLayout>

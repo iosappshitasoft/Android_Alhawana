@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <com.app.audiotrimmer.views.CustomTextView
+        android:id="@+id/titleSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Playback Speed"
+        android:textSize="12sp"
+      android:fontFamily="@font/font_regular"
+        android:textColor="@color/white"
+        android:paddingBottom="15dp" />
+
+    <RadioGroup
+        android:id="@+id/speedGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 0.5x -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="10dp">
+
+            <com.app.audiotrimmer.views.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.5x"
+                android:textSize="12sp"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/speed05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- 1x -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="10dp">
+
+            <com.app.audiotrimmer.views.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1x (Normal)"
+                android:textSize="12sp"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/speed1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- 1.5x -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="10dp">
+
+            <com.app.audiotrimmer.views.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1.5x"
+                android:textSize="12sp"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/speed15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- 2x -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="10dp">
+
+            <com.app.audiotrimmer.views.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2x"
+                android:textSize="12sp"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/speed2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RadioGroup>
+
+</LinearLayout>

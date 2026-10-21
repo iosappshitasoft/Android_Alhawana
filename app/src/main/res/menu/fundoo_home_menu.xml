@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuLive"
+        android:icon="@drawable/home_active4"
+        android:title=""
+        android:enabled="true"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menuLiveStream"
+        android:icon="@drawable/group_633439"
+        android:title=""
+        app:showAsAction="ifRoom"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/menuUpload"
+        android:enabled="true"
+        android:icon="@drawable/add_new"
+        android:title=""
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menuSearch"
+        android:icon="@drawable/new_message_inactive_1"
+        android:title=""
+        android:enabled="true"
+        app:showAsAction="ifRoom" />
+
+
+  <!--  <item
+        android:id="@+id/menuChat"
+        android:enabled="true"
+        android:icon="@drawable/new_message_inactive_1"
+        android:title=""
+        app:showAsAction="ifRoom" />
+-->
+    <item
+        android:enabled="true"
+        android:id="@+id/menuProfile"
+        android:icon="@drawable/new_profile_inactive_1"
+        android:title=""
+        app:showAsAction="ifRoom" />
+</menu>

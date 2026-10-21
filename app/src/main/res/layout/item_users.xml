@@ -1,0 +1,82 @@
+<FrameLayout
+    android:id="@+id/itemLay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_curve"
+    android:layout_gravity="center"
+    android:layout_marginEnd="6dp"
+    android:layout_marginStart="6dp"
+    android:padding="15dp"
+    android:layoutDirection="locale"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:gravity="center_horizontal">
+
+<com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/profileImage"
+    android:layout_width="85dp"
+    android:layout_height="85dp"
+    android:padding="2dp"
+    android:layout_gravity="center"
+    android:scaleType="centerCrop"
+    android:src="@drawable/social_icon_svg"
+    app:shapeAppearanceOverlay="@style/RoundedRectImage" />
+
+<ImageView
+    android:id="@+id/premiumImage"
+    android:layout_width="20dp"
+    android:layout_height="20dp"
+    android:layout_marginTop="-10dp"
+    android:src="@drawable/crown" />
+
+<TextView
+    android:id="@+id/txtName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:text="Name"
+    android:textColor="@color/white"
+    android:fontFamily="@font/outfit_medium"
+    android:textSize="17sp"
+    android:textAlignment="viewStart" />
+
+<TextView
+    android:id="@+id/txtName1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:text="Name"
+    android:textColor="#8F8F8F"
+    android:fontFamily="@font/outfit_regular"
+    android:textSize="14sp"
+    android:textAlignment="viewStart" />
+
+<LinearLayout
+    android:id="@+id/btnFollow"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/bg_follow1"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <TextView
+        android:id="@+id/txtFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Follow"
+        android:textSize="15sp"
+        android:fontFamily="@font/outfit_medium"
+        android:textColor="@android:color/white" />
+</LinearLayout>
+
+</LinearLayout>
+
+    </FrameLayout>

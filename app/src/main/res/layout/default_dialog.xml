@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_curve"
+    app:layout_constraintCircleRadius="@dimen/text_size_13sp"
+    android:layoutDirection="@string/layout_direction"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:paddingTop="10dp"
+        android:visibility="gone" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/alert_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Alert"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:lineSpacingExtra="5dp"
+        android:id="@+id/alert_msg"
+        style="@style/TextWhiteRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/outfit_medium"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/report_success_alert"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@color/white" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/alert_button"
+        style="@style/TextWhiteRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0"
+        android:text="@string/okay"
+        android:textAllCaps="false"
+        app:cornerRadius="8dp" />
+
+</LinearLayout>

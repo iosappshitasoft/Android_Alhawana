@@ -1,0 +1,41 @@
+<!-- res/drawable/seekbar_progress.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background track -->
+    <item android:id="@android:id/background"
+        android:height="@dimen/seekbar_height"
+        android:gravity="center_vertical">
+        <shape android:shape="rectangle">
+            <solid android:color="#70FFFFFF" />
+            <size android:height="@dimen/seekbar_height" />
+            <corners android:radius="@dimen/seekbar_corner_redius"/>
+        </shape>
+    </item>
+
+    <!-- Secondary progress (buffer) -->
+    <item android:id="@android:id/secondaryProgress"
+        android:height="@dimen/seekbar_height"
+        android:gravity="center_vertical">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="@color/colorWhite" />
+                <size android:height="@dimen/seekbar_height" />
+                <corners android:radius="@dimen/seekbar_corner_redius"/>
+            </shape>
+        </clip>
+    </item>
+
+    <!-- Actual progress -->
+    <item android:id="@android:id/progress"
+        android:height="@dimen/seekbar_height"
+        android:gravity="center_vertical">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="@color/colorWhite" />
+                <size android:height="@dimen/seekbar_height" />
+                <corners android:radius="@dimen/seekbar_corner_redius"/>
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

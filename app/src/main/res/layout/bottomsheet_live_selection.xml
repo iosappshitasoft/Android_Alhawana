@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/img_bottomsheet_rectangle"/>
+
+    <TextView
+        android:id="@+id/sheettitle"
+        android:textFontWeight="600"
+        style="@style/OutfitRegularForHeadingWhiteSize18"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/title_select_live_type"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/bottomsheet_viewline"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <!-- RadioGroup to ensure only one RadioButton is selected -->
+        <RadioGroup
+            android:id="@+id/radioGroupLiveType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Single Live -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/title_single_live"
+                    style="@style/OutfitRegularForHeadingLiteWhiteSize14" />
+
+                <RadioButton
+                    android:id="@+id/radioSingleLive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:button="@drawable/custom_radio_button"/>
+            </LinearLayout>
+
+            <!-- Multi Live -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txt_multilive"
+                    style="@style/OutfitRegularForHeadingLiteWhiteSize14"/>
+
+                <RadioButton
+                    android:id="@+id/radioMultiLive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_radio_button"/>
+            </LinearLayout>
+
+            <!-- PK -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/title_pk"
+                    style="@style/OutfitRegularForHeadingLiteWhiteSize14"/>
+
+                <RadioButton
+                    android:id="@+id/radioPK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_radio_button"/>
+            </LinearLayout>
+        </RadioGroup>
+    </LinearLayout>
+
+
+
+</LinearLayout>

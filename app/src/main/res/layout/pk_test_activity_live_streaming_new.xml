@@ -1,0 +1,1283 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/livestreaming_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+  <ImageView
+      android:id="@+id/backgroundImage"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scaleType="centerCrop"
+      android:src="@drawable/fundoo_logo"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentRight="true"/>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/relative_test">
+<!--      <com.app.Zego.components.cohost.CoHostView-->
+<!--          android:id="@+id/live_cohost_view"-->
+<!--          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--          android:orientation="vertical"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="match_parent" />-->
+  </RelativeLayout>
+  <FrameLayout
+      android:id="@+id/main_host_video_layout"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toTopOf="@id/live_bottom_menu_bar"
+      app:layout_constraintTop_toBottomOf="@+id/layout_viewers">
+
+    <com.app.Zego.internal.sdk.components.express.ZEGOVideoView
+        android:id="@+id/main_host_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.app.Zego.components.cohost.CoHostView
+        android:id="@+id/live_cohost_view"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+    <TextureView
+        android:id="@+id/texture_heartLay"
+        android:layout_width="match_parent"
+        android:layout_gravity="start"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <com.app.Zego.components.LetterIconView
+        android:id="@+id/main_host_video_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+  </FrameLayout>
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/pk_video_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:visibility="visible"
+      app:layout_constraintTop_toTopOf="@+id/main_host_video_layout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pk_mix_video_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="18:16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BattleLay">
+
+      <com.app.Zego.internal.sdk.components.express.ZEGOVideoView
+          android:id="@+id/audience_mix_video"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+
+      <com.app.Zego.components.LetterIconView
+          android:id="@+id/audience_mix_self_icon"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:visibility="invisible"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintDimensionRatio="9:16"
+          app:layout_constraintEnd_toStartOf="@+id/audience_mix_other_icon"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <com.app.Zego.components.LetterIconView
+          android:id="@+id/audience_mix_other_icon"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:visibility="invisible"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintDimensionRatio="9:16"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/audience_mix_self_icon"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:id="@+id/audience_mix_other_tips"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:background="#333333"
+          android:gravity="center"
+          android:text="host reconnecting"
+          android:textColor="@color/white"
+          android:textSize="18sp"
+          android:visibility="gone"
+          app:layout_constraintBottom_toBottomOf="@+id/audience_mix_other_icon"
+          app:layout_constraintEnd_toEndOf="@+id/audience_mix_other_icon"
+          app:layout_constraintStart_toStartOf="@+id/audience_mix_other_icon"
+          app:layout_constraintTop_toTopOf="@+id/audience_mix_other_icon" />
+
+      <TextView
+          android:id="@+id/audience_mix_self_tips"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:background="#333333"
+          android:gravity="center"
+          android:text="host reconnecting"
+          android:textColor="@color/white"
+          android:textSize="18sp"
+          android:visibility="gone"
+          app:layout_constraintBottom_toBottomOf="@+id/audience_mix_self_icon"
+          app:layout_constraintEnd_toEndOf="@+id/audience_mix_self_icon"
+          app:layout_constraintStart_toStartOf="@+id/audience_mix_self_icon"
+          app:layout_constraintTop_toTopOf="@+id/audience_mix_self_icon" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          android:id="@+id/pk_viewer_heartLay"
+          app:layout_constraintBottom_toBottomOf="parent"
+          android:orientation="horizontal">
+
+        <com.app.addon.livestream.external.heartlayout.HeartLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/pk_viewer_heart1"
+            android:layout_weight="1"
+            android:paddingStart="50dp"
+            android:visibility="gone"/>
+
+        <com.app.addon.livestream.external.heartlayout.HeartLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/pk_viewer_heart2"
+            android:layout_weight="1"
+            android:paddingStart="50dp"
+            android:visibility="gone"/>
+
+      </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/t_ImageFilterView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <LinearLayout
+            android:id="@+id/giftTimerLinearLayout"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/BattleLay"
+            android:background="@drawable/bg_mls_curved_white">
+
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/transparent"
+              android:textColor="@color/black"
+              android:id="@+id/txt_timer_type"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:textAlignment="center"/>
+
+        </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/BattleLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+      <TextView
+          android:layout_width="70dp"
+          android:layout_height="match_parent"
+          android:textColor="@color/colorBlack"
+          android:id="@+id/txt_timer_type"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:textAlignment="center"
+          android:visibility="gone"
+          android:background="@drawable/bg_mls_curved_white"/>
+
+
+      <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+          <View
+              android:id="@+id/host11"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#3F51B5"
+              android:layout_weight="1"/>
+
+          <com.airbnb.lottie.LottieAnimationView
+              android:layout_width="30dp"
+              android:layout_height="24dp"
+              app:lottie_autoPlay="true"
+              android:scaleType="centerCrop"
+              app:lottie_fileName="fire.json"
+              app:lottie_loop="true"
+              android:visibility="gone"/>
+
+          <RelativeLayout
+              android:layout_width="30dp"
+              android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+              <View
+                  android:layout_width="15dp"
+                  android:layout_height="match_parent"
+                  android:background="#3F51B5"
+                  android:layout_weight="1"/>
+              <View
+                  android:layout_width="15dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:background="@color/colorSecondaryVariant"/>
+
+            </LinearLayout>
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                app:lottie_autoPlay="true"
+                android:scaleType="centerCrop"
+                app:lottie_fileName="fire.json"
+                app:lottie_loop="true"
+                android:visibility="visible"/>
+          </RelativeLayout>
+
+
+          <!--<View
+              android:textStyle="bold"
+              android:id="@+id/host22"
+              android:layout_width="match_parent"
+              android:layout_height="14dp"
+              android:background="#DA0000"
+              android:layout_weight="1"/>-->
+          <View
+              android:textStyle="bold"
+              android:id="@+id/host22"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorSecondaryVariant"
+              android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@color/transparent"
+            android:id="@+id/overlayLayout"
+            android:visibility="visible">
+
+          <TextView
+              android:textColor="@color/white"
+              android:paddingStart="5dp"
+              android:textSize="@dimen/text_tiny"
+              android:textAlignment="viewStart"
+              android:textStyle="bold"
+              android:text="0"
+              android:id="@+id/host1"
+              android:layout_width="match_parent"
+              android:layout_height="14dp"
+              android:visibility="visible"
+              android:layout_weight="1"/>
+          <TextView
+              android:textColor="@color/white"
+              android:paddingEnd="5dp"
+              android:textSize="@dimen/text_tiny"
+              android:textAlignment="viewEnd"
+              android:textStyle="bold"
+              android:text="0"
+              android:id="@+id/host2"
+              android:layout_width="match_parent"
+              android:layout_height="14dp"
+              android:visibility="visible"
+              android:layout_weight="1"/>
+
+        </LinearLayout>
+      </FrameLayout>
+
+
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/pk_self_video_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="9:16"
+        app:layout_constraintEnd_toStartOf="@+id/pk_other_video_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/BattleLay">
+
+
+      <com.app.Zego.components.LetterIconView
+          android:id="@+id/pk_self_video_icon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:visibility="gone" />
+
+      <com.app.Zego.internal.sdk.components.express.ZEGOVideoView
+          android:id="@+id/pk_self_video"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+
+      <com.app.addon.livestream.external.heartlayout.HeartLayout
+          android:id="@+id/pk_heartLay"
+          android:layout_width="130dp"
+          android:layout_height="match_parent"
+          android:layout_gravity="end"
+          />
+
+      <TextureView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:visibility="gone"
+          android:id="@+id/texturePk1"/>
+
+      <ImageView
+          android:layout_width="150dp"
+          android:layout_height="150dp"
+          android:layout_gravity="center|bottom"
+          app:lottie_loop="true"
+          app:lottie_autoPlay="true"
+          android:layout_marginBottom="?actionBarSize"
+          android:visibility="gone"
+          android:id="@+id/winnerIVpk1"/>
+
+      <LinearLayout
+          android:id="@+id/pkProfileLay1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="end|bottom"
+          android:layout_margin="5dp"
+          android:background="@drawable/bg_mls_curved"
+          android:orientation="horizontal"
+          android:visibility="gone">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/userProfileImageNew_pk1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:padding="3dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher"
+            android:visibility="visible"
+            app:riv_mutate_background="true"
+            app:riv_oval="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/txtView_Heading_new_pk1"
+              style="@style/TextWhiteLight"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:maxLines="1"
+              android:paddingStart="0dp"
+              android:paddingEnd="10dp"
+              android:text=""
+              android:textAlignment="textStart"
+              android:textSize="@dimen/text_small"
+              android:textStyle="bold" />
+
+          <LinearLayout
+              android:id="@+id/linear_seat_host_bottom_diamond_pk1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="3dp"
+                android:src="@drawable/diamond" />
+
+            <TextView
+                android:id="@+id/tv_diamond_pk1"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center"
+                android:text="0"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small" />
+          </LinearLayout>
+        </LinearLayout>
+
+
+      </LinearLayout>
+
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/pk_other_video_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="9:16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/pk_self_video_layout"
+        app:layout_constraintTop_toBottomOf="@id/BattleLay">
+
+      <com.app.Zego.internal.sdk.components.express.ZEGOVideoView
+          android:id="@+id/pk_other_video"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+
+      <com.app.Zego.components.LetterIconView
+          android:id="@+id/pk_other_video_icon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:visibility="gone" />
+
+      <com.app.addon.livestream.external.heartlayout.HeartLayout
+          android:id="@+id/pk_heartLay2"
+          android:layout_width="130dp"
+          android:layout_height="match_parent"
+          android:layout_gravity="end"
+          />
+
+      <ImageView
+          android:layout_width="150dp"
+          android:layout_height="150dp"
+          app:lottie_autoPlay="true"
+          app:lottie_loop="true"
+          android:visibility="gone"
+          android:layout_gravity="center|bottom"
+          android:layout_marginBottom="?actionBarSize"
+          android:id="@+id/winnerIVpk2"/>
+      <TextView
+          android:id="@+id/pk_other_video_tips"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="#333333"
+          android:gravity="center"
+          android:text="host reconnecting"
+          android:textColor="@color/white"
+          android:textSize="18sp"
+          android:visibility="gone" />
+
+
+      <LinearLayout
+          android:id="@+id/pkProfileLay2"
+          android:layout_width="wrap_content"
+          android:layout_height="45dp"
+          android:layout_gravity="end|bottom"
+          android:layout_margin="5dp"
+          android:background="@drawable/bg_mls_curved"
+          android:orientation="horizontal"
+          android:visibility="gone">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/userProfileImageNew_pk2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:padding="3dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher"
+            android:visibility="visible"
+            app:riv_mutate_background="true"
+            app:riv_oval="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:id="@+id/txtView_Heading_new_pk2"
+              style="@style/TextWhiteLight"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:maxLines="1"
+              android:paddingStart="0dp"
+              android:paddingEnd="10dp"
+              android:text=""
+              android:textAlignment="textStart"
+              android:textSize="@dimen/text_small"
+              android:textStyle="bold" />
+
+          <LinearLayout
+              android:id="@+id/linear_seat_host_bottom_diamond_pk2"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="3dp"
+                android:src="@drawable/diamond" />
+
+            <TextView
+                android:id="@+id/tv_diamond_pk2"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small" />
+          </LinearLayout>
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <Button
+          android:id="@+id/pk_other_video_mute"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Mute user"
+          android:visibility="gone" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:lottie_autoPlay="true"
+        android:visibility="gone"
+        android:scaleType="centerCrop"
+        app:lottie_loop="true"
+        android:layout_gravity="center|bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="?actionBarSize"
+        android:id="@+id/winnerIVpkDraw"/>
+
+    <LinearLayout
+        android:id="@+id/linear_timer_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/BattleLay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/bg_primary_timer">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:padding="5dp"
+          android:textSize="10dp"
+          android:textColor="@color/white"
+          android:id="@+id/txt_remaining_time"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@drawable/blue_username"
+        android:gravity="center"
+        android:id="@+id/host1Anim"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/pk_self_video_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+      <TextView
+          android:id="@+id/hostName1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textStyle="bold"
+          android:textColor="@color/white"
+          android:layout_gravity="center"
+          android:text="Host 1" />
+
+      <com.makeramen.roundedimageview.RoundedImageView
+          android:layout_gravity="center"
+          android:layout_width="50dp"
+          android:id="@+id/hostImg1"
+          android:layout_height="50dp"
+          android:layout_marginStart="4dp"
+          android:scaleType="centerCrop"
+          android:src="@drawable/ic_launcher"
+          app:riv_border_color="@color/white"
+          app:riv_border_width="2dp"
+          app:riv_corner_radius="30dp" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@drawable/red_username"
+        android:gravity="center"
+        android:id="@+id/host2Anim"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pk_self_video_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+      <com.makeramen.roundedimageview.RoundedImageView
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_gravity="center"
+          android:id="@+id/hostImg2"
+          android:scaleType="centerCrop"
+          android:src="@drawable/ic_launcher"
+          app:riv_border_color="@color/white"
+          app:riv_border_width="2dp"
+          app:riv_corner_radius="30dp" />
+
+      <TextView
+          android:id="@+id/hostName2"
+          android:layout_marginStart="4dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="Host 2"
+          android:textColor="@color/white"
+          android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:lottie_loop="true"
+        android:id="@+id/vsLottie"
+        app:lottie_autoPlay="true"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:lottie_fileName="vs.json"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+  <LinearLayout
+      android:id="@+id/linearLayout2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:weightSum="2"
+      app:layout_constraintTop_toBottomOf="@+id/pk_video_layout"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent">
+
+    <LinearLayout
+        android:id="@+id/pk_self_viewer_layout"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+      <LinearLayout
+          android:layout_width="50dp"
+          android:layout_height="25dp"
+          android:background="@drawable/mls_bg_gray"
+          android:gravity="center"
+          android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/view" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtViewer_A_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/iconView"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+      </LinearLayout>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recycler_a_viewers"
+          android:layout_width="match_parent"
+          android:layout_height="35dp"
+          android:layout_gravity="center"
+          android:layout_marginStart="5dp"
+          android:scrollbars="none"
+          android:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pk_other_viewer_layout"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+      <LinearLayout
+          android:layout_width="50dp"
+          android:layout_height="25dp"
+          android:layout_marginRight="5dp"
+          android:background="@drawable/mls_bg_gray"
+          android:gravity="center"
+          android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/view" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtViewer_B_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/iconView"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+      </LinearLayout>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recycler_b_viewers"
+          android:layout_width="match_parent"
+          android:layout_height="35dp"
+          android:layout_marginRight="5dp"
+          android:layout_weight="1"
+          android:scrollbars="none"
+          android:visibility="visible" />
+
+
+    </LinearLayout>
+
+
+  </LinearLayout>
+  <Button
+      android:id="@+id/preview_start"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="88dp"
+      android:text="Start"
+      android:visibility="invisible"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+  <!--<androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/live_message_view"
+      android:layout_width="match_parent"
+      android:layout_height="250dp"
+      android:layout_marginEnd="40dp"
+      app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+      app:layout_constraintBottom_toTopOf="@+id/live_bottom_menu_bar"
+      app:layout_constraintStart_toStartOf="parent" />-->
+
+  <LinearLayout
+      android:id="@+id/live_bottom_menu_bar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      android:orientation="horizontal">
+    <include layout="@layout/pk_bottom_menu_bar_content"/>
+
+  </LinearLayout>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:id="@+id/likeLay"
+      android:layout_height="match_parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/likeLottie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_loop="false"
+        app:lottie_autoPlay="false"
+        android:scaleType="centerCrop"
+        app:lottie_fileName="likelottie.json"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.90"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="12dp"
+      android:layout_marginTop="48dp"
+      android:layout_marginEnd="12dp"
+      android:layout_marginBottom="72dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="35dp"
+      android:layout_marginTop="10dp"
+      android:id="@+id/tv_stream_name"
+      style="@style/ButtonPrimaryBold"
+      app:layout_constraintTop_toTopOf="parent"
+      android:visibility="gone"/>
+
+  <com.opensource.svgaplayer.SVGAImageView
+      android:id="@+id/svgaImage"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginBottom="60dp"
+      android:layout_marginTop="100dp"
+      app:autoPlay="true" />
+
+  <!--  <ImageView
+        android:id="@+id/img_animation_gif"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="100dp"/>-->
+
+  <!-- <WebView
+       android:id="@+id/webView"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:layout_marginBottom="60dp"
+       android:clickable="true"
+       android:visibility="gone"
+       android:background="@android:color/transparent"/>-->
+
+  <!--<RelativeLayout
+      android:id="@+id/relative_lottie_view"
+      android:layout_width="90dp"
+      android:layout_height="110dp"
+      android:visibility="gone"
+      android:layout_marginBottom="70dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent">
+
+    <RelativeLayout
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:id="@+id/linear_lottie_layout">
+
+      <TextView
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:text="1"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:textColor="@color/white"
+          android:id="@+id/tv_lottie_count"
+          android:background="@drawable/shape_circle_orange"/>
+    </RelativeLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieCountDown"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="loading.json"
+        app:lottie_loop="true"
+        app:lottie_repeatMode="restart"
+        android:visibility="visible"
+        android:layout_marginTop="13dp"/>
+
+  </RelativeLayout>-->
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_gravity="center"
+      android:gravity="center"
+      android:layout_marginTop="5dp"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:id="@+id/layout_viewers">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <include layout="@layout/mls_header_2"
+          android:id="@+id/header"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="3dp"
+        android:id="@+id/linear_test">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_weight="1"
+          android:id="@+id/linear_single_viewer_layout">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_height="30dp"
+            android:background="@drawable/mls_bg_gray"
+            android:gravity="center"
+            android:orientation="horizontal">
+          <View
+              android:layout_width="10dp"
+              android:layout_height="match_parent"/>
+          <ImageView
+              android:layout_width="22dp"
+              android:layout_height="22dp"
+              android:padding="3dp"
+              android:src="@drawable/heart"
+              android:layout_marginRight="2dp"/>
+
+          <TextView
+              android:id="@+id/textView_likecount"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:textSize="10dp"
+              android:text="0"
+              android:textColor="@color/white" />
+
+          <View
+              android:layout_width="10dp"
+              android:layout_height="match_parent"/>
+          <!--  <ImageView
+                android:layout_width="20dp"
+                android:layout_height="14dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtViewCountTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@+id/iconView"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />-->
+
+        </LinearLayout>
+        <!--  <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/rv_viewers"
+              android:layout_width="match_parent"
+              android:layout_height="35dp"
+              android:layout_marginStart="10dp"
+              android:scrollbars="none"
+              android:layout_weight="1"
+              android:layout_gravity="center"
+              android:visibility="gone" />-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:backgroundTint="#80000000"
+            android:paddingStart="4dp"
+            android:paddingBottom="2dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="2dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/bg_mls_curved_white"
+            android:id="@+id/linear_seat_host_bottom_diamond">
+
+          <ImageView
+              android:layout_width="20dp"
+              android:layout_height="20dp"
+              android:padding="3dp"
+              android:src="@drawable/new_diamond"/>
+          <TextView
+
+              android:fontFamily="@font/font_regular"
+              android:layout_width="wrap_content"
+              android:layout_height="20dp"
+              android:text="Gifts: "
+              android:layout_weight="1"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:textAlignment="textStart"
+              android:textColor="@color/white"
+              android:textSize="@dimen/text_small" />
+          <TextView
+              android:id="@+id/tv_diamond"
+              android:fontFamily="@font/font_regular"
+              android:layout_width="wrap_content"
+              android:layout_height="20dp"
+              android:text="0"
+              android:layout_weight="1"
+              android:layout_gravity="center"
+              android:gravity="center"
+              android:textAlignment="textStart"
+              android:textColor="@color/white"
+              android:textSize="@dimen/text_small" />
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <ImageView
+          android:id="@+id/btnGiftNew"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_gravity="center_vertical"
+          android:background="?attr/selectableItemBackgroundBorderless"
+          android:padding="3dp"
+          android:src="@drawable/gift"
+          android:visibility="gone"/>
+
+      <com.app.Zego.internal.sdk.components.express.ToggleMicrophoneButton
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_gravity="end"
+          android:layout_marginStart="5dp"
+          android:id="@+id/toggleMic"/>
+
+      <com.app.Zego.internal.sdk.components.express.ToggleCameraButton
+          android:layout_width="30dp"
+          android:layout_marginStart="5dp"
+          android:layout_marginEnd="5dp"
+          android:layout_gravity="end"
+          android:layout_height="30dp"
+          android:id="@+id/enableCamera"/>
+
+
+      <com.app.Zego.internal.sdk.components.express.SwitchCameraButton
+          android:layout_width="30dp"
+          android:layout_marginEnd="5dp"
+          android:layout_height="30dp"
+          android:layout_gravity="end"
+          android:id="@+id/switchCamera"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/layout_viewers">
+
+    <TextureView
+        android:id="@+id/media_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-30dp"
+        android:visibility="visible" />
+  </RelativeLayout>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/live_message_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="63dp"
+        android:requiresFadingEdge="vertical"
+        android:fadingEdgeLength="60dp" />
+
+    <!-- WebView -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="60dp"/>
+
+    <!-- Transparent Overlay View -->
+    <View
+        android:id="@+id/overlayView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:visibility="gone"
+        android:background="@android:color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/relative_lottie_view"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="70dp">
+
+      <RelativeLayout
+          android:layout_width="70dp"
+          android:layout_height="30dp"
+          android:gravity="center"
+          android:id="@+id/linear_lottie_layout">
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:id="@+id/tv_lottie_count"
+            android:background="@drawable/shape_circle_orange"/>
+      </RelativeLayout>
+
+      <com.airbnb.lottie.LottieAnimationView
+          android:id="@+id/lottieCountDown"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:scaleType="fitXY"
+          app:lottie_autoPlay="true"
+          app:lottie_fileName="loading.json"
+          app:lottie_loop="true"
+          app:lottie_repeatMode="restart"
+          android:visibility="visible"
+          android:layout_marginTop="13dp"/>
+
+    </RelativeLayout>
+
+  </RelativeLayout>
+
+  <ImageView
+      android:id="@+id/img_animation_gif"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:visibility="gone"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="60dp"
+      android:layout_marginTop="100dp"/>
+
+  <RelativeLayout
+      android:layout_width="130dp"
+      android:layout_height="match_parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginBottom="60dp"
+      android:layout_marginTop="80dp">
+    <com.app.addon.livestream.external.heartlayout.HeartLayout
+        android:id="@+id/heartLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+  </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

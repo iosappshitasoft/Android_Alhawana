@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.app.helper.LinkEllipseTextView
+        android:id="@+id/tvPrivacyText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/outfit_medium"
+        android:textColor="@color/colorPlaceHolder"
+        android:textSize="16sp" />
+
+    <com.google.android.material.radiobutton.MaterialRadioButton
+        android:id="@+id/ivCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:paddingEnd="0dp"
+        app:useMaterialThemeColors="true" />
+</LinearLayout>

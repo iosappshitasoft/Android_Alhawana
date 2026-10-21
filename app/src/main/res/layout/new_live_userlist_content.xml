@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:paddingBottom="24dp"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/alhawana"
+        android:background="@color/surface_color"
+        app:riv_oval="true"
+        app:riv_border_width="0dp"
+        app:riv_mutate_background="true"
+        android:scaleType="centerCrop"
+        android:id="@+id/userImage"/>
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="UserName"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="12dp"
+        android:textSize="14sp"
+        android:textDirection="locale"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/btnInvite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/invite"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:background="@drawable/curved_accent"
+        android:backgroundTint="@color/colorPrimary"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="6dp"
+        android:foreground="?selectableItemBackground"
+        />
+
+</LinearLayout>

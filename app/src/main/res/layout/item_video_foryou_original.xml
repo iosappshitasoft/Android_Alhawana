@@ -1,0 +1,1337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey">
+
+
+    <FrameLayout
+        android:id="@+id/mediaContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:background="@color/colorBlack"
+        android:gravity="center"
+        android:scaleType="center"
+        app:resize_mode="fill"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <!--<ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme"
+            android:visibility="visible" />-->
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/mediaCoverImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/parentBtnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:src="@drawable/back"
+            android:visibility="gone" />
+
+        <!--<View
+            android:id="@+id/view_gradient2"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/footer_gra"
+            android:visibility="visible" />-->
+
+        <!--<View
+            android:id="@+id/view_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/header_gra"
+            android:visibility="visible" />-->
+
+        <ImageView
+            android:id="@+id/video_play_pause"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            app:srcCompat="@drawable/play_home" />
+
+        <!--<ImageView
+            android:id="@+id/ic_fav_heart"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:elevation="99dp"
+            android:src="@drawable/ic_baseline_favorite_24"
+            android:translationZ="1dp"
+            android:visibility="invisible"
+            tools:visibility="visible" />-->
+
+       <!-- <ImageView
+            android:id="@+id/mediaCoverImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />-->
+
+        <LinearLayout
+            android:id="@+id/leftSideVieww"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/ic_fav_heart"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/newg"
+            app:lottie_renderMode="software"
+            app:lottie_speed="1" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/newadlayout"
+                android:id="@+id/linear1">
+
+                <LinearLayout
+                    android:id="@+id/bottomLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="80dp"
+                    android:orientation="vertical"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_title"
+                        style="@style/TextWhiteRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/txt_description"
+                        android:layout_gravity="start"
+                        android:scrollbars="none"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_medium"
+                        android:visibility="gone"/>
+
+                    <com.app.helper.LinkEllipseTextView
+                        android:id="@+id/txt_description_old"
+                        style="@style/TextWhiteLight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/progress_duration"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="0dp"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:scrollHorizontally="false"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_normal"
+                        android:visibility="gone"/>
+
+                    <Button
+                        android:id="@+id/add_button"
+                        android:layout_width="100dp"
+                        android:layout_height="40sp"
+                        android:layout_above="@+id/progress_duration"
+                        android:layout_marginBottom="10dp"
+                        android:textAlignment="center"
+                        android:ellipsize="end"
+                        android:scrollHorizontally="false"
+                        android:text="Link"
+                        android:minHeight="0dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_normal"
+                        android:visibility="gone" />
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <FrameLayout
+                            android:id="@+id/frame"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/bottom_pager"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="0dp"
+                                android:clipToPadding="false"
+                                android:nestedScrollingEnabled="true"
+                                android:orientation="horizontal"
+                                android:overScrollMode="always"
+                                android:paddingBottom="20dp"
+                                android:visibility="visible"
+                                tools:listitem="@layout/recycleview_bottom"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                        </FrameLayout>
+
+                    </androidx.core.widget.NestedScrollView>
+
+                     <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                         android:background="@drawable/bg_card_curve_trans">
+
+                        <ImageView
+                            android:id="@+id/blurredBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:src="@drawable/filter_sample_image"
+                            android:scaleType="centerCrop"
+
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!-- Profile Image -->
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/profileImageNew"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/filter_sample_image"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:background="@drawable/circle_background"
+                            app:riv_corner_radius="65dp"
+                            app:riv_mutate_background="true" />
+
+                        <!-- User Name -->
+                        <TextView
+                            android:layout_marginStart="10dp"
+                            android:id="@+id/userName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Edward"
+                            android:textSize="14sp"
+                            android:textFontWeight="600"
+                            style="@style/OutfitRegularForHeadingWhiteSize14"
+                            app:layout_constraintTop_toTopOf="@id/profileImageNew"
+                            app:layout_constraintStart_toEndOf="@id/profileImageNew"
+                            app:layout_constraintEnd_toStartOf="@id/followButton" />
+
+                        <!-- User Handle -->
+                        <TextView
+                            android:id="@+id/userHandle"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_height="wrap_content"
+                            android:text="@edwards"
+                            android:textFontWeight="400"
+                            android:layout_marginTop="2dp"
+                            style="@style/OutfitRegularForHeadingWhiteSize10"
+                            app:layout_constraintTop_toBottomOf="@id/userName"
+                            app:layout_constraintStart_toEndOf="@id/profileImageNew"
+                            app:layout_constraintEnd_toStartOf="@id/followButton" />
+
+                        <!-- Follow Button -->
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/followButton"
+                            style="@style/OutfitRegularForHeadingWhiteSize12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:background="@drawable/bg_top_selection_1"
+                            android:gravity="center"
+                            android:text="Follow"
+                            android:padding="2dp"
+                            android:textAllCaps="false"
+                            android:textFontWeight="400"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!-- Content Text -->
+                        <com.app.helper.LinkEllipseTextView
+                            android:id="@+id/txt_description"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:ellipsize="end"
+                            android:textFontWeight="400"
+                            style="@style/OutfitRegularForHeadingWhiteSize12"
+                            android:maxLines="3"
+                            android:scrollHorizontally="false"
+                            android:layout_marginTop="5dp"
+                            app:layout_constraintTop_toBottomOf="@id/profileImageNew"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+
+                        <LinearLayout
+                            android:id="@+id/audioLay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/rounded_transparent_background_new"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt_description">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="start|center_vertical"
+                                android:src="@drawable/wave_sound"
+                                android:padding="5dp"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txtAudioTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start|center_vertical"
+                                android:ellipsize="marquee"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:paddingHorizontal="6dp"
+                                android:singleLine="true"
+                                android:text="7 Years - Lukas Graham"
+                                android:textAlignment="viewStart"
+                                android:textFontWeight="400"
+                                style="@style/OutfitRegularForHeadingWhiteSize12" />
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/leftSideView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/img_round_white">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/logo"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="4dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/image_logo"
+                            android:visibility="visible"
+                            android:scaleType="centerInside" />
+
+                    </LinearLayout>
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/liveStreaming"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_above="@+id/userLay"
+                        android:layout_alignParentEnd="true"
+                        android:adjustViewBounds="true"
+                        android:background="@color/colorBlack"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_live_stream"
+                        android:visibility="gone"
+                        app:riv_corner_radius="65dp"
+                        app:riv_mutate_background="true"
+                        android:layout_marginBottom="16dp"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/userLay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/heartLay"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="@+id/profileImage"
+                            app:layout_constraintGuide_percent=".65" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/profileImage"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_centerHorizontal="true"
+                            android:adjustViewBounds="false"
+                            android:padding="2dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/default_profile_image"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                            app:strokeColor="@color/colorWhite"
+                            app:strokeWidth="2dp" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/profileFollowIcon"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/add_user"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="@+id/profileImage"
+                            app:layout_constraintStart_toStartOf="@+id/profileImage"
+                            app:layout_constraintTop_toBottomOf="@+id/guideline" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/heartLay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/giftLay"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imgheart"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/img_round"
+                            android:src="@drawable/img_heart_empty_1"
+                            android:visibility="visible"
+                            android:scaleType="centerInside" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/heartAni"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:visibility="gone"
+                            app:lottie_loop="false"
+                            app:lottie_rawRes="@raw/newg"
+                            app:lottie_speed="2.0" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txt_heart_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="6dp"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textFontWeight="600"
+                            style="@style/OutfitRegularForHeadingWhiteSize12" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/giftLay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/giftImageView"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/img_gift_1" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txt_gift_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="6dp"
+                            android:digits="4"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textFontWeight="600"
+                            style="@style/OutfitRegularForHeadingWhiteSize12" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/commentLay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/shareLay"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/img_chat_1" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txt_comment_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="6dp"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textFontWeight="600"
+                            style="@style/OutfitRegularForHeadingWhiteSize12" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/moreLay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/music_symbol"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/img_more_1" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="6dp"
+                            android:singleLine="true"
+                            android:text="@string/more"
+                            android:textFontWeight="600"
+                            style="@style/OutfitRegularForHeadingWhiteSize12"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottieAudio"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_fileName="data.json"
+                        app:lottie_loop="true"
+                        android:visibility="gone"
+                        app:lottie_repeatMode="restart" />
+
+                </LinearLayout>
+            </RelativeLayout>
+            <!--this linearlayout is for sample adlayout, later we can change-->
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/newadlayout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_above="@+id/progress_duration"
+                android:gravity="center"
+                android:background="@drawable/bg_sample"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Ad   Ad   Ad    Ad   Ad   Ad   Ad   Ad   Ad   Ad   Ad"
+                    style="@style/OutfitRegularForHeadingWhiteSize14"
+                    android:textFontWeight="400" />
+
+            </LinearLayout>
+            <!--<ProgressBar
+                android:id="@+id/progress_duration"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="?attr/actionBarSize"
+                android:max="100"
+                android:progressBackgroundTint="@null"
+                android:progressBackgroundTintMode="screen"
+                android:progressTint="@color/colorPrimary"
+                android:visibility="visible" />-->
+            <ProgressBar
+                android:id="@+id/progress_duration"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:max="100"
+                android:progressBackgroundTint="@null"
+                android:progressBackgroundTintMode="screen"
+                android:progressTint="@color/colorPrimary"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+       <!-- <LinearLayout
+            android:id="@+id/leftSideView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/bottomLay"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/img_round_white">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/logo"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:padding="4dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/image_logo"
+                    android:visibility="visible"
+                    android:scaleType="centerInside" />
+
+            </LinearLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/liveStreaming"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_above="@+id/userLay"
+                android:layout_alignParentEnd="true"
+                android:adjustViewBounds="true"
+                android:background="@color/colorBlack"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_live_stream"
+                android:visibility="visible"
+                app:riv_corner_radius="65dp"
+                app:riv_mutate_background="true"
+                android:layout_marginBottom="16dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/userLay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/heartLay"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@+id/profileImage"
+                    app:layout_constraintGuide_percent=".65" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="false"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_profile_image"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                    app:strokeColor="@color/colorWhite"
+                    app:strokeWidth="2dp" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profileFollowIcon"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/add_user"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="@+id/profileImage"
+                    app:layout_constraintStart_toStartOf="@+id/profileImage"
+                    app:layout_constraintTop_toBottomOf="@+id/guideline" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/heartLay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/giftLay"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/heart"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/img_round"
+                    android:src="@drawable/img_heart_empty_1"
+                    android:visibility="visible"
+                    android:scaleType="centerInside" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/heartAni"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:visibility="gone"
+                    app:lottie_loop="false"
+                    app:lottie_rawRes="@raw/heart"
+                    app:lottie_speed="2.0" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_heart_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textFontWeight="600"
+                    style="@style/OutfitRegularForHeadingWhiteSize12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/giftLay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/giftImageView"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/img_gift_1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_gift_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:digits="4"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textFontWeight="600"
+                    style="@style/OutfitRegularForHeadingWhiteSize12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/commentLay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/shareLay"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/img_chat_1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_comment_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textFontWeight="600"
+                    style="@style/OutfitRegularForHeadingWhiteSize12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/moreLay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/music_symbol"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/img_more_1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:singleLine="true"
+                    android:text="@string/more"
+                    android:textFontWeight="600"
+                    style="@style/OutfitRegularForHeadingWhiteSize12"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAudio"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="data.json"
+                app:lottie_loop="true"
+                app:lottie_repeatMode="restart" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/progress_duration"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/leftSideView"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_title"
+                style="@style/TextWhiteRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/txt_description"
+                android:layout_gravity="start"
+                android:scrollbars="none"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_medium"
+                android:visibility="gone"/>
+
+            <com.app.helper.LinkEllipseTextView
+                android:id="@+id/txt_description_old"
+                style="@style/TextWhiteLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/progress_duration"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="0dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:scrollHorizontally="false"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_normal"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/add_button"
+                android:layout_width="100dp"
+                android:layout_height="40sp"
+                android:layout_above="@+id/progress_duration"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="center"
+                android:ellipsize="end"
+                android:scrollHorizontally="false"
+                android:text="Link"
+                android:minHeight="0dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_normal"
+                android:visibility="gone" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/frame"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/bottom_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="0dp"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="true"
+                        android:orientation="horizontal"
+                        android:overScrollMode="always"
+                        android:paddingBottom="20dp"
+                        android:visibility="visible"
+                        tools:listitem="@layout/recycleview_bottom"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                </FrameLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            &lt;!&ndash; <LinearLayout
+                android:id="@+id/audioLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:src="@drawable/music" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtAudioTitle"
+                    style="@style/TextWhiteLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/progress_duration"
+                    android:layout_gravity="start|center_vertical"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:paddingHorizontal="8dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_normal" />
+
+            </LinearLayout>&ndash;&gt;
+
+            &lt;!&ndash;<eightbitlab.com.blurview.BlurView
+                android:id="@+id/blurView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:blurOverlayColor="@android:color/transparent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:background="@drawable/rounded_transparent_background">
+
+                    &lt;!&ndash; Profile Image &ndash;&gt;
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/profileImageNew"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/filter_sample_image"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:background="@drawable/circle_background"
+                        app:riv_corner_radius="65dp"
+                        app:riv_mutate_background="true" />
+
+                    &lt;!&ndash; User Name &ndash;&gt;
+                    <TextView
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/userName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Edward"
+                        android:textSize="14sp"
+                        android:textFontWeight="600"
+                        style="@style/OutfitRegularForHeadingWhiteSize14"
+                        app:layout_constraintTop_toTopOf="@id/profileImageNew"
+                        app:layout_constraintStart_toEndOf="@id/profileImageNew"
+                        app:layout_constraintEnd_toStartOf="@id/followButton" />
+
+                    &lt;!&ndash; User Handle &ndash;&gt;
+                    <TextView
+                        android:id="@+id/userHandle"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_height="wrap_content"
+                        android:text="@edwards"
+                        android:textFontWeight="400"
+                        android:layout_marginTop="2dp"
+                        style="@style/OutfitRegularForHeadingWhiteSize10"
+                        app:layout_constraintTop_toBottomOf="@id/userName"
+                        app:layout_constraintStart_toEndOf="@id/profileImageNew"
+                        app:layout_constraintEnd_toStartOf="@id/followButton" />
+
+                    &lt;!&ndash; Follow Button &ndash;&gt;
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/followButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="Follow"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:textFontWeight="400"
+                        style="@style/OutfitRegularForHeadingWhiteSize12"
+                        android:background="@drawable/bg_top_selection_1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    &lt;!&ndash; Content Text &ndash;&gt;
+                    <com.app.helper.LinkEllipseTextView
+                        android:id="@+id/txt_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Hi everyone, in this video I will sing a song #song #music #love #beauty"
+                        android:ellipsize="end"
+                        android:textFontWeight="400"
+                        style="@style/OutfitRegularForHeadingWhiteSize12"
+                        android:maxLines="3"
+                        android:scrollHorizontally="false"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintTop_toBottomOf="@id/profileImageNew"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+                    <LinearLayout
+                        android:id="@+id/audioLay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_transparent_background_new"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_description">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="start|center_vertical"
+                            android:src="@drawable/wave_sound"
+                            android:padding="5dp"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txtAudioTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/progress_duration"
+                            android:layout_gravity="start|center_vertical"
+                            android:ellipsize="marquee"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:paddingHorizontal="6dp"
+                            android:singleLine="true"
+                            android:text="7 Years - Lukas Graham"
+                            android:textAlignment="viewStart"
+                            android:textFontWeight="400"
+                            style="@style/OutfitRegularForHeadingWhiteSize12" />
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </eightbitlab.com.blurview.BlurView>&ndash;&gt;
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="@drawable/rounded_transparent_background">
+
+                &lt;!&ndash; Profile Image &ndash;&gt;
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/profileImageNew"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/filter_sample_image"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:background="@drawable/circle_background"
+                    app:riv_corner_radius="65dp"
+                    app:riv_mutate_background="true" />
+
+                &lt;!&ndash; User Name &ndash;&gt;
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/userName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Edward"
+                    android:textSize="14sp"
+                    android:textFontWeight="600"
+                    style="@style/OutfitRegularForHeadingWhiteSize14"
+                    app:layout_constraintTop_toTopOf="@id/profileImageNew"
+                    app:layout_constraintStart_toEndOf="@id/profileImageNew"
+                    app:layout_constraintEnd_toStartOf="@id/followButton" />
+
+                &lt;!&ndash; User Handle &ndash;&gt;
+                <TextView
+                    android:id="@+id/userHandle"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="@edwards"
+                    android:textFontWeight="400"
+                    android:layout_marginTop="2dp"
+                    style="@style/OutfitRegularForHeadingWhiteSize10"
+                    app:layout_constraintTop_toBottomOf="@id/userName"
+                    app:layout_constraintStart_toEndOf="@id/profileImageNew"
+                    app:layout_constraintEnd_toStartOf="@id/followButton" />
+
+                &lt;!&ndash; Follow Button &ndash;&gt;
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/followButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Follow"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:textFontWeight="400"
+                    style="@style/OutfitRegularForHeadingWhiteSize12"
+                    android:background="@drawable/bg_top_selection_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                &lt;!&ndash; Content Text &ndash;&gt;
+                <com.app.helper.LinkEllipseTextView
+                    android:id="@+id/txt_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Hi everyone, in this video I will sing a song #song #music #love #beauty"
+                    android:ellipsize="end"
+                    android:textFontWeight="400"
+                    style="@style/OutfitRegularForHeadingWhiteSize12"
+                    android:maxLines="3"
+                    android:scrollHorizontally="false"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/profileImageNew"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/audioLay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rounded_transparent_background_new"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_description">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="start|center_vertical"
+                        android:src="@drawable/wave_sound"
+                        android:padding="5dp"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtAudioTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:paddingHorizontal="6dp"
+                        android:singleLine="true"
+                        android:text="7 Years - Lukas Graham"
+                        android:textAlignment="viewStart"
+                        android:textFontWeight="400"
+                        style="@style/OutfitRegularForHeadingWhiteSize12" />
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/newadlayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/bottomLay"
+            android:layout_above="@+id/progress_duration"
+            android:gravity="center"
+            android:background="@drawable/bg_sample"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ad"
+                style="@style/OutfitRegularForHeadingWhiteSize14"
+                android:textFontWeight="400"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ad"
+                style="@style/OutfitRegularForHeadingWhiteSize14"
+                android:textFontWeight="400"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ad"
+                style="@style/OutfitRegularForHeadingWhiteSize14"
+                android:textFontWeight="400"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ad"
+                style="@style/OutfitRegularForHeadingWhiteSize14"
+                android:textFontWeight="400"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ad"
+                style="@style/OutfitRegularForHeadingWhiteSize14"
+                android:textFontWeight="400"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ad"
+                style="@style/OutfitRegularForHeadingWhiteSize14"
+                android:textFontWeight="400"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ad"
+                style="@style/OutfitRegularForHeadingWhiteSize14"
+                android:textFontWeight="400"
+                android:layout_margin="5dp"/>
+
+        </LinearLayout>
+        &lt;!&ndash;<ProgressBar
+            android:id="@+id/progress_duration"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:max="100"
+            android:progressBackgroundTint="@null"
+            android:progressBackgroundTintMode="screen"
+            android:progressTint="@color/colorPrimary"
+            android:visibility="visible" />&ndash;&gt;
+        <ProgressBar
+            android:id="@+id/progress_duration"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:max="100"
+            android:progressBackgroundTint="@null"
+            android:progressBackgroundTintMode="screen"
+            android:progressTint="@color/colorPrimary"
+            android:visibility="invisible" />-->
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

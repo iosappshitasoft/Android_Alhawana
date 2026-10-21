@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="locale"
+    android:textDirection="locale"
+    android:background="@color/colorBlack">
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        android:fillViewport="true"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="afterDescendants"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layoutDirection="locale"
+            android:textDirection="locale">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/millions_of_people_waiting"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/outfit_semibold"
+                    android:gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:lineSpacingExtra="6dp" />
+
+                <!-- Profile Picture with Edit Icon -->
+                <FrameLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="30dp">
+
+                    <ImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/img_bg"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/circle_background" />
+
+                    <ImageView
+                        android:id="@+id/imgEdit"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/edit_image_svg"
+                        android:padding="6dp" />
+                </FrameLayout>
+
+                <!-- Input: Name -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--                <RelativeLayout-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="50dp"-->
+                    <!--                    android:layout_marginTop="15dp"-->
+                    <!--                    android:background="@drawable/bg_input_field">-->
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/txtUserName"-->
+                    <!--                        style="@style/TextWhiteLight"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_alignParentStart="true"-->
+                    <!--                        android:layout_centerVertical="true"-->
+                    <!--                        android:padding="10dp"-->
+                    <!--                        android:text="@string/user_name"-->
+                    <!--                        android:textColor="@color/gray_444"-->
+                    <!--                        android:layout_marginStart="5dp"-->
+                    <!--                        android:textSize="@dimen/text_normal" />-->
+
+
+                    <!--                    <androidx.appcompat.widget.AppCompatEditText-->
+                    <!--                        android:id="@+id/edtUserName"-->
+                    <!--                        style="@style/EditWhiteLight"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_alignParentEnd="true"-->
+                    <!--                        android:layout_centerVertical="true"-->
+                    <!--                        android:layout_toEndOf="@+id/txtUserName"-->
+                    <!--                        android:background="@null"-->
+                    <!--                        android:ellipsize="none"-->
+                    <!--                        android:gravity="end"-->
+                    <!--                        android:textDirection="locale"-->
+                    <!--                        android:inputType="textCapWords|textPersonName"-->
+                    <!--                        android:maxLength="20"-->
+                    <!--                        android:padding="10dp"-->
+                    <!--                        android:singleLine="true"-->
+                    <!--                        android:textAlignment="viewEnd"-->
+                    <!--                        android:textSize="@dimen/text_normal" />-->
+
+                    <!--                </RelativeLayout>-->
+                    <RelativeLayout
+                        android:id="@+id/userNameLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/bg_input_field"
+                        android:paddingEnd="10dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtUserName"
+                            style="@style/EditWhiteLight"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:gravity="start|center_vertical"
+                            android:hint="@string/user_name"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:textDirection="locale"
+                            android:layoutDirection="locale"
+                            android:inputType="textPersonName"
+                            android:maxLength="20"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/text_normal" />
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/userNameNotesLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="5dp"
+                        android:visibility="visible"
+                        android:orientation="vertical"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_regular"
+                            android:gravity="center"
+                            android:text="@string/username_notes_1"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_regular"
+                            android:gravity="center"
+                            android:text="@string/username_note_2"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/outfit_regular"
+                            android:gravity="center"
+                            android:text="@string/username_note_3"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+
+
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingEnd="10dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/bg_input_field">
+
+                        <TextView
+                            android:id="@+id/txtName"
+                            style="@style/TextWhiteLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:padding="10dp"
+                            android:text="@string/name"
+                            android:visibility="gone"
+                            android:textColor="@color/gray_444"
+                            android:layout_marginStart="5dp"
+                            android:textSize="@dimen/text_normal" />
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtName"
+                            style="@style/EditWhiteLight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/txtName"
+                            android:background="@null"
+                            android:ellipsize="none"
+                            android:textDirection="locale"
+                            android:layoutDirection="locale"
+                            android:gravity="start|center_vertical"
+                            android:textAlignment="viewStart"
+                            android:hint="@string/name"
+                            android:textColorHint="@color/white"
+                            android:inputType="textCapWords|textPersonName"
+                            android:maxLength="20"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textSize="@dimen/text_normal" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/genderLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="15dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="10dp"
+                        android:background="@drawable/bg_input_field">
+
+                        <Spinner
+                            android:id="@+id/spinnerGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:popupBackground="@color/colorBlack"
+                            android:entries="@array/gender_options"
+                            android:gravity="start|center_vertical"
+                            android:textAlignment="viewStart"
+                            android:textDirection="locale"
+                            android:layoutDirection="locale" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="15dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:background="@drawable/bg_input_field">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtDob"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:gravity="start|center_vertical"
+                            android:hint="@string/date_of_birth"
+                            android:textAlignment="viewStart"
+                            android:padding="10dp"
+                            android:textSize="@dimen/text_normal"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:inputType="date"
+                            android:textDirection="locale"
+                            android:layoutDirection="locale" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="15dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:background="@drawable/bg_input_field">
+
+                        <EditText
+                            android:lineSpacingExtra="5dp"
+                            android:id="@+id/filledTextField"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:gravity="start"
+                            android:hint="@string/bio"
+                            android:textAlignment="viewStart"
+                            android:padding="10dp"
+                            android:textSize="@dimen/text_normal"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:textDirection="locale"
+                            android:layoutDirection="locale"/>
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+                <!-- Save Button -->
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Fixed Button at bottom -->
+    <LinearLayout
+        android:id="@+id/btnNextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/save_only"
+            android:fontFamily="@font/outfit_semibold"
+            android:textSize="@dimen/text_medium"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_button_purple" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:theme="@style/CircularProgress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

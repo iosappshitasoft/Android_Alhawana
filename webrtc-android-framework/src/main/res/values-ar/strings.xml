@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="layout_direction">1</string>
+
+    <!--Use &lt; instead of < symbol for this string-->
+<string name="login_with_mobile">تسجيل الدخول مع الهاتف المحمول</string>
+<string name="facebook">فيسبوك</string>
+<string name="snap_and_share">التقط و \ n شارك كل لحظة</string>
+<string name="millions_of_people_waiting">الملايين من مقاطع الفيديو تنتظر من أجلك</string>
+<string name="terms_and_conditions_des">من خلال الاستمرار ، توافق على&lt;b>الأحكام والشروط&lt;b/></string>
+<string name="bio">السيرة الذاتية</string>
+<string name="max_characters">كحد أقصى 50 حرفًا</string>
+<string name="Skip">يتخطى</string>
+<string name="choose_your">اختر خاصتك</string>
+<string name="interests">الإهتمامات</string>
+<string name="get_personalized">احصل على توصيات فيديو مخصصة</string>
+<string name="fab_content">حدد اهتمامك</string>
+<string name="interest_warning">الرجاء تحديد اهتمامك</string>
+<string name="following">التالي</string>
+<string name="foryou">لك</string>
+<string name="addafav">أضف إلى المفضلة</string>
+<string name="addafav2">أضف إلى المفضل</string>
+<string name="favourites">المفضلة</string>
+<string name="unFav">غير متاح</string>
+<string name="report_success_alert">شكرًا! تم تسجيل تقريرك بنجاح.</string>
+<string name="add_fav_video_success">تم إضافة الفيديو إلى قائمتك المفضلة بنجاح</string>
+<string name="add_fav_video_removed">تم إزالة الفيديو إلى قائمتك المفضلة بنجاح</string>
+<string name="video_call">مكالمة فيديو</string>
+<string name="Original_sound">الصوت الأصلي</string>
+<string name="sounds">اصوات</string>
+<string name="upload_sounds">تحميل الأصوات</string>
+<string name="liked_videos">أحب مقاطع الفيديو</string>
+<string name="preview">معاينة</string>
+<string name="discard_recording_progress">تجاهل الصوت الحالي وتسجيل التقدم؟</string>
+<string name="reshoot">RECHOOT</string>
+<string name="add_comment">أضف تعليق</string>
+<string name="gift_to_cash">لديك ٪ 1 $ S هدايا يستحق ٪ 2 $ s $</string>
+    <!--<string name="gift_to_cash_no">لديك ٪ 1 $ s</string>-->
+    <string name="portrait">لَوحَة</string>
+    <string name="describe_your_video">صف الفيديو الخاص بك</string>
+    <string name="describe_sample_hashtag">على سبيل المثال. #friendship ، #nature</string>
+    <string name="who_can_post_comments">من يمكنه نشر / كتابة التعليقات</string>
+    <string name="who_can_send_message">من يمكنه إرسال الرسائل</string>
+    <string name="Everyone">الجميع</string>
+    <string name="block_lists">قائمة الحظر</string>
+    <string name="save_gallery">حفظ إلى المعرض</string>
+    <string name="post">بريد</string>
+    <string name="alert_close_this_video">هل تريد إغلاق هذا الفيديو؟</string>
+    <string name="upload_and_skip">تحميل الصورة أو تخطي</string>
+    <string name="name">اسم</string>
+    <string name="date_of_birth">تاريخ الميلاد</string>
+    <string name="next">التالي</string>
+    <string name="gender">جنس</string>
+    <string name="gender_alert">الرجاء تحديد جنسك</string>
+    <string name="enter_name">أدخل الاسم</string>
+    <string name="enter_date_of_birth">أدخل تاريخ الميلاد</string>
+    <string name="no_internet_connection">لا يوجد اتصال بالإنترنت</string>
+    <string name="internet_disturb">فشل اتصال الإنترنت ، حاول مرة أخرى</string>
+    <string name="away_from_chat">بعيدا عن الدردشة</string>
+    <string name="privacy_settings">الخصوصية والإعدادات</string>
+    <string name="settings">إعدادات</string>
+    <string name="okay">تمام</string>
+    <string name="free_coins">عملات مجانية</string>
+    <string name="pick_image_intent_text">اختر صورة</string>
+    <string name="storage_error">تمكين إذن التخزين</string>
+    <string name="camera_permission_error">تمكين إذن الكاميرا</string>
+    <string name="require_permission">تمكين يتطلب إذن</string>
+    <string name="audio_record_error">تمكين الميكروفون والتخزين pemission</string>
+    <string name="camera_storage_error">تمكين أذونات الكاميرا والتخزين</string>
+    <string name="camera_photos_storage_error">تمكين الكاميرا والصور ، أذونات مقاطع الفيديو</string>
+    <string name="camera_microphone_permission_error">تمكين أذونات الكاميرا والميكروفون</string>
+    <string name="camera_microphone_phone_state_permission_error">تمكين الكاميرا ، الميكروفون ، اقرأ أذونات حالة الهاتف</string>
+    <string name="camera_microphone_bluetooth_permission_error">تمكين الكاميرا والميكروفون والبلوتوث وقراءة أذونات حالة الهاتف</string>
+    <string name="touch_to_full">المس الكامل</string>
+    <string name="followings">التالية</string>
+    <string name="fans">المشجعين</string>
+    <string name="hearts">قلوب</string>
+    <string name="gems">الأحجار الكريمة</string>
+    <string name="gifts">الهدايا</string>
+    <string name="expired">منتهي الصلاحية</string>
+    <string name="your_membership">عضويتك</string>
+    <string name="renewal">التجديد</string>
+    <string name="payment_id">معرف الدفع</string>
+    <string name="save">يحفظ</string>
+    <string name="swipe_change_photo">انتقاد صورة التغيير</string>
+    <string name="swipe_to_see_followings">انتقد اليسار لرؤية متابعاتك</string>
+    <string name="swipe_to_see_followers">انتقد يمينًا لرؤية معجبيك</string>
+    <string name="swipe_to_see_other_followings">انتقد اليسار لرؤية هذا المستخدم متابعة</string>
+    <string name="swipe_to_see_other_followers">انتقد يمينًا لرؤية مشجعي المستخدمين</string>
+    <string name="use_this_hash_tag">استخدم هذا الهاشتاج</string>
+    <string name="use_this_sound">استخدم هذا الصوت</string>
+    <string name="related_videos">فيديوهات ذات علاقة</string>
+    <string name="selected_song_sucess">تم اختيار الصوت بنجاح</string>
+    <string name="flip">يواجه</string>
+    <string name="timer">مؤقت</string>
+    <string name="filter">منقي</string>
+    <string name="flash">فلاش</string>
+    <string name="flash_not_support">فلاش غير مدعوم</string>
+    <string name="search_sounds">أصوات البحث</string>
+    <string name="search_fav">البحث المفضلات</string>
+    <string name="txt_warning">الرجاء إدخال الوصف</string>
+    <!--APPRTC Strings-->
+<string name="follow">يتبع</string>
+<string name="unfollow">الغاء المتابعة</string>
+<string name="invalid_url_title">URL غير صالح</string>
+<string name="invalid_url_text">أدى عنوان URL أو الغرفة التي أدخلتها إلى عنوان URL غير صالح: ٪ 1 $ s</string>
+<string name="channel_error_title">خطأ في الإتصال</string>
+<string name="camera2_texture_only_error">Camera2 يدعم فقط التقاط الملمس. إما تعطيل Camera2 أو تمكين التقاط الملمس في الخيارات.</string>
+<string name="swipe_to_skip">انتقاد تخطي</string>
+<string name="no_followers_yet">لا جماهير حتى الآن</string>
+<string name="no_followings_yet">لا متابعة بعد</string>
+<string name="no_gems_list_found">لم يتم العثور على عملات معدنية</string>
+<string name="no_gift">لا هدايا</string>
+<string name="no_gift_founded">لا توجد هدايا أسس</string>
+<string name="no">لا</string>
+<string name="really_want_exit">هل ترغب فعلا بالخروج؟</string>
+<string name="really_want_logout">هل أنت متأكد من تريد تسجيل الدخول؟</string>
+<string name="really_want_clear">هل أنت متأكد من رغبتك في مسح الدردشة؟</string>
+<string name="profile_updated_successfully">تم تحديث الملف الشخصي بنجاح</string>
+<string name="male">ذكر</string>
+<string name="female">أنثى</string>
+<string name="account_deactivated_by_admin">تم إلغاء تنشيط حسابك بواسطة المسؤول</string>
+<string name="broadcast_deactivated_by_admin">تم حظر البث بواسطة المسؤول</string>
+<string name="get_prime_benefits">احصل على فوائد رئيسية</string>
+<string name="subscribe">يشترك</string>
+<string name="stickers">ملصقات</string>
+<string name="congratulations_you_got">تهانينا. أنت حصلت</string>
+<string name="gems_free_coins"> العملات المعدنية الحرة</string>
+<string name="coins">عملات معدنية</string>
+<string name="report_user">تقرير</string>
+<string name="unreported">التراجع عن التقرير</string>
+<string name="undo_report_successfully">التراجع عن التقرير بنجاح</string>
+<string name="user_alert_message">لا يمكنك إرسال رسالة إلى هذا المستخدم</string>
+<string name="prime">برايم</string>
+<string name="send">يرسل</string>
+<string name="copy_link">نسخ الوصلة</string>
+<string name="whatsApp">Whatsapp</string>
+<string name="messenger">رسول</string>
+<string name="shareTo">مشاركة إلى</string>
+<string name="no_comments">بدون تعليقات</string>
+<string name="not_enough_gems">لا يكفي العملات المعدنية</string>
+<string name="location">موقع</string>
+<string name="select_all">اختر الكل</string>
+<string name="no_gems_yet">لا الأحجار الكريمة حتى الآن</string>
+<string name="free_gems_content">ادعُ صديقًا واحدًا للانضمام إلى فوندو واحصل على عملات وشاهد الفيديو واحصل على العملات المعدنية المجانية</string>
+<string name="invite_friends_reward">دعوة أصدقائك \ nreward</string>
+<string name="refer_your_friends">إحالة أصدقائك</string>
+<string name="invite_friends">ادعو أصدقاء</string>
+<string name="watch_video">شاهد الفيديو</string>
+<string name="not_now">ليس الآن</string>
+<string name="buy_gems">شراء الأحجار الكريمة</string>
+<string name="insufficient_funds">رصيد غير كاف</string>
+<string name="subscription_price">سعر الاشتراك</string>
+   <!-- <string name="subscription_price">٪ 1 $ s/٪ 2 $ s</string>-->
+<string name="premium_member">قسط الأعضاء</string>
+<string name="purchase_cancelled">شراء تم إلغاؤه</string>
+    <!-- Settings strings. -->
+<string name="gems_purchase_response">تم تحديث العملات المعدنية إلى حسابك</string>
+<string name="pref_room_key" translatable="false">room_preference</string>
+<string name="request_sent_successfully" translatable="false">طلب إرسال بنجاح</string>
+<string name="pref_room_list_key" translatable="false">room_list_preference</string>
+<string name="pref_videosettings_key" translatable="false">video_settings_key</string>
+<string name="pref_videosettings_title" translatable="false">إعدادات الفيديو WEBRTC.</string>
+<string name="pref_videocall_key" translatable="false">vidoicall_preference</string>
+<string name="pref_videocall_title" translatable="false">مكالمة فيديو.</string>
+<string name="pref_videocall_dlg" translatable="false">تمكين الفيديو في مكالمة.</string>
+<string name="pref_videocall_default" translatable="false">حقيقي</string>
+<string name="pref_screencapture_key" translatable="false">screencapture_preference</string>
+<string name="pref_screencapture_title" translatable="false">استخدم screencapture.</string>
+<string name="pref_screencapture_default" translatable="false">خطأ شنيع</string>
+<string name="pref_camera2_key" translatable="false">camera2_preference</string>
+<string name="pref_camera2_title" translatable="false">استخدم Camera2.</string>
+<string name="pref_camera2_default" translatable="false">حقيقي</string>
+<string name="pref_resolution_key" translatable="false">resolution_preference</string>
+<string name="pref_resolution_title" translatable="false">دقة الفيديو.</string>
+<string name="pref_resolution_dlg" translatable="false">أدخل قرار الفيديو المحلي APPRTC.</string>
+<string name="pref_resolution_default" translatable="false">تقصير</string>
+<string name="pref_fps_key" translatable="false">FPS_PREFERENCE</string>
+<string name="pref_fps_title" translatable="false">كاميرا FPS.</string>
+<string name="pref_fps_dlg" translatable="false">أدخل الكاميرا المحلية FPS.</string>
+<string name="pref_fps_default" translatable="false">تقصير</string>
+<string name="pref_capturequalityslider_key" translatable="false">captureDualitySlider_Preference</string>
+<string name="pref_capturequalityslider_title" translatable="false">التقاط الجودة شريط التمرير.</string>
+<string name="pref_capturequalityslider_dlg" translatable="false">تمكين شريط التمرير لتغيير جودة الالتقاط.</string>
+<string name="pref_capturequalityslider_default" translatable="false">خطأ شنيع</string>
+<string name="pref_maxvideobitrate_key" translatable="false">maxvideobitrate_preference</string>
+<string name="pref_maxvideobitrate_title" translatable="false">الحد الأقصى للفيديو إعداد معدل البت.</string>
+<string name="pref_maxvideobitrate_dlg" translatable="false">الحد الأقصى للفيديو إعداد معدل البت.</string>
+<string name="pref_maxvideobitrate_default" translatable="false">تقصير</string>
+<string name="pref_maxvideobitratevalue_key" translatable="false">maxvideobitratevalue_preference</string>
+<string name="pref_maxvideobitratevalue_title" translatable="false">فيديو تشفير الحد الأقصى البت.</string>
+<string name="pref_maxvideobitratevalue_dlg" translatable="false">أدخل باتيرات تشفير الفيديو في KBPs.</string>
+<string name="pref_maxvideobitratevalue_default" translatable="false">1700</string>
+<string name="pref_videocodec_key" translatable="false">vidoocodec_preference</string>
+<string name="pref_videocodec_title" translatable="false">برنامج ترميز الفيديو الافتراضي.</string>
+<string name="pref_videocodec_dlg" translatable="false">حدد برنامج ترميز الفيديو الافتراضي.</string>
+<string name="pref_videocodec_default" translatable="false">VP8</string>
+<string name="pref_hwcodec_key" translatable="false">hwcodec_preference</string>
+<string name="pref_hwcodec_title" translatable="false">فيديو برامج الترميز تسريع الأجهزة.</string>
+<string name="pref_hwcodec_dlg" translatable="false">استخدم برنامج ترميز الفيديو المتسارع للأجهزة (إذا كان ذلك متاحًا).</string>
+<string name="pref_hwcodec_default" translatable="false">حقيقي</string>
+<string name="pref_capturetotexture_key" translatable="false">captureTotexture_preference</string>
+<string name="pref_capturetotexture_title" translatable="false">التقاط الفيديو إلى الملمس السطحي.</string>
+<string name="pref_capturetotexture_dlg" translatable="false">التقاط الفيديو إلى القوام (إن وجدت).</string>
+<string name="pref_capturetotexture_default" translatable="false">حقيقي</string>
+<string name="pref_flexfec_key" translatable="false">flexfec_preference</string>
+<string name="pref_flexfec_title" translatable="false">برامج الترميز المرن مرنة FEC.</string>
+<string name="pref_flexfec_dlg" translatable="false">تمكين FlexFec.</string>
+<string name="pref_flexfec_default" translatable="false">خطأ شنيع</string>
+<string name="pref_audiosettings_key" translatable="false">Audio_settings_key</string>
+<string name="pref_audiosettings_title" translatable="false">إعدادات الصوت WEBRTC.</string>
+<string name="pref_startaudiobitrate_key" translatable="false">startaudiobitrate_preference</string>
+<string name="pref_startaudiobitrate_title" translatable="false">إعداد البت الصوتي.</string>
+<string name="pref_startaudiobitrate_dlg" translatable="false">إعداد البت الصوتي.</string>
+<string name="pref_startaudiobitrate_default" translatable="false">تقصير</string>
+<string name="pref_startaudiobitratevalue_key" translatable="false">startaudiobitratevalue_preference</string>
+<string name="pref_startaudiobitratevalue_title" translatable="false">بترة برامج الترميز الصوتي.</string>
+<string name="pref_startaudiobitratevalue_dlg" translatable="false">أدخل بتبر برنسي الصوت في KBPs.</string>
+<string name="pref_startaudiobitratevalue_default" translatable="false">32</string>
+<string name="pref_audiocodec_key" translatable="false">AudioCodec_Preference</string>
+<string name="pref_audiocodec_title" translatable="false">برنامج ترميز الصوت الافتراضي.</string>
+<string name="pref_audiocodec_dlg" translatable="false">حدد برنامج ترميز الصوت الافتراضي.</string>
+<string name="pref_audiocodec_default" translatable="false">opus</string>
+<string name="pref_noaudioprocessing_key" translatable="false">Audioprocessing_preference</string>
+<string name="pref_noaudioprocessing_title" translatable="false">تعطيل معالجة الصوت.</string>
+<string name="pref_noaudioprocessing_dlg" translatable="false">تعطيل خط أنابيب معالجة الصوت.</string>
+<string name="pref_noaudioprocessing_default" translatable="false">خطأ شنيع</string>
+<string name="pref_aecdump_key" translatable="false">aecdump_preference</string>
+<string name="pref_aecdump_title" translatable="false">إنشاء AECDump.</string>
+<string name="pref_aecdump_dlg" translatable="false">تمكين تسجيلات الصوت التشخيصية.</string>
+<string name="pref_aecdump_default" translatable="false">خطأ شنيع</string>
+<string name="pref_enable_save_input_audio_to_file_key" translatable="false">enable_key</string>
+<string name="pref_enable_save_input_audio_to_file_title" translatable="false">احفظ صوت الإدخال للملف.</string>
+<string name="pref_enable_save_input_audio_to_file_dlg" translatable="false">احفظ صوت الإدخال للملف.</string>
+<string name="pref_enable_save_input_audio_to_file_default" translatable="false">حقيقي</string>
+<string name="pref_opensles_key" translatable="false">opensles_preference</string>
+<string name="pref_opensles_title" translatable="false">استخدم Opensl ES لتشغيل الصوت.</string>
+<string name="pref_opensles_dlg" translatable="false">استخدم Opensl ES لتشغيل الصوت.</string>
+<string name="pref_opensles_default" translatable="false">خطأ شنيع</string>
+<string name="pref_disable_built_in_aec_key" translatable="false">disable_built_in_aec_preference</string>
+<string name="pref_disable_built_in_aec_title" translatable="false">تعطيل الأجهزة AEC.</string>
+<string name="pref_disable_built_in_aec_dlg" translatable="false">تعطيل الأجهزة AEC.</string>
+<string name="pref_disable_built_in_aec_default" translatable="false">خطأ شنيع</string>
+<string name="pref_disable_built_in_agc_key" translatable="false">disable_built_in_agc_preference</string>
+<string name="pref_disable_built_in_agc_title" translatable="false">تعطيل الأجهزة AGC.</string>
+<string name="pref_disable_built_in_agc_dlg" translatable="false">تعطيل الأجهزة AGC.</string>
+<string name="pref_disable_built_in_agc_default" translatable="false">خطأ شنيع</string>
+<string name="pref_disable_built_in_ns_key" translatable="false">disable_built_in_ns_preference</string>
+<string name="pref_disable_built_in_ns_title" translatable="false">تعطيل الأجهزة NS.</string>
+<string name="pref_disable_built_in_ns_dlg" translatable="false">تعطيل الأجهزة NS.</string>
+<string name="pref_disable_built_in_ns_default" translatable="false">خطأ شنيع</string>
+<string name="pref_disable_webrtc_agc_and_hpf_key" translatable="false">disable_webrtc_agc_and_hpf_preference</string>
+<string name="pref_disable_webrtc_agc_and_hpf_title" translatable="false">تعطيل WEBRTC AGC و HPF.</string>
+<string name="pref_disable_webrtc_agc_default" translatable="false">خطأ شنيع</string>
+<string name="pref_speakerphone_key" translatable="false">مكبر الصوت</string>
+<string name="pref_speakerphone_title" translatable="false">مكبر الصوت.</string>
+<string name="pref_speakerphone_dlg" translatable="false">مكبر الصوت.</string>
+<string name="pref_speakerphone_default" translatable="false">آلي</string>
+<string name="pref_datasettings_key" translatable="false">data_settings_key</string>
+<string name="pref_datasettings_title" translatable="false">إعدادات قناة WEBRTC.</string>
+<string name="pref_enable_datachannel_key" translatable="false">enable_datachannel_preference</string>
+<string name="pref_enable_datachannel_title" translatable="false">تمكين datachannel.</string>
+<string name="pref_enable_datachannel_default" translatable="false">حقيقي</string>
+<string name="pref_ordered_key" translatable="false">ordered_preference</string>
+<string name="pref_ordered_title" translatable="false">طلب الرسائل.</string>
+<string name="pref_ordered_default" translatable="false">حقيقي</string>
+<string name="pref_data_protocol_key" translatable="false">Subprotocol</string>
+<string name="pref_data_protocol_title" translatable="false">Subprotocol.</string>
+<string name="pref_data_protocol_dlg" translatable="false">أدخل subprotocol.</string>
+<string name="pref_data_protocol_default" translatable="false">/خيط</string>
+<string name="pref_negotiated_key" translatable="false">التفاوض _preference</string>
+<string name="pref_negotiated_title" translatable="false">التفاوض.</string>
+<string name="pref_negotiated_default" translatable="false">خطأ شنيع</string>
+<string name="pref_max_retransmit_time_ms_key" translatable="false">max_retransmit_time_ms_preference</string>
+<string name="pref_max_retransmit_time_ms_title" translatable="false">أقصى تأخير لإعادة الإرسال.</string>
+<string name="pref_max_retransmit_time_ms_dlg" translatable="false">أدخل Max Delay لإعادة الإرسال (في MS).</string>
+<string name="pref_max_retransmit_time_ms_default" translatable="false">-1</string>
+<string name="pref_max_retransmits_key" translatable="false">max_retransmits_preference</string>
+<string name="pref_max_retransmits_title" translatable="false">ماكس يحاول إعادة الإرسال.</string>
+<string name="pref_max_retransmits_dlg" translatable="false">أدخل ماكس محاولات لإعادة الإرسال.</string>
+<string name="pref_max_retransmits_default" translatable="false">-1</string>
+<string name="pref_data_id_key" translatable="false">data_id_preference</string>
+<string name="pref_data_id_title" translatable="false">معرف البيانات.</string>
+<string name="pref_data_id_dlg" translatable="false">أدخل معرف قناة البيانات.</string>
+<string name="pref_data_id_default" translatable="false">-1</string>
+<string name="pref_miscsettings_key" translatable="false">misc_settings_key</string>
+<string name="pref_miscsettings_title" translatable="false">إعدادات متنوعة.</string>
+<string name="pref_room_server_url_key" translatable="false">room_server_url_preference</string>
+<string name="pref_room_server_url_title" translatable="false">Room Server URL.</string>
+<string name="pref_room_server_url_dlg" translatable="false">أدخل عنوان URL لخادم الغرفة.</string>
+<string name="pref_room_server_url_default" translatable="false">https://appr.tc</string>
+<string name="pref_displayhud_key" translatable="false">displayhud_preference</string>
+<string name="pref_displayhud_title" translatable="false">عرض إحصائيات المكالمات.</string>
+<string name="pref_displayhud_dlg" translatable="false">عرض إحصائيات المكالمات.</string>
+<string name="pref_displayhud_default" translatable="false">خطأ شنيع</string>
+<string name="pref_tracing_key" translatable="false">Tracing_Preference</string>
+<string name="pref_tracing_title" translatable="false">تصحيح الأداء تتبع.</string>
+<string name="pref_tracing_dlg" translatable="false">تصحيح الأداء تتبع.</string>
+<string name="pref_tracing_default" translatable="false">خطأ شنيع</string>
+<string name="pref_enable_rtceventlog_key" translatable="false">enable_rtceventlog_key</string>
+<string name="pref_enable_rtceventlog_title" translatable="false">تمكين rtceventlog.</string>
+<string name="pref_enable_rtceventlog_default" translatable="false">خطأ شنيع</string>
+<string name="pref_use_legacy_audio_device_key" translatable="false">use_legacy_audio_device_key</string>
+<string name="pref_use_legacy_audio_device_title" translatable="false">استخدم جهاز الصوت القديم.</string>
+<string name="pref_use_legacy_audio_device_default" translatable="false">خطأ شنيع</string>
+<string name="today">اليوم</string>
+<string name="yesterday">أمس</string>
+<string name="filter_error_message">لم يتم العثور على المستخدم. قم بتغيير خيارات التصفية الخاصة بك</string>
+<string name="no_user_message">لم يتم العثور على المستخدم. حاول مرة أخرى في وقت لاحق!</string>
+<string name="gift_to_gems">لديك ٪ 1 $ S HOPTS (٪ 2 $ S COINS)</string>
+<string name="convert_gems">تحويل العملات المعدنية</string>
+<string name="general_settings">الاعدادات العامة</string>
+<string name="privacy">الخصوصية حساب</string>
+<string name="invite_your_friends">اعزم أصحابك</string>
+<string name="help">مركز المساعدة</string>
+<string name="language">لغة</string>
+<string name="message">رسالة</string>
+<string name="story_not_found">الفيديو لم يتم العثور عليه</string>
+<string name="terms_of_use_warning">يرجى الإشارة إلى أنك قد قرأت وتوافق على الشروط والأحكام</string>
+<string name="max_reached">لقد وصلت إلى الحد الأقصى لمستوى الشخصية ..</string>
+<string name="not_valid_url">عنوان URL غير صالح</string>
+<string name="warning_sound">الرجاء اختيار ملف الصوت</string>
+<string name="post_video_alert">ملاحظة: مقاطع فيديو لتكون ضد إرشادات مجتمع Fundoo (مثل: التحرش الجنسي وما إلى ذلك) ، قد نقوم بإزالة هذا المحتوى من النظام الأساسي/حظر المستخدم</string>
+<string name="type_your_message">اكتب رسالتك</string>
+<string name="gems_description">من خلال شراء العملات المعدنية ، يمكنك تطبيق المرشحات لمقابلة الأشخاص الذين تريدهم</string>
+<string name="exit">مخرج</string>
+<string name="back_button_exit_description">يرجى النقر مرة أخرى للخروج</string>
+<string name="valid_until">صالح حتى</string>
+<string name="one_week_subs">1W</string>
+<string name="one_month_subs">1M</string>
+<string name="three_month_subs">3M</string>
+<string name="six_month_subs">6M</string>
+<string name="one_year_subs">1y</string>
+<string name="image">صورة</string>
+<string name="video">فيديو</string>
+<string name="enter_your_message">أدخل رسالتك</string>
+<string name="notification">إشعار</string>
+<string name="chat">محادثة</string>
+<string name="notify_if_anyone_follows">إخطار ما إذا كان أي شخص يتبع</string>
+<string name="poor_internet_connection">por_internet_connection</string>
+<string name="calling">الدعوة ...</string>
+<string name="call_ended">المكالمة انتهت</string>
+<string name="call_cancelled">تم إلغاء المكالمة</string>
+<string name="clear_chat">دردشة واضحة</string>
+<string name="block">حاجز</string>
+<string name="unblock">رفع الحظر</string>
+<string name="money">مال</string>
+<string name="logout">تسجيل خروج</string>
+<string name="logged_out_successfully">سجلت بنجاح</string>
+<string name="typing">الكتابة ...</string>
+<string name="recording">تسجيل…</string>
+<string name="online">متصل</string>
+<string name="unblock_description">إلغاء حظر المستخدم</string>
+<string name="referral_code_copied">تم نسخ رمز الإحالة إلى لوحة المقطع</string>
+<string name="gems_added_to_your_account">تم إضافة العملات المعدنية إلى حسابك</string>
+<string name="video_time">سيكون الفيديو متاحًا في</string>
+<string name="last_seen_at">شوهد آخر مرة في</string>
+<string name="contact_admin_desc">سيكون حسابك نشطًا خلال 24 ساعة. لمزيد من المعلومات ، اتصل بمسؤول الاتصال</string>
+<string name="unblocked_successfully">المستخدم غير المحظور بنجاح</string>
+<string name="user_blocked_successfully">تم حظر المستخدم بنجاح</string>
+<string name="you_dont_have_any_gifts">آسف! ليس لديك أي هدايا</string>
+<string name="mutual_followers_can_make_a_call">فقط المشجعين المشتركين يمكنهم إجراء مكالمات</string>
+<string name="profile_image_updated">صورة الملف الشخصي محدث</string>
+<string name="team">فريق</string>
+<string name="contact_us">اتصل بنا</string>
+<string name="missed_call_at">مكالمة فائتة في</string>
+<string name="missed_call">مكالمة فائتة</string>
+<string name="convert_money_error_desc">الخيار غير متوفر الآن</string>
+<string name="convert_gifts_to_gems_desc">هل أنت متأكد من تحويل الهدايا إلى العملات المعدنية؟</string>
+<string name="convert_gifts_to_money_desc">طلب إعادة توجيهه إلى المسؤول؟</string>
+<string name="yes">نعم</string>
+<string name="uploading">تحميل ...</string>
+<string name="convert_money">سحب المال</string>
+<string name="something_went_wrong">هناك خطأ ما</string>
+<string name="search_for_users">ابحث عن المستخدمين</string>
+<string name="search_for_videos">ابحث عن مقاطع الفيديو</string>
+<string name="search_for_sounds">ابحث عن الأصوات</string>
+<string name="broadcast">إذاعة</string>
+<string name="people">الناس</string>
+<string name="no_videos">لا مقاطع فيديو</string>
+<string name="no_sound">لا أصوات</string>
+<string name="live">يعيش</string>
+<string name="linkCopied">تم نسخ الرابط إلى الحافظة</string>
+<string name="search_user">المستخدمون</string>
+<string name="search_video">أشرطة فيديو</string>
+<string name="search_sound">اصوات</string>
+<string name="search_hashtag">علامات التجزئة</string>
+<string name="time_just_now">الآن</string>
+    <string name="time_just_now_new">الآن</string>
+<string name="time_ago_seconds">٪ د</string>
+<string name="time_ago_minute">1 م</string>
+<string name="time_ago_minutes">٪ د م</string>
+<string name="time_ago_hour">1 ح</string>
+<string name="time_ago_hours">٪ د</string>
+<string name="time_ago_day">1 د</string>
+<string name="time_ago_days">٪ د د</string>
+<string name="time_ago_month">1 م</string>
+<string name="time_ago_months">٪ د م</string>
+<string name="time_ago_year">1 ذ</string>
+<string name="time_ago_years">٪ d y</string>
+<string name="search">يبحث</string>
+<string name="my_videos">أشرطة الفيديو الخاصة بي</string>
+<string name="msg_please_wait">انتظر من فضلك</string>
+<string name="processing">\ tpricessing ...</string>
+<string name="videos">أشرطة فيديو</string>
+<string name="invite_description">Haven \ \'t حاول ٪ 1 $ s حتى الآن؟ اشترك واحصل على الأحجار الكريمة المجانية! تنزيل: \ n \ n \ n ٪ 2 $ s</string>
+<string name="share_link">شارك الرابط</string>
+<string name="share_broadcast">حصة البث</string>
+<string name="no_broadcast_found">لم يتم العثور على فيديو</string>
+<string name="no_user">لا مستخدمين</string>
+<string name="comments">تعليقات</string>
+<string name="h">ح</string>
+<string name="m">م</string>
+<string name="s">س</string>
+<string name="k">ك</string>
+<string name="one_week">أسبوع 1</string>
+<string name="one_month">1 شهر</string>
+<string name="three_months">3 اشهر</string>
+<string name="six_months">6 اشهر</string>
+<string name="one_year">1 سنة</string>
+<string name="security">حماية</string>
+<string name="authentication_required">يستلزم التوثيق</string>
+<string name="password">كلمة المرور</string>
+<string name="fingerprint_not_recognized">بصمات الأصابع غير معترف بها</string>
+<string name="app_locked">مقفل</string>
+<string name="touch_the_fingerprint_sensor">المس مستشعر البصمات</string>
+<string name="my_qr_code">رمز الاستجابة السريعة الخاصة بي</string>
+<string name="share">يشارك</string>
+<string name="username">اسم المستخدم</string>
+<string name="discover">يكتشف</string>
+<string name="my_gifts">الهدايا بلدي</string>
+<string name="gallery">صالة عرض</string>
+<string name="touch_fingerprint_description">المس إصبعك على مستشعر طباعة الإصبع لفتح</string>
+<string name="cancel">يلغي</string>
+<string name="blocked_list">قائمة الحظر</string>
+<string name="no_user_you_blocked_yet"> بحظره حتى الآنلا يوجد مستخدم قمت بحظره حتى الآن</string>
+<string name="too_many_attempts">محاولات كثيرة! حاول مع فتح دبوس!</string>
+<string name="unable_to_verify">غير قادر على التحقق</string>
+<string name="rate_dialog_title">تتمتع ٪ 1 $ s؟</string>
+<string name="rate_dialog_message">اضغط على البدء في تقييمه على google play</string>
+<string name="rate_dialog_ok">قيمنا الآن</string>
+<string name="rate_dialog_cancel">ذكرني لاحقا</string>
+<string name="rate_dialog_no">ليس الآن</string>
+<string name="hashtag">الوسم</string>
+<string name="views">الآراء</string>
+<string name="select_atleast_one_user">حدد مستخدمًا واحدًا على الأقل</string>
+<string name="popular_countries">البلدان الشعبية</string>
+<string name="trending_hashtag">تتجه الهاشتاج</string>
+<string name="hash_symbol" translatable="false">#</string>
+<string name="at_symbol" translatable="false">\@</string>
+<string name="shared_a_stream">شارك في دفق</string>
+<string name="stream_share_description"><![CDATA[فيديو مشترك. انقر هنا للمشاهدة-> ]]></string>
+<string name="camera">آلة تصوير</string>
+<string name="unblock_call_description">قم بإلغاء حظر المستخدم لإجراء مكالمة</string>
+<string name="search_for_hashtag">ابحث عن الهاشتاج</string>
+<string name="no_hashtags">لا علامات التجزئة</string>
+<string name="allow_pop_up_window">السماح للنافذة المنبثقة</string>
+<string name="pop_up_permission_description">السماح للإذن المنبثق بالاستمتاع بوظائف المكالمات الواردة حتى لو لم يكن التطبيق في الخلفية</string>
+<string name="don_t_ask_again">لا تسأل مرة أخرى</string>
+<string name="allow">يسمح</string>
+<string name="deny">ينكر</string>
+<string name="no_mutual_description">لم يتم العثور على أتباع مشتركة. اجعل شخصًا متبادلاً من أجل مشاركة خاصة مباشرة</string>
+<string name="no_stream_found">لم يتم العثور على دفق</string>
+    <!-- TODO: Remove or change this placeholder text -->
+<string name="who_can_view">من يمكنه عرض الفيديو الخاص بي</string>
+<string name="settings_everyone">الجميع</string>
+<string name="settings_Fans">المشجعين</string>
+<string name="settings_Off">عن</string>
+<string name="notification_empty">لم يتم العثور على إشعار</string>
+<string name="edit_loading_text">تحميل ...</string>
+<string name="editor_error">خطأ</string>
+<string name="editor_error_msg">خطأ</string>
+<string name="application_permission">إذن التطبيق</string>
+<string name="permission_description">يحتاج صانع نغمة الرنين إلى قراءة مكتبة الموسيقى الخاصة بك من أجل استخدام وظائف التطبيق بشكل صحيح</string>
+<string name="editor_back_dialog_title">اختر إجراء</string>
+<string name="editor_back_dialog_discard">ينبذ</string>
+<string name="editor_back_dialog_cancel">يلغي</string>
+<string name="alert_audio_crop">يرجى تقليل مدة الأغنية ٪ 1 $ s sec</string>
+<string name="almost_done">يكاد ينتهي...</string>
+<string name="saved_to_gallery_filename">تم توفيره إلى ٪ 1 $ s</string>
+<string name="video_saved_to_gallery">تم حفظ الفيديو إلى المعرض</string>
+<string name="cannot_save_to_gallery">لا يمكن الحفظ إلى المعرض</string>
+<string name="video_will_save_in_gallery">سيتم حفظ الفيديو إلى المعرض</string>
+<string name="prime_description">تتيح عضوية Prime المستخدم الخاص بك أن يتطابق بشكل أسرع ويمكن أن يحصل على خصومات نهائية على العملات المعدنية</string>
+<string name="file_provider_authority" translatable="false">com.app.alhawanajd.fileprovider</string>
+<string name="prime_alert">كن عضوًا رئيسيًا لاستخدام هذه الميزة</string>
+    <!-- <string name="gift_to_cash">تحويل الهدية إلى نقود</string>-->
+<string name="gift_to_cash_no">لديك ٪ 1 $ s</string>
+<string name="gift_to_cash_not_enough">ليس لديك هدايا كافية</string>
+<string name="update_paypal_id">قم بتحديث معرف PayPal الخاص بك</string>
+    <!-- Addon Voice message-->
+<string name="slide_to_cancel">شريحة لإلغاء</string>
+<string name="file_not_found">لم يتم العثور على الملف</string>
+<string name="audio_length_error">خطأ في طول الصوت</string>
+<string name="hold_audio"> تمسك بتسجيل الصوت</string>
+<string name="audio">صوتي</string>
+    <!-- Addon Emoji and Gif in chat-->
+<string name="gif">GIF</string>
+    <!--Addon Chat Translate-->
+<string name="translate">يترجم</string>
+<string name="google_api_key_" translatable="false">aizasycnwt_jj_pc9uptq0mlrazt6rxxq3wgfia</string>
+<string name="allow_pop_up_tecno">التطبيقات المحمية</string>
+<string name="pop_up_permission_tecno">يتطلب Fundoo تمكين في التطبيقات المحمية إلى وظيفة الخلفية بشكل صحيح.</string>
+<string name="allow_pop_up_autostart_tecno">تمكين autostart</string>
+<string name="allow_pop_up_autostart_subtitle_tecno">لفتح التطبيق عندما يتم خلفية</string>
+<string name="pop_up_permission_autostart_tecno_step1">Step1: انقر فوق مربع الأدوات.</string>
+<string name="pop_up_permission_autostart_tecno_step2">Step2: انقر فوق Autostart Manager.</string>
+<string name="pop_up_permission_autostart_tecno_step3">الخطوة 3: تمكين Fundoo</string>
+<string name="connecting">توصيل…</string>
+<string name="video_deleted">تم حذف الفيديو بنجاح !!</string>
+<string name="no_categories">لا فئات</string>
+<string name="category">فئة</string>
+<string name="audio_warning">تنسيق ملف الصوت غير مدعوم</string>
+<string name="loading">تحميل...!</string>
+<string name="popular_creators">المبدعين المشهورين</string>
+<string name="view_all">اظهار الكل</string>
+<string name="saved">أنقذ</string>
+<string name="bookmark">إشارة مرجعية</string>
+<string name="txt_trimming_video">معالجة الفيديو ...</string>
+<string name="txt_done">منتهي</string>
+<string name="txt_cancel">يلغي</string>
+<string name="txt_edt_video">تحرير الفيديو</string>
+<string name="txt_smaller">يجب أن يكون الفيديو أصغر من</string>
+<string name="open_file_location">افتح مكان ملف؟</string>
+<string name="txt_failed_to_trim">فشل في تقليم</string>
+<string name="video_should_less_than_seconds">لا ينبغي أن يكون الفيديو أكثر من ٪ d ثواني</string>
+<string name="view">منظر</string>
+<string name="more">أكثر</string>
+<string name="audio_category">فئة الصوت</string>
+<string name="select_audio_category">حدد فئة الصوت</string>
+<string name="downloading">جارى التحميل</string>
+<string name="accept_author">يرجى الإشارة إلى أنك قد قرأت الحالة المعتمدة.</string>
+<string name="original_audio_by">الصوت الأصلي بواسطة</string>
+<string name="by">بواسطة</string>
+<string name="subscribed_successfully">تم الاشتراك بنجاح</string>
+<string name="none">لا أحد</string>
+<string name="download_successfully">تم تنزيله بنجاح</string>
+<string name="download_in_progress">تنزيل في التقدم</string>
+    <!-- TODO: Remove or change this placeholder text -->
+<string name="hello_blank_fragment">مرحبا شظية فارغة</string>
+<string name="video_not_uploaded">لا يزال الفيديو معالجة</string>
+<string name="call">يتصل</string>
+<string name="my_profile">ملفي</string>
+<string name="read_more">...اقرأ أكثر</string>
+<string name="read_less">...أقرأ أقل</string>
+<string name="package_empty_description">لم تتم إضافة حزمة</string>
+<string name="all">الجميع</string>
+<string name="use_audio_description">اسمح لاستخدام صوتك للآخرين</string>
+<string name="audio_record_permission_error">لا يمكن تسجيل الصوت ، يرجى تمكين الأذونات في إعدادات التطبيق</string>
+<string name="retry">إعادة المحاولة</string>
+<string name="video_not_found">الفيديو لم يتم العثور عليه</string>
+<string name="no_audio_description">الفيديو ليس لديك صوت</string>
+<string name="unable_to_reach_server">غير قادر على الوصول إلى الخادم</string>
+<string name="already_tagged">الموسومة بالفعل!</string>
+<string name="delete">يمسح</string>
+<string name="delete_video_description">هل أنت متأكد من حذف هذا الفيديو؟ لا يمكن التراجع عن هذا الإجراء.</string>
+<string name="video_deleted_successfully">تم حذف الفيديو بنجاح</string>
+<string name="edit">يحرر</string>
+<string name="every_one">الجميع</string>
+<string name="only_me">انا فقط</string>
+<string name="video_updated_successfully">تم تحديث الفيديو بنجاح</string>
+<string name="authorize_content">أنا مخول لتحميل هذا المحتوى</string>
+<string name="authorized">مخول</string>
+<string name="confirm_ownership">تأكيد الملكية</string>
+<string name="confirm">يتأكد</string>
+<string name="audio_disabled_description">الرؤية الصوتية معطل من هذا المستخدم</string>
+<string name="delete_account">حذف الحساب</string>
+<string name="really_want_del_acc">هل أنت متأكد من حذف الحساب؟</string>
+<string name="delete_acc_successfully">تم حذف الحساب بنجاح</string>
+<string name="response_del_acc">لقد تم حذف حسابك. للحصول على تفاصيل ، يرجى الاتصال بالمسؤول.</string>
+<string name="notification_del_acc">تم حذف حساب المستخدم هذا</string>
+<string name="deactive_admin">تملي هذا الحساب بواسطة المسؤول</string>
+<string name="my_video">الفيديو الخاص بي</string>
+<string name="really_remove_from_list">هل تريد حقًا إزالة الفيديو من القائمة؟</string>
+<string name="live_streams">يعيش تيارات</string>
+<string name="using_video_capture">باستخدام التقاط الفيديو؟</string>
+<string name="back_camera">الكاميرا الخلفية</string>
+<string name="capture_setting">إعداد التقاط</string>
+<string name="rear_camera">الكاميرا الأمامية</string>
+<string name="stop_broadcasting">توقف عن البث</string>
+<string name="broadcast_details">تفاصيل البث</string>
+<string name="hide_chat">إخفاء الدردشة</string>
+<string name="report_broadcast">البث التقرير</string>
+<string name="delete_broadcast">حذف البث</string>
+<string name="really_delete_video">هل أنت متأكد من حذف الفيديو؟</string>
+<string name="total_viewers">إجمالي المشاهدين</string>
+<string name="duration">مدة</string>
+<string name="total_likes">إجمالي الإعجابات</string>
+<string name="live_viewers">المشاهدين الأحياء</string>
+<string name="double_tap_to_flip_camera">اضغط مزدوجًا لقلب الكاميرا</string>
+<string name="you_are_now">انت الآن</string>
+<string name="your_broadcast_deactivated_by_admin">تم حظر البث الخاص بك بواسطة المسؤول</string>
+<string name="stop_publish_description">هل تريد حقًا التوقف عن النشر؟</string>
+<string name="camera_not_running_properly">الكاميرا لا تعمل بشكل صحيح</string>
+<string name="streaming_not_finished">لا يزال بثك السابق يرسل الحزم بسبب سرعة الإنترنت البطيئة</string>
+<string name="oopps_shouldnt_happen">OOPPs يجب أن يحدث هذا. يرجى ترك مطور المكتبة هذه الحالة</string>
+<string name="broadcast_connection_lost">يضيع الاتصال بخادم الوسائط</string>
+<string name="low_bandwidth">سرعة الشبكة منخفضة. الكمون يتزايد.</string>
+<string name="not_eligible_for_broadcast">جهازك غير مؤهل للبث. لا يوجد تشفير الأجهزة.</string>
+<string name="no_network_connectivity">أنت غير متصل بأي شبكة. الرجاء الاتصال بالإنترنت</string>
+<string name="stop">قف</string>
+<string name="permission_is_required">مطلوب إذن الكاميرا والميكروفون لتشغيل هذا التطبيق</string>
+<string name="permission">إذن</string>
+<string name="app_doesnot_work_without_permissions">التطبيق لا يعمل بدون أذونات. يرجى إعطاء الكاميرا وتسجيل إذن الصوت على إعدادات التطبيق</string>
+<string name="first_call_open_camera">أول وظيفة استدعاء OpenCamera</string>
+<string name="only_one_camera_exists">توجد كاميرا واحدة فقط في هذا الجهاز</string>
+<string name="camera_permission_is_required">مطلوب إذن الكاميرا لتشغيل هذا التطبيق</string>
+<string name="microphone_permission_is_required">مطلوب إذن الميكروفون لتشغيل هذا التطبيق</string>
+<string name="your_stream_end_description">انتهى البث الآن</string>
+<string name="stream_end_description">انتهى البث الآن</string>
+<string name="enter_comments">أدخل التعليقات</string>
+<string name="error_querying_decoders">غير قادر على استعلام وحدة فك ترميز الأجهزة</string>
+<string name="tips2">نصيحة: تأكد من البث لبضع دقائق على الأقل لتسهيل على الناس العثور عليك.</string>
+<string name="undo_report_broadcast">تراجع البث التقرير</string>
+<string name="initializing">جار تهيئة…</string>
+<string name="something_wrong">حدث خطأ</string>
+<string name="reported_successfully">تم إرسال التقرير إلى بنجاح</string>
+<string name="what_s_happening">ماذا يحدث</string>
+<string name="go_live">اذهب على الهواء مباشرة</string>
+<string name="tips">نصيحة: اكتب عنوانًا قبل بدء البث والتعرف على أشخاص لديهم اهتمامات مماثلة!</string>
+<string name="read_phone_state_permission_forandroid12">يرجى تمكين إذن الجهاز القريب على جهازك للتيار المباشر</string>
+<string name="delete_this_video">هل أنت متأكد من أنك تريد حذف هذا الفيديو؟ لا يمكن التراجع عن هذا الإجراء.</string>
+<string name="need_permission_to_access">نحن بحاجة إلى إذن للوصول!</string>
+<string name="need_publish_permission_to_access">نحتاج إلى كاميرا ، ميكروفون ، إذن القريب للوصول!</string>
+<string name="need_chat_permission_to_access">نحتاج إلى كاميرا وصور وإذن بالفيديو للوصول!</string>
+<string name="need_video_permission_to_access">نحتاج إلى كاميرا وصور ومقاطع فيديو وميكروفون وموسيقى وأذن للصوت للوصول!</string>
+<string name="need_plus_permission_to_access">نحتاج إلى إذن للتسجيل والمعرض</string>
+<string name="need_permission_to_notify_access">نحن بحاجة إلى إذن الإخطار للوصول!</string>
+<string name="empty" translatable="false">/خيط</string>
+<string name="Account_block">تم حظر الحساب</string>
+<string name="image_not_support">ملف الصورة غير مدعوم ، اختر الفيديو</string>
+    <string name="strem_live">يعيش</string>
+    <string name="reachlimt">أنت تصل إلى الحد ..</string>
+    <string name="upload_pic_from">تحميل الصورة من</string>
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:visibility="visible"
+    android:id="@+id/itemLay"
+    android:orientation="vertical"
+    android:background="@drawable/bottom_sheet_white_bg">
+
+    <ImageView
+        android:id="@+id/close_"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/cancel"
+        android:tint="#9D9797"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="17dp"
+        android:padding="5dp"
+        android:layout_gravity="end">
+
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear_gift_to_cohost_layout"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_header_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/text_live_viewers_new"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="@string/text_live_viewers_discription"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:id="@+id/searchlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtSearch"
+                style="@style/EditTextPrimaryLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/bg_primary_curved"
+                android:hint="Serach for people"
+
+                android:imeOptions="actionSearch"
+                android:inputType="textCapSentences"
+                android:maxLength="80"
+                android:maxLines="1"
+                android:padding="10dp"
+
+                android:textColorHint="@color/white"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorWhite"
+                android:textCursorDrawable="@null"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/btnSearch"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:src="@drawable/search_home"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recycler_cohost"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="11dp"
+            android:visibility="visible"
+            android:layout_marginEnd="11dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nullLay"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:visibility="gone"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="No Viewers Invite Viewers and Followers"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/sharebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/share"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:textColor="@color/colorWhite"
+                android:paddingTop="3dp"
+                android:paddingEnd="24dp"
+                android:backgroundTint="#F5805B"
+                android:paddingStart="24dp"
+                android:paddingBottom="3dp"
+                android:background="@drawable/curved_gradient"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemLay"
+    android:orientation="horizontal"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginRight="15dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/likedImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/mls_round_corner"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mls_add_new"
+        android:padding="2dp"
+        app:riv_mutate_background="true"
+        app:riv_oval="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:padding="3dp"
+        android:background="@drawable/blurred_card_background_1">
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/btn_subscribe_text"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"/>
+        <TextView
+            android:id="@+id/txt_content"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="JOHN"
+            android:padding="2dp"
+            style="@style/OutfitRegularForHeadingLiteWhiteSize14" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/btn_subscribe_text"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"/>
+        <TextView
+            android:id="@+id/txt_request_to_join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Request to join"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:padding="7dp"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:alpha="0.7"
+            android:background="@drawable/mls_bg_rectangle_gray"
+            android:textColor="@color/white"/>
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>

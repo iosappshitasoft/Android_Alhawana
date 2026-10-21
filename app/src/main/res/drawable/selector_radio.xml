@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item android:width="24dp" android:height="24dp" android:drawable="@drawable/bg_radio_outer_selected"/>
+            <item android:drawable="@drawable/bg_radio_inner_selected"/>
+        </layer-list>
+    </item>
+
+    <item android:state_checked="false">
+        <shape android:shape="oval">
+            <solid android:color="#757575"/> <!-- Unchecked gray border -->
+            <size android:width="24dp" android:height="24dp" />
+            <stroke android:width="2dp" android:color="#757575"/>
+        </shape>
+    </item>
+</selector>

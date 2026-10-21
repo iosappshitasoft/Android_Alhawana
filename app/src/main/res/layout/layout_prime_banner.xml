@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/subscribeLay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/colorPrimary"
+    android:clickable="true"
+    android:elevation="2dp"
+    android:focusable="true"
+    android:padding="5dp"
+    app:cardCornerRadius="12dp"
+    android:layout_marginBottom="16dp"
+    app:cardElevation="2dp"
+    app:rippleColor="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/primeBgLay"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/rounded_square_primary_new">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:textFontWeight="500"
+                android:id="@+id/txtPrimeTitle"
+                style="@style/OutfitRegularForHeadingLiteWhiteSize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/get_prime_benefits"
+                android:paddingStart="15dp"
+                android:text="@string/get_prime_benefits"
+                android:textAlignment="viewStart" />
+
+
+            <TextView
+                android:id="@+id/txtPrice"
+                style="@style/TextWhiteRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:text=""
+                android:visibility="gone"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/text_medium" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/premiumLay"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/premiumImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/circle_white_bg"
+                android:padding="12dp"
+                android:src="@drawable/crown" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignStart="@+id/premiumImage"
+                android:layout_alignBottom="@+id/premiumImage"
+                android:background="@color/btn_rounded_tick"
+                android:padding="5dp"
+                android:src="@drawable/tick_white"
+                android:translationX="-5dp"
+                app:riv_corner_radius="50dp"
+                app:riv_mutate_background="true"
+                app:riv_oval="true" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnSubscribe"
+            android:textFontWeight="500"
+            style="@style/OutfitRegularForHeadingLiteWhiteSize14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/subscribe"
+            android:textAllCaps="false"
+            android:background="@android:color/transparent"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

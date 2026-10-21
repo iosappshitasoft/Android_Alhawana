@@ -1,0 +1,713 @@
+
+==================== rv_item10.xml ====================
+<LinearLayout id:view10 orientation:vertical w:match_parent h:match_parent />
+  <LinearLayout orientation:horizontal w:match_parent h:match_parent />
+    <com.google.android.material.card.MaterialCardView id:cv weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout1 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic1 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond orientation:horizontal w:match_parent h:wrap_content />
+    <LinearLayout weight:1 orientation:vertical w:0dp h:match_parent />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv1 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay1 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout2 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay1 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic2 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond1 orientation:horizontal w:match_parent h:wrap_content />
+        <com.google.android.material.card.MaterialCardView id:cv2 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay2 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout3 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay2 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic3 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond2 orientation:horizontal w:match_parent h:wrap_content />
+        <com.google.android.material.card.MaterialCardView id:cv3 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay3 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout4 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay3 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic4 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond3 orientation:horizontal w:match_parent h:wrap_content />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv4 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay4 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout5 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay4 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic5 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond4 orientation:horizontal w:match_parent h:wrap_content />
+        <com.google.android.material.card.MaterialCardView id:cv5 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay5 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout6 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay5 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic6 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond5 orientation:horizontal w:match_parent h:wrap_content />
+        <com.google.android.material.card.MaterialCardView id:cv6 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay6 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout7 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay6 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic7 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond6 orientation:horizontal w:match_parent h:wrap_content />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv7 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay7 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout8 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay7 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic8 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond7 orientation:horizontal w:match_parent h:wrap_content />
+        <com.google.android.material.card.MaterialCardView id:cv8 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay8 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout9 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay8 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic9 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond8 orientation:horizontal w:match_parent h:wrap_content />
+        <com.google.android.material.card.MaterialCardView id:cv9 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay9 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout10 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay9 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic10 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond9 orientation:horizontal w:match_parent h:wrap_content />
+
+==================== rv_item11.xml ====================
+<LinearLayout id:view11 orientation:vertical w:match_parent h:match_parent />
+  <LinearLayout weight:2 orientation:horizontal w:match_parent h:0dp />
+    <com.google.android.material.card.MaterialCardView id:cv weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout1 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic1 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond orientation:horizontal w:match_parent h:wrap_content />
+    <LinearLayout weight:1 orientation:vertical w:0dp h:match_parent />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv1 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay1 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout2 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay1 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic2 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond1 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut1 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv2 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay2 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout3 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay2 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic3 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond2 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut2 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv3 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay3 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout4 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay3 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic4 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond3 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut3 w:22dp h:22dp />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv4 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay4 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout5 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay4 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic5 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond4 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut4 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv5 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay5 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout6 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay5 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic6 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond5 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut5 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv6 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay6 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout7 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay6 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic7 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond6 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut6 w:22dp h:22dp />
+  <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+    <com.google.android.material.card.MaterialCardView id:cv7 weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay7 w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout8 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay7 orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic8 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond7 orientation:horizontal w:match_parent h:wrap_content />
+          <ImageView id:kickOut7 w:22dp h:22dp />
+    <com.google.android.material.card.MaterialCardView id:cv8 weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay8 w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout9 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay8 orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic9 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond8 orientation:horizontal w:match_parent h:wrap_content />
+          <ImageView id:kickOut8 w:22dp h:22dp />
+    <com.google.android.material.card.MaterialCardView id:cv9 weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay9 w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout10 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay9 orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic10 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond9 orientation:horizontal w:match_parent h:wrap_content />
+          <ImageView id:kickOut9 w:22dp h:22dp />
+    <com.google.android.material.card.MaterialCardView id:cv10 weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay10 w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout11 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay10 orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic11 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond10 orientation:horizontal w:match_parent h:wrap_content />
+          <ImageView id:kickOut10 w:22dp h:22dp />
+
+==================== rv_item12.xml ====================
+<LinearLayout id:view12 orientation:vertical w:match_parent h:match_parent />
+  <LinearLayout weight:3 orientation:horizontal w:match_parent h:0dp />
+    <com.google.android.material.card.MaterialCardView id:cv weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout1 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic1 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond orientation:horizontal w:match_parent h:wrap_content />
+    <LinearLayout weight:1 orientation:vertical w:0dp h:match_parent />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv1 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay1 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout2 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay1 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic2 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond1 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut1 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv2 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay2 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout3 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay2 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic3 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond2 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut2 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv3 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay3 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout4 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay3 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic4 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond3 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut3 w:22dp h:22dp />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv4 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay4 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout5 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay4 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic5 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond4 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut4 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv5 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay5 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout6 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay5 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic6 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond5 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut5 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv6 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay6 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout7 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay6 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic7 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond6 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut6 w:22dp h:22dp />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv7 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay7 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout8 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay7 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic8 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond7 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut7 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv8 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay8 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout9 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay8 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic9 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond8 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut8 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv9 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay9 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout10 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay9 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic10 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond9 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut9 w:22dp h:22dp />
+  <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+    <com.google.android.material.card.MaterialCardView id:cv10 weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay10 w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout11 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay10 orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic11 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond10 orientation:horizontal w:match_parent h:wrap_content />
+          <ImageView id:kickOut10 w:22dp h:22dp />
+    <com.google.android.material.card.MaterialCardView id:cv11 weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay11 w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout12 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay11 orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic12 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond11 orientation:horizontal w:match_parent h:wrap_content />
+          <ImageView id:kickOut11 w:22dp h:22dp />
+
+==================== rv_item13.xml ====================
+<LinearLayout id:view13 orientation:vertical w:match_parent h:match_parent />
+  <LinearLayout weight:3 orientation:horizontal w:match_parent h:0dp />
+    <com.google.android.material.card.MaterialCardView id:cv weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout1 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic1 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond orientation:horizontal w:match_parent h:wrap_content />
+    <LinearLayout weight:1 orientation:vertical w:0dp h:match_parent />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv1 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay1 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout2 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay1 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic2 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond1 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut1 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv2 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay2 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout3 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay2 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic3 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond2 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut2 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv3 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay3 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout4 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay3 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic4 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond3 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut3 w:22dp h:22dp />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv4 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay4 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout5 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay4 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic5 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond4 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut4 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv5 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay5 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout6 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay5 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic6 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond5 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut5 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv6 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay6 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout7 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay6 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic7 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond6 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut6 w:22dp h:22dp />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv7 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay7 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout8 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay7 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic8 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond7 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut7 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv8 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay8 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout9 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay8 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic9 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond8 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut8 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv9 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay9 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout10 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay9 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic10 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond9 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut9 w:22dp h:22dp />
+  <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+    <com.google.android.material.card.MaterialCardView id:cv10 weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay10 w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout11 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay10 orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic11 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond10 orientation:horizontal w:match_parent h:wrap_content />
+          <ImageView id:kickOut10 w:22dp h:22dp />
+    <com.google.android.material.card.MaterialCardView id:cv11 weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay11 w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout12 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay11 orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic12 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond11 orientation:horizontal w:match_parent h:wrap_content />
+          <ImageView id:kickOut11 w:22dp h:22dp />
+    <com.google.android.material.card.MaterialCardView id:cv12 weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay12 w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout13 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay12 orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic13 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond12 orientation:horizontal w:match_parent h:wrap_content />
+          <ImageView id:kickOut12 w:22dp h:22dp />
+
+==================== rv_item14.xml ====================
+<LinearLayout id:view14 orientation:vertical w:match_parent h:match_parent />
+  <LinearLayout weight:3 orientation:horizontal w:match_parent h:0dp />
+    <com.google.android.material.card.MaterialCardView id:cv weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout1 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic1 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond orientation:horizontal w:match_parent h:wrap_content />
+    <LinearLayout weight:1 orientation:vertical w:0dp h:match_parent />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv1 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay1 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout2 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay1 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic2 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond1 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut1 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv2 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay2 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout3 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay2 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic3 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond2 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut2 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv3 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay3 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout4 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay3 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic4 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond3 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut3 w:22dp h:22dp />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv4 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay4 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout5 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay4 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic5 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond4 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut4 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv5 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay5 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout6 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay5 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic6 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond5 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut5 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv6 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay6 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout7 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay6 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic7 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond6 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut6 w:22dp h:22dp />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv7 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay7 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout8 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay7 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic8 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond7 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut7 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv8 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay8 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout9 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay8 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic9 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond8 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut8 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv9 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay9 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout10 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay9 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic10 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond9 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut9 w:22dp h:22dp />
+  <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+    <com.google.android.material.card.MaterialCardView id:cv10 weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay10 w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout11 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay10 orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic11 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond10 orientation:horizontal w:match_parent h:wrap_content />
+          <ImageView id:kickOut10 w:22dp h:22dp />
+    <com.google.android.material.card.MaterialCardView id:cv11 weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay11 w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout12 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay11 orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic12 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond11 orientation:horizontal w:match_parent h:wrap_content />
+          <ImageView id:kickOut11 w:22dp h:22dp />
+    <com.google.android.material.card.MaterialCardView id:cv12 weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay12 w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout13 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay12 orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic13 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond12 orientation:horizontal w:match_parent h:wrap_content />
+          <ImageView id:kickOut12 w:22dp h:22dp />
+    <com.google.android.material.card.MaterialCardView id:cv13 weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay13 w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout14 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay13 orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic14 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond13 orientation:horizontal w:match_parent h:wrap_content />
+          <ImageView id:kickOut13 w:22dp h:22dp />
+
+==================== rv_item15.xml ====================
+<LinearLayout id:view15 orientation:vertical w:match_parent h:match_parent />
+  <LinearLayout weight:4 orientation:horizontal w:match_parent h:0dp />
+    <com.google.android.material.card.MaterialCardView id:cv weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout1 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic1 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond orientation:horizontal w:match_parent h:wrap_content />
+    <LinearLayout weight:1 orientation:vertical w:0dp h:match_parent />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv1 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay1 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout2 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay1 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic2 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond1 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut1 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv2 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay2 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout3 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay2 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic3 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond2 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut2 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv3 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay3 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout4 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay3 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic4 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond3 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut3 w:22dp h:22dp />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv4 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay4 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout5 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay4 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic5 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond4 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut4 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv5 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay5 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout6 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay5 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic6 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond5 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut5 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv6 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay6 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout7 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay6 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic7 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond6 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut6 w:22dp h:22dp />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv7 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay7 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout8 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay7 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic8 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond7 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut7 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv8 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay8 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout9 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay8 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic9 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond8 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut8 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv9 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay9 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout10 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay9 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic10 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond9 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut9 w:22dp h:22dp />
+      <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+        <com.google.android.material.card.MaterialCardView id:cv10 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay10 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout11 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay10 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic11 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond10 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut10 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv11 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay11 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout12 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay11 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic12 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond11 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut11 w:22dp h:22dp />
+        <com.google.android.material.card.MaterialCardView id:cv12 weight:1 w:0dp h:match_parent />
+          <RelativeLayout id:blurLay12 w:match_parent h:match_parent />
+          <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+            <LinearLayout id:layout13 orientation:horizontal w:match_parent h:wrap_content />
+            <LinearLayout id:gemLay12 orientation:horizontal w:wrap_content h:45dp />
+              <ImageView id:mic13 w:16dp h:16dp />
+              <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+                <LinearLayout id:linear_seat_host_bottom_diamond12 orientation:horizontal w:match_parent h:wrap_content />
+              <ImageView id:kickOut12 w:22dp h:22dp />
+  <LinearLayout weight:1 orientation:horizontal w:match_parent h:0dp />
+    <com.google.android.material.card.MaterialCardView id:cv13 weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay13 w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout14 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay13 orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic14 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond13 orientation:horizontal w:match_parent h:wrap_content />
+          <ImageView id:kickOut13 w:22dp h:22dp />
+    <com.google.android.material.card.MaterialCardView id:cv14 weight:1 w:0dp h:match_parent />
+      <RelativeLayout id:blurLay14 w:match_parent h:match_parent />
+      <LinearLayout orientation:vertical w:wrap_content h:wrap_content />
+        <LinearLayout id:layout15 orientation:horizontal w:match_parent h:wrap_content />
+        <LinearLayout id:gemLay14 orientation:horizontal w:wrap_content h:45dp />
+          <ImageView id:mic15 w:16dp h:16dp />
+          <LinearLayout weight:1 orientation:vertical w:match_parent h:wrap_content />
+            <LinearLayout id:linear_seat_host_bottom_diamond14 orientation:horizontal w:match_parent h:wrap_content />
+          <ImageView id:kickOut14 w:22dp h:22dp />

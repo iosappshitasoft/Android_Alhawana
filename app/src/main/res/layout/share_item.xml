@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center">
+
+    <com.app.audiotrimmer.views.CircleImageView
+        android:id="@+id/itemIcon"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:scaleType="centerCrop"
+        android:padding="10dp" />
+
+    <com.app.audiotrimmer.views.CustomTextView
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:singleLine="false"
+        android:fontFamily="@font/font_regular"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+</LinearLayout>

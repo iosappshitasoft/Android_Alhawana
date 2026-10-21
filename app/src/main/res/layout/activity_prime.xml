@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="2dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/toolbar_start_margin"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@drawable/back"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:textFontWeight="600"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/coins"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/outfit_semibold"
+                android:gravity="center"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDivider"
+            android:visibility="gone"/>
+
+        <com.app.external.LoopViewPager
+            android:id="@+id/looper_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:foregroundGravity="center"
+            android:layoutDirection="locale"
+            android:overScrollMode="never"
+            android:visibility="gone"/>
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/pagerIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            app:ci_drawable="@drawable/primary_circle_bg"
+            app:ci_drawable_unselected="@drawable/circle_secondary_bg" />
+
+        <LinearLayout
+            android:id="@+id/headerLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iconDiamond"
+                android:layout_width="210dp"
+                android:layout_height="132dp"
+                android:src="@drawable/illustrationsection"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                android:id="@+id/txtAvailableGems"
+                android:textFontWeight="600"
+                style="@style/OutfitRegularForHeadingLiteWhiteSize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prime Plan" />
+
+            <TextView
+                android:id="@+id/txt_description"
+                android:fontFamily="@font/outfit_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Prime membership allows you to save other uses \nvideo to your device."
+                android:textSize="@dimen/text_small"
+                android:maxLines="2"
+                android:textFontWeight="400"
+                android:textColor="#A8A8A8"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFreeGems"
+                android:textFontWeight="500"
+                style="@style/OutfitRegularForHeadingLiteWhiteSize14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="Prime membership allows you to save other uses video to your device."
+                android:textAllCaps="false"
+                android:visibility="gone"
+                android:background="@drawable/btn_bottomsheet_addcomment_12"
+                app:backgroundTint="@color/new_black_addcomment"
+                app:rippleColor="@color/new_black_addcomment" />
+
+        </LinearLayout>
+
+      <!--  <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_prime_pack"
+            android:visibility="gone"/>-->
+
+   <!--     <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
+            android:padding="5dp"
+            tools:listitem="@layout/item_prime_pack_two"
+            android:background="@drawable/bottom_sheet_20"/>
+-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="5dp"
+            tools:listitem="@layout/item_prime_pack_two"
+            android:background="@drawable/bottom_sheet_20"/>
+
+        <!--<androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+             android:layout_height="20dp"/>-->
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_ad" />
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnSubscribe"
+        style="@style/OutfitRegularForHeadingWhiteSize16"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="40dp"
+        android:text="Subscribe for $15.50/year"
+        android:textAllCaps="false"
+        android:textFontWeight="600"
+        android:backgroundTint="@color/colorPrimary"
+        android:background="@drawable/bg_12"
+        android:visibility="visible" />
+
+</RelativeLayout>
