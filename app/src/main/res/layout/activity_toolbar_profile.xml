@@ -38,8 +38,8 @@
         <!-- 🔔 NOTIFICATION BUTTON (Left of Share) -->
         <ImageView
             android:id="@+id/btnNotification"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="45dp"
+            android:layout_height="60dp"
             android:visibility="gone"
             android:layout_alignParentEnd="false"
             android:layout_toStartOf="@id/btnShare"
@@ -51,8 +51,8 @@
         <!-- 📤 SHARE BUTTON (Rightmost) -->
         <ImageView
             android:id="@+id/btnShare"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="45dp"
+            android:layout_height="60dp"
             android:visibility="gone"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
